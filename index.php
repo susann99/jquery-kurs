@@ -21,6 +21,12 @@
                 $("div h1").addClass("classH1H2");
                 $(".class").addClass("testA");
                 //$(".class:not(:selected)");
+		$("#absatz").click(function(){
+			$(this).addClass("text");	
+		});
+		$("#absatz").click(function(xy){
+			alert('x='+xy.clientX+' y='+xy.clientY);
+		});
             });
             
         </script>
@@ -28,13 +34,17 @@
         <title>jQuery!</title>
     </head>
     <body>
-        <div>Hallo<h1>Test</h1></div>
-         <h1>1Hallo</h1>
-          <h1>2Hallo</h1>
-           <h1>3Hallo</h1>
+        <div>jQuery Tag1 Einstieg<h1>Hallo im DIV</h1></div>
+        <h1>1Hallo</h1>
+        <h1>2Hallo</h1>
+        <h1>3Hallo</h1>
+	<div id="absatz">
+		Star Trek Deutsch: Sternenreise, Reise durchs All ist der ubergreifende Titel fur sechs Science-Fiction-Fernsehserien mit insgesamt 726 Episoden sowie fur elf Kinofilme, zahlreiche Romane, Computerspiele und andere Werke, deren Inhalte auf der 1966 von Gene Roddenberry geschaffenen Fernsehserie Raumschiff Enterprise basieren.
+	</div>
         <script type="text/javascript" >
             $("h1").addClass("test");
         </script>
     </body>
 </html>
+
 
