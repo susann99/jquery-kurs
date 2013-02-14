@@ -1,0 +1,19 @@
+/* 
+    Document   : css
+    Created on : 14.02.2013, 10:44:27
+    Author     : cpi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.classH1 {
+    color: brown;
+}
+.classH1neu {
+    background-color: gold;
+    font-size: large;
+}
+.test {
+    font-style: italic;
+}
+
