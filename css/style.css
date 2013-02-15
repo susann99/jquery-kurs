@@ -1,0 +1,126 @@
+/* 
+    Document   : css
+    Created on : 14.02.2013, 10:44:27
+    Author     : cpi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+* {margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; }
+body,html {height:100%;}
+           
+.classH1 {
+    color: brown;
+}
+.classH1neu {
+    background-color: gold;
+    font-size: large;
+}
+.test {
+    font-style: italic;
+}
+.text {
+    width:320px;color: red;
+}
+#inhalt {
+    margin:5px; margin-top:20px; padding:5px; width:80%; box-shadow:1px 2px 4px 1px #B43104;border-radius:12px;
+    background:-moz-linear-gradient(top, #fff, #adf); /* Firefox */
+    background:-webkit-linear-gradient(top, #fff, #adf); /* Safari, Chrome */
+    background:-o-linear-gradient(top, #fff, #adf); /* Opera */
+    background:-ms-linear-gradient(top, #fff, #adf); /* IE */
+    background:linear-gradient(top, #fff, #adf);
+}
+#header {
+    border-radius:10px 10px 0px 0px;
+    padding:5px;
+    background:-moz-linear-gradient(top, #EEB937, #FADD67); /* Firefox */
+    background:-webkit-linear-gradient(top, #EEB937, #FADD67); /* Safari, Chrome */
+    background:-o-linear-gradient(top, #EEB937, #FADD67); /* Opera */
+    background:-ms-linear-gradient(top, #EEB937, #FADD67); /* IE */
+    background:linear-gradient(top, #EEB937, #FADD67);  
+}
+#header h1 {
+    font-size:30px;
+    letter-spacing:0.3em;
+    color: yellow;
+    padding:5px;
+    text-shadow:brown 2px 1px 4px;
+}
+#navigation {
+    text-align: right;
+    background-color: #adf;
+    padding:5px;
+}
+
+#navigation a {
+    border:thin solid black;
+    padding-left:20px;
+    padding-right:20px;
+    margin-right:10px;
+    text-align: inherit;
+    text-decoration: none;
+}
+.naviRot {
+    background-color: red;
+    color:#fff;
+    font-weight: bold;
+}
+.naviBlau {
+    background-color: blue;
+    color:#fff;
+    font-weight: bold;
+}
+.naviGruen {
+    background-color: green;
+    color:#fff;
+    font-weight: bold;
+}
+.naviOrang {
+    background-color: orange;
+    color:#fff;
+    font-weight: bold;
+}
+.naviMangenta {
+    background-color: magenta;
+    color:#fff;
+    font-weight: bold;
+}
+.naviYellow {
+    background-color: yellowgreen;
+    color:#fff;
+    font-weight: bold;
+}
+.navOver {
+    background-color: yellow;
+    color:darkcyan;
+    font-weight: bolder;
+}
+#content {
+    position: relative; margin:5px; margin-left:20px;
+    height: 400px;
+}
+#contentRight{
+    position: absolute;z-index: 100;top:10px;right:10px;
+    width:auto;
+}
+#contentLeft{
+    margin:10px;
+}
+#contentLeft ol {
+    margin-left:30px;
+    margin-top: 10px;
+}
+.blabla {
+    display: none;
+}
+.blablaView {
+   display: block; 
+   font-weight: normal;
+}
+
+#footer {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+
