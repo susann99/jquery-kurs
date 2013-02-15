@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+       <style type="text/css">        
+            .classH1 {
+                color: brown;
+            }
+            .classH1neu {
+                background-color: gold;
+                font-size: large;
+            }
+            .test {
+                font-style: italic;
+            }
+            .text {
+                width:320px;color: red;
+            }
+        </style>
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
         <script type="text/javascript" >
             $(document).ready(function(){

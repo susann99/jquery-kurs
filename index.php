@@ -18,14 +18,21 @@
                    $(this).removeClass("navOver");
                });
                $("#contentLeft  li:eq(0)").click(function(){
-                   $('#contentLeft  li:eq(0)').css("font-weight","bold").append($(".blabla p:eq(0)").addClass("blablaView"));
-                   
+                   $('#contentLeft  li:not(0) p').css("display","none");
+                   $('#contentLeft  li:eq(0)').css("font-weight","bold");
+                   $('#contentLeft  li:eq(0) p').css("display","block").css("font-weight","normal");                   
                });
                $("#contentLeft  li:eq(1)").click(function(){
-                   $('#contentLeft  li:eq(1)').css("font-weight","bold").append($(".blabla p:eq(0)").addClass("blablaView"));                   
+                   $('#contentLeft  li:not(1) p').css("display","none");
+                   $('#contentLeft  li:eq(1)').css("font-weight","bold");
+                   $('#contentLeft  li:eq(1) p').css("display","block").css("font-weight","normal");
+             
                });
                $("#contentLeft  li:eq(2)").click(function(){
-                   $('#contentLeft  li:eq(2)').css("font-weight","bold").append($(".blabla p:eq(0)").addClass("blablaView"));                   
+                   $('#contentLeft  li:not(2) p').css("display","none");
+                   $('#contentLeft  li:eq(2)').css("font-weight","bold");
+                   $('#contentLeft  li:eq(2) p').css("display","block").css("font-weight","normal");
+              
                });
         });          
         </script>
@@ -44,9 +51,30 @@
             <div id="contentLeft">
                 <h2>Inhalt</h2>
                 <ol>
-                   <li>Einf&uuml;hrung</li>
-                   <li>Selectoren</li>
-                   <li>ToDo-Listen</li>
+                   <li>
+                       Einf&uuml;hrung
+                        <p>
+                            1. Was ist jQuery<br>
+                            2. Wie wird es Eingebunden<br>
+                            3. Erste Finger&uuml;bungen
+                        </p>
+                   </li>
+                   <li>
+                       Selectoren
+                       <p>
+                            1. Selectoren<br>
+                            2. Beispiele<br>
+                            3. Projekt
+                       </p>
+                   </li>
+                   <li>
+                       ToDo-Listen
+                       <p>
+                            1. Einarbeitung NetBeans<br>
+                            2. GitHub<br>
+                            3. kleines Tutorial erstellen
+                       </p>
+                   </li>
                 </ol>
             </div>
             <div id="contentRight">
@@ -54,23 +82,6 @@
             </div>
         </div>
         <div id="footer">(c) susann rieder 2013 - Kontakt</div>
-    </div>
-    <div class="blabla">
-        <p>
-            1. Was ist jQuery<br>
-            2. Wie wird es Eingebunden<br>
-            3. Erste Finger&uuml;bungen
-        </p>
-        <p>
-            1. Selectoren<br>
-            2. Beispiele<br>
-            3. Projekt
-        </p>
-        <p>
-            1. Einarbeitung NetBeans<br>
-            2. GitHub<br>
-            3. kleines Tutorial erstellen
-        </p>
     </div>
     </body>
 </html>
