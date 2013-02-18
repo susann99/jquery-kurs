@@ -7,7 +7,9 @@
 */
 * {margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; }
 body,html {height:100%;}
-
+h2 {
+    display: none;
+}
 #inhalt {
     margin:5px; margin-top:20px; padding:5px; width:80%; box-shadow:1px 2px 4px 1px #B43104;border-radius:12px;
     background:-moz-linear-gradient(top, #fff, #adf); /* Firefox */
@@ -76,7 +78,7 @@ body,html {height:100%;}
     color:#fff;
     font-weight: bold;
 }
-.navOver {
+#navigation a:hover {
     background-color: yellow;
     color:darkcyan;
     font-weight: bolder;
@@ -99,7 +101,9 @@ body,html {height:100%;}
 #contentLeft ol li p {
     display: none;
 }
-
+#contentLeft ol li  {
+   cursor: pointer;
+}
 #footer {
     margin-bottom: 10px;
     margin-left: 10px;

@@ -2,13 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Tag 01 JQuery-Einführung</title>
+<title>JQuery-Einführung</title>
 </head>
 <body>
-<h1>JQuery-Einführung</h1>
+<h1>JQuery-Kurs</h1>
 <a href="index.php">Inhalt</a>
-<h2 id="ausgabe"></h2>
-Sascha Wohlgemuth
 <p>
 <h1>Tag 01</h1>
 <h2>1. Was ist jQuery</h2>
@@ -79,6 +77,54 @@ Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->...
 	<li>Menüpunkt->Team->Git->create Branche</li>
 	<li>.....</li>
 </ul>
-<button onClick="getStart();">start jQuery</button>
+<h1>Tag 3</h1>
+<h2>Grundlegendes zu jQuery</h2>
+<ul>
+        <li>Konzepte zur Anwendung von jQuery:<br>jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.
+Damit ergibt sich die Möglichkeit, HTML-Dokumente zu erstellen, welche auch bei deaktiviertem JavaScript funktionieren. </li>
+        <li>Übersicht und Aufgaben von Plugins: <br>Plugin sind Erweierungen, werden als zip geladen, 
+            entpakt und wie ext. Javascript und css-Dateien eingebunden</li>
+        <li>Kompatibilität zu anderen Frameworks und Browsern:<br>Browser ist Entstehungsgrund<br>
+            jQuery reserviert im globalen Namensraum die Variablen $ und jquery.
+            Um Kollisionen mit anderen JavaScript-Bibliotheken zu verhindern kann die Variable $ umbenannt werden.
+            (Im Beispiel wird das jQuery-Objekt über jq referenziert.)
+            <code>var jq = jQuery.noConflict();</code>
+        </li>
+        <li>Barrierefreiheit:<br>siehe Konzept<br> und Suchmaschinenoptimierung: Solange ma kaum Textmanipulationen 
+            in den Containern vornimmt müßte das sehr gut funktionieren. 
+            Da der Content in einfacher Reihnform vorhanden ist.
+        </li>
+</ul>
+<h2>2. Git und NetBeans</h2>
+<ul>
+	<li>Mit Branches pushen</li>
+	<li>Branches löschen</li>
+</ul>
+<h2>3. Projekt</h2>
+<ul>
+	<li>Filter</li>
+	<li>Animation - Bild</li>
+</ul>
+<h2>4. Praxis</h2>
+<ul>
+	<li>
+            Eltern und Kinder:<br>
+             $("#contentLeft li").children("p").css("display","none");
+             $("#contentLeft li").parent().css("color","green");
+        </li>
+	<li>
+            Schleifen:<br>
+            <code>
+             $("#navigation a").each(function(index){
+               $(this).addClass("navi"+arrColor[index % arrColor.length]);
+            });
+            </code>
+        </li>
+        <li>Filterauswahlen: z.B. :eq(n)</li>
+        <li>
+            Eventhandling und Callbacks:<br>
+            Callback Funktion ist die Funktion die in der Funktion aufgerufen wird:  $(".text").click( function() {...
+        </li>
+</ul>
 </body>
 </html>
