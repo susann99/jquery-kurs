@@ -21,6 +21,11 @@
             $(document).ready(function(){
                $(".text").click( function() {
                 $(this).addClass("green");
+                //var elem = document.getElementsByClassName("text")[0].parentNode;
+                //alert (elem);
+                //childrin
+                $(".normal").children().css("border","2px solid red");
+                $(this).parent().css({border:'2px solid green'});//Objektschreibweise
                });
             });
             
@@ -39,7 +44,7 @@
             <p class="text">Die ist ein zweiter div un p container</p>
         </div>
         <div class="normal">
-            <p class="text">Hier spielt auch die </p>
+            <p class="text">Traversierung:Transport von einer Stelle zu einer anderen, Bewegung im DOM, Traverse über Kind- oder Elternknoten </p>
         </div>
     </body>
 </html>

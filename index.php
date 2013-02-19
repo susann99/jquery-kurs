@@ -65,7 +65,7 @@
                                 </p>
                             </li>
                             <li>
-                                best Praktik mit each, modulo, this
+                                best Practic mit each, modulo, this
                                 <p>
                                     for each Schleife in jQuery: $.each(arrColor, function(index, value) {...});
                                 </p>
