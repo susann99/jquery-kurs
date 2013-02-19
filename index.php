@@ -16,7 +16,7 @@
                     $(this).css("font-weight","bold");
                     $(this).children().css("display","block").css("font-weight","normal");                   
                 });
-                $("nav a").click(function(index){
+                $("nav a").click(function(){
                     $("article li").css("font-weight","normal")
                     $("article li").children().css("display","none");
                     $("article").css("display","none");
@@ -33,20 +33,20 @@
                 <h1>jQuerry Kurs</h1>
             </header>
             <nav>
-                <a href="#">Home</a><a href="#">News</a><a href="#">Inhalt</a><a href="#">Links</a><a href="#">Profil</a><a href="#">Kontakt</a><a href="#">Hamburg</a>
+                <a href="#home">Home</a><a href="#news">News</a><a href="#inhalt">Inhalt</a><a href="#links">Links</a><a href="#profil">Profil</a><a href="#kontakt">Kontakt</a><a href="#doku">Doku</a>
             </nav>
             <div id="content">
                 <div id="contentLeft">
                     <article>
-                        <h2>Home</h2>
+                        <h2><a name="home">Home</a></h2>
                         <p>Diese kleine Projekt ist die Dokumentation zu einem jQuerykurs</p>
                     </article>
                     <article>
-                        <h2>News</h2>
+                        <h2><a name="news">News</a></h2>
                         <p>3 Tag nix los</p>
                     </article>
                     <article>
-                        <h2>Inhalt</h2>
+                        <h2><a name="inhalt">Inhalt</a></h2>
                         <ol>
                             <li>
                                 Einf&uuml;hrung

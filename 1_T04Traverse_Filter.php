@@ -35,7 +35,7 @@
             
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>Elternteil Tag03</title>
+        <title>Elternteil, children, parent, next, nextAll, prev Tag03/4</title>
     </head>
     <body>
         <a href="index.php">Inhalt</a>
