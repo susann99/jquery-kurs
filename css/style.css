@@ -31,10 +31,12 @@ header h1 {
     padding:5px;
     text-shadow:brown 2px 1px 4px;
 }
-nav {
+#menue{
     text-align: right;
     background-color: #adf;
     padding:5px;
+    height:16px;
+    
 }
 
 nav a {
@@ -45,6 +47,18 @@ nav a {
     text-align: inherit;
     text-decoration: none;
     width: 20px;
+}
+nav li {
+    list-style-type: none;
+}
+.clearboth {
+	clear: both;
+}
+.nav {
+    float: left;
+}
+.nav ul{
+    display: none;
 }
 nav a:hover {
     background-color: yellow;

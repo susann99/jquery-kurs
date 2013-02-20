@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
         <script type="text/javascript" >
@@ -32,8 +33,44 @@
             <header>Eine Einf&uuml;hrung in das JavaScript-Framework
                 <h1>jQuerry Kurs</h1>
             </header>
-            <nav>
-                <a href="#home">Home</a><a href="#news">News</a><a href="#inhalt">Inhalt</a><a href="#links">Links</a><a href="#profil">Profil</a><a href="#kontakt">Kontakt</a><a href="#doku">Doku</a>
+            <nav id="menue">
+                <ul>
+                    <li class="nav"><a href="#home">Home</a></li>
+                    <li class="nav"><a href="#news">News</a></li>
+                    <li class="nav"><a href="#inhalt">Inhalt</a>
+                    <nav class="submenu">
+                        <ul class="clearboth">
+                            <li>Kapitel</li>
+                            <li>Beispiele</li>
+                            <li>Projekt</li>
+                            <li>Downloads</li>
+                        </ul>
+                    </nav>
+                    </li>
+                    <li class="nav"><a href="#doku">Doku</a>
+                    <nav class="submenu">
+                        <ul class="clearboth">
+                            <li>Videos</li>
+                            <li>Bücher</li>
+                            <li>Websites</li>
+                            <li>Kursanbieter</li>
+                        </ul>
+                    </nav>
+                    </li>
+                    <li class="nav"><a href="#links">Links</a>
+                    <nav class="submenu">
+                        <ul class="clearboth">
+                            <li>Arbeitsumgebung</li>
+                            <li>jQuery</li>
+                            <li>Javascript</li>
+                            <li>HTML/CSS</li>
+                            <li>weitere Framworks</li>
+                        </ul>
+                    </nav>
+                    </li>
+                    <li class="nav"><a href="#profil">Profil</a></li>
+                    <li class="nav"><a href="#kontakt">Kontakt</a></li>
+               </ul>
             </nav>
             <div id="content">
                 <div id="contentLeft">
