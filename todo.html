@@ -152,7 +152,21 @@ Damit ergibt sich die Möglichkeit, HTML-Dokumente zu erstellen, welche auch bei
 <h1>Tag 5</h1>
 <h2>Events und Event-Handling,  Inhalte, Attribute, Datenspeicher</h2>
 <ul>
-	<li>Accessoren – Eigenschaften der Collection</li>
+	<li>Accessoren – Eigenschaften der Collection: data, get, index:
+        public string Name 
+{
+   get 
+   { 
+      return name; 
+   }
+   set 
+   {
+      name = value; 
+   }
+}
+Wenn Sie der Eigenschaft einen Wert zuweisen, wird der set-Accessor mit einem Argument aufgerufen, das den neuen Wert angibt. Beispiel:
+e1.Name = "Joe";   // The set accessor is invoked here       
+        </li>
         <li>Events und Event-Handling</li>
         <li>Inhalte, Attribute, Datenspeicher</li>
         <li>Einstieg Formulare</li>
