@@ -23,57 +23,75 @@
                     $("article").css("display","none");
                     $("article h2:contains('"+$(this).text()+"')").parent().css("display","block")
                 });
-            });          
+            });
+function menu(obj){
+  if (!obj.length) return;
+  $("div").removeClass("menue");
+  $(obj).hover(function(){
+  $(this).find('ul').slideDown(500,function(){
+    $(this).css({
+        overflow: "visible"
+    });     
+    });
+  },function(){
+  $(this).find('ul').first().stop(true, true).slideUp(500);
+});
+}
+
+
+$(document).ready(function(){
+	menu($("ul li"));
+});
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>jQuery -Kurs Inhalt</title>
     </head>
     <body>
-        <div id="inhalt">
+        <div id="inhalt" class="menue">
             <header>Eine Einf&uuml;hrung in das JavaScript-Framework
-                <h1>jQuerry Kurs</h1>
+                <h1>jQuery Kurs</h1>
             </header>
-            <nav id="menue">
+            <nav>
+            <!--[if IE 6]><div id="ie6"></div><![endif]--> 
                 <ul>
-                    <li class="nav"><a href="#home">Home</a></li>
-                    <li class="nav"><a href="#news">News</a></li>
-                    <li class="nav"><a href="#inhalt">Inhalt</a>
-                    <nav class="submenu">
-                        <ul class="clearboth">
-                            <li>Kapitel</li>
-                            <li>Beispiele</li>
-                            <li>Projekt</li>
-                            <li>Downloads</li>
-                        </ul>
-                    </nav>
+                    <li><a class="n0" href="#home">Home</a></li>
+                    <li><a class="n0" href="#news">News</a></li>
+                    <li><a class="n0" href="#inhalt">Inhalt</a>
+                    <ul>
+                            <li><a href="#">Kapitel</a></li>
+                            <li><a href="#">Beispiele</a></li>
+                            <li><a href="#">Projekt</a></li>
+                            <li><a href="#">Downloads</a></li>
+                    </ul>
                     </li>
-                    <li class="nav"><a href="#doku">Doku</a>
-                    <nav class="submenu">
-                        <ul class="clearboth">
+                    <li class="n0"><a href="#doku">Doku</a>
+                    
+                        <ul>
                             <li>Videos</li>
                             <li>Bücher</li>
                             <li>Websites</li>
                             <li>Kursanbieter</li>
                         </ul>
-                    </nav>
+    
                     </li>
-                    <li class="nav"><a href="#links">Links</a>
-                    <nav class="submenu">
-                        <ul class="clearboth">
+                    <li class="n0"><a href="#links">Links</a>
+                        <ul>
                             <li>Arbeitsumgebung</li>
                             <li>jQuery</li>
                             <li>Javascript</li>
                             <li>HTML/CSS</li>
                             <li>weitere Framworks</li>
                         </ul>
-                    </nav>
                     </li>
-                    <li class="nav"><a href="#profil">Profil</a></li>
-                    <li class="nav"><a href="#kontakt">Kontakt</a></li>
+                    <li class="n0"><a href="#profil">Profil</a></li>
+                    <li class="n0"><a href="#kontakt">Kontakt</a></li>
                </ul>
             </nav>
-            <div id="content">
+            <div id="content" style="clear: both;">
                 <div id="contentLeft">
+                    <div>
+                        asdlkfslkjflkasjf sdjkfhasjkfhaskfh asjkfhasjkfhaskjfh lalsfhasklhfasjkfh lasfasfhaslhfasfh
+                    </div>
                     <article>
                         <h2><a name="home">Home</a></h2>
                         <p>Diese kleine Projekt ist die Dokumentation zu einem jQuerykurs</p>

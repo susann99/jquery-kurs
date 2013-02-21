@@ -14,6 +14,7 @@ body,html {height:100%;}
     background:-o-linear-gradient(top, #fff, #adf); /* Opera */
     background:-ms-linear-gradient(top, #fff, #adf); /* IE */
     background:linear-gradient(top, #fff, #adf);
+    position: relative; top:20px;left:30px;
 }
 header {
     border-radius:10px 10px 0px 0px;
@@ -31,39 +32,9 @@ header h1 {
     padding:5px;
     text-shadow:brown 2px 1px 4px;
 }
-#menue{
-    text-align: right;
-    background-color: #adf;
-    padding:5px;
-    height:16px;
-    
-}
-
-nav a {
-    border:thin solid black;
-    padding-left:20px;
-    padding-right:20px;
-    margin-right:10px;
-    text-align: inherit;
-    text-decoration: none;
-    width: 20px;
-}
-nav li {
-    list-style-type: none;
-}
-.clearboth {
-	clear: both;
-}
-.nav {
-    float: left;
-}
-.nav ul{
-    display: none;
-}
-nav a:hover {
-    background-color: yellow;
-    color:darkcyan;
-    font-weight: bolder;
+nav {
+    background: #adf;
+    height: 30px;
 }
 .naviRot {
     background-color: red;
@@ -96,11 +67,11 @@ nav a:hover {
     font-weight: bold;
 }
 #content {
-    position: relative; margin:5px; margin-left:20px;
+    margin:5px; margin-left:20px;
     height: 400px;
 }
 #contentRight{
-    position: absolute;z-index: 100;top:10px;right:10px;
+    position: absolute;z-index: 100;top:150px;right:10px;
     width:auto;
 }
 #contentLeft{
@@ -119,6 +90,62 @@ article {
 #footer {
     margin-bottom: 10px;
     margin-left: 10px;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	color:#000000;
+}
+nav ul {
+	list-style-type:none;
+	margin:0px;
+}
+nav ul ul {
+	display:none;
+        position:absolute;
+	width:150px;
+	margin:0;
+	left:0px;
+	top:26px;
+}
+nav li {
+	float:left;
+	position:relative;
+	padding:5px 8px 5px 5px;
+}
+nav li a{
+  padding:4px 8px;
+  border: blue solid thin;
+}
+nav li a:hover{
+  color:red;
+  background-color: yellow;
+  border: #B43104 solid thin;
+}
+nav li li {
+	float:none;
+	width:150px; /* ie6 */
+	background-color:#CCCCCC;
+	padding:0;
+}
+
+nav li li a {
+	width:147px;
+	margin:0 0 0 0;
+	padding:0;
+	line-height:20px;
+	display:inline-block;  /* ie6 */
+}
+.menue li:hover ul ul {
+	display:none;
+}
+
+.menue li:hover ul {
+	display:block;
+}
+.menue li li:hover ul {
+	display:block;
 }
 
 
