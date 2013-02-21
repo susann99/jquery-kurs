@@ -47,22 +47,19 @@
             $("#normal p").eq(1).text("Mouse Position:"+e.pageX+" "+e.pageY);
         });
         $("#weg").click(function(e){
-            //console.log("MousePosition: %o x, %o y",e.pageX, e.pageY);
             $("#normal p").eq(1).text("geklickt:"+Date(e.timeStamp));
         });
         $("body").bind('mousedown mouseup',function(e){
-            //console.log("MousePosition: %o x, %o y",e.pageX, e.pageY);
             $("#normal p").eq(2).text("which:"+e.type+" "+e.which);
         });
         $("body").bind('keydown',function(e){
-            //console.log("MousePosition: %o x, %o y",e.pageX, e.pageY);
             $("#normal p").eq(3).text("which:"+e.type+" "+e.which);
         });
     });
 
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>Events Tag05, currentTarget, data, namespace</title>
+        <title>Events Tag05,Attribute, bind, Event-Objekt</title>
     </head>
     <body>
         <a href="index.php">Inhalt</a>

@@ -24,24 +24,22 @@
                     $("article h2:contains('"+$(this).text()+"')").parent().css("display","block")
                 });
             });
-function menu(obj){
-  if (!obj.length) return;
-  $("div").removeClass("menue");
-  $(obj).hover(function(){
-  $(this).find('ul').slideDown(500,function(){
-    $(this).css({
-        overflow: "visible"
-    });     
-    });
-  },function(){
-  $(this).find('ul').first().stop(true, true).slideUp(500);
-});
-}
-
-
-$(document).ready(function(){
-	menu($("ul li"));
-});
+            function menu(obj){
+              if (!obj.length) return;
+              $("div").removeClass("menue");
+              $(obj).hover(function(){
+              $(this).find('ul').slideDown(500,function(){
+                $(this).css({
+                    overflow: "visible"
+                });     
+                });
+              },function(){
+              $(this).find('ul').first().stop(true, true).slideUp(500);
+            });
+            }
+            $(document).ready(function(){
+                    menu($("ul li"));
+            });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>jQuery -Kurs Inhalt</title>
