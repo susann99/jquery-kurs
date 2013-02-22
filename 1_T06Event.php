@@ -20,9 +20,9 @@
         <script type="text/javascript" >
            
     $(document).ready(function(){
-        $("body").bind('mousedown mouseup',function(e){
-            //console.log("MousePosition: %o x, %o y",e.pageX, e.pageY);
-            //$("#normal p").eq(3).text("which:"+e.type+" "+e.which);
+        $("body").bind('mousedown',function(e){
+            console.log("MousePosition: %o x, %o y",e.pageX, e.pageY);
+             //$("#normal p").eq(3).text("which:"+e.type+" "+e.which);
             if(e.which==3){
                 $("#rechteMaus").css({display:'block'});
                 $("#rechteMaus").css("left",e.pageX+"px");
@@ -36,7 +36,7 @@
 
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>Events Tag06, Contextmenü rechte Maustaste</title>
+        <title>Events - Übung, Tag06, Contextmenü rechte Maustaste</title>
     </head>
     <body oncontextmenu="return false">
         <a href="index.php">Inhalt</a>

@@ -88,18 +88,40 @@
             <div id="content" style="clear: both;">
                 <div id="contentLeft">
                     <div>
-                        asdlkfslkjflkasjf sdjkfhasjkfhaskfh asjkfhasjkfhaskjfh lalsfhasklhfasjkfh lasfasfhaslhfasfh
+                        
                     </div>
                     <article>
                         <h2><a name="home">Home</a></h2>
-                        <p>Diese kleine Projekt ist die Dokumentation zu einem jQuerykurs</p>
+                        <p>Dies ist ein kleines Beispielprojekt zu einem jQuery-Kurs.</p>
+                        <h3>Da ich selber noch nicht der jQueryChrack bin habe ich ein einfaches Konzept gewählt:</h3>
+                        <ul>
+                            <li>
+                                der gesamte Content ist auf einer Seite (Klorolle), soll aber durch jQuery wie eine Seitennavigation aussehen
+                            </li>
+                            <li>
+                                einfache listen als Navigation, mit Anker, Ausklappmenü
+                            </li>
+                            <li>
+                                Geldwerter Content wird nicht durch jQuery erzeugt
+                            </li>
+                            <li>
+                                der Content soll hübsch in Arkkordeon und Karteikarten dargestellt werden, da wo es Sinn macht
+                            </li>
+                            <li>
+                                Ein Galerie auf jeder Seite
+                            </li>
+                            <li>Eine Formularanwendung: Kontaktseite</li>
+                            <li>HTML5 und CSS3, Google</li>
+                        </ul>
                     </article>
                     <article>
                         <h2><a name="news">News</a></h2>
-                        <p>3 Tag nix los</p>
+                        <p>Hier könnt Ihr den aktuellen Fortschritt des Projektes verfolgen. Dazu verwende ich die Listendarstellungen von jQuery z.B. mit der Zebradarstellung.</p>
+                        Newslisten
                     </article>
                     <article>
                         <h2><a name="inhalt">Inhalt</a></h2>
+                        <p>Der Inhalt ist mit einem Arkkordeon umgesetzt. Das heißt die Artikel sind ausklappbar.</p>
                         <ol>
                             <li>
                                 Einf&uuml;hrung
@@ -132,6 +154,11 @@
                                 </p>
                             </li>
                         </ol>
+                    </article>
+                    <article>
+                        <h2><a name="news">Docu</a></h2>
+                        <p>Referenz</p>
+                        Newslisten
                     </article>
                 </div>
                 <div id="contentRight">

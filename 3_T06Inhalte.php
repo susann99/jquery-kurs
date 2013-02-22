@@ -51,7 +51,7 @@
         <nav>
             <ul>
                 <li>Kanu</li>
-                <li><a href="#" title="paddel">Paddel</a></li>
+                <li><a href="#" title="paddel" style="color:red;">Paddel</a></li>
                 <li><a href="http://www.globetrotter.de">Schwimmweste</a></li>
             </ul>
         </nav>
