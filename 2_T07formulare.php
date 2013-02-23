@@ -111,7 +111,6 @@
         </style>
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
         <script type="text/javascript" >
-           
     $(document).ready(function(){
         $(".name").change(function(){
             var name = $(this).val();
@@ -120,22 +119,13 @@
             if(name.length < 4){
                 $(this).addClass("error-input");
                 $('<span class="error">Bitte mindesten 3 Zeichen eingeben</span>').insertAfter(this);
-                $(this).focus();
+                var self = $(this);
+                setTimeout(function(){
+                    self.focus();
+                }, 1); 
+               
             } 
         });
-        $("#submit").click(function(){
-            $(".error").remove();
-            $(".auswahl").removeClass("error-input");
-            if(!$(".auswahl").is(":checked")){
-                $(".auswahl").addClass("error-input");
-                $('<span class="error">Bitte auswählen</span>').insertAfter("#auswahl1");
-                $(".auswahl").focus();
-            }
-        });
-        $('.auswahl').change(function(){
-            $(".error").remove();
-            $(".auswahl").removeClass("error-input");
-        })
          $("#email").change(function(){
             var email = $(this).val();
             $("#error-email").remove();
@@ -143,7 +133,10 @@
             if(email.length < 4){
                 $(this).addClass("error-input");
                 $('<span id="error-email" class="error">Bitte mindesten 3 Zeichen eingeben</span>').insertAfter(this);
-                $(this).focus();
+                var self = $("#auswahl1");
+                setTimeout(function(){
+                    self.focus();
+                }, 1); 
             } 
         });
          $("#content").change(function(){
@@ -153,7 +146,22 @@
             if(content.length < 10){
                 $(this).addClass("error-input");
                 $('<span id="error-email" class="error">Bitte einen Kommentar eingeben x</span>').insertAfter(this);
-                $(this).focus();
+                var self = $(this);
+                setTimeout(function(){
+                    self.focus();
+                }, 1);  
+            } 
+        });
+        $("#submit").click(function(){
+            $(".error").remove();
+            $(".auswahl").removeClass("error-input");
+            if(!$(".auswahl").is(":checked")){
+                $(".auswahl").addClass("error-input");
+                $('<span class="error">Bitte auswählen</span>').insertAfter("#auswahl1");
+                var self = $("#auswahl1");
+                setTimeout(function(){
+                    self.focus();
+                }, 1);            
             } 
         });
     });
