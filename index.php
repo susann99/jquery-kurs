@@ -4,41 +4,17 @@
         <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
+        <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
             $(document).ready(function(){
                 var arrColor = ["Rot","Blau","Gruen","Orang","Yellow","Mangenta"];
                 $("nav a").each(function(index){
                     $(this).addClass("navi"+arrColor[index % arrColor.length]);
                 });
-                $("article li").children().css("display","none");
-                $("article li").click(function(){
-                    $("article li").css("font-weight","normal")
-                    $("article li").children().css("display","none");
-                    $(this).css("font-weight","bold");
-                    $(this).children().css("display","block").css("font-weight","normal");                   
-                });
                 $("nav a").click(function(){
-                    $("article li").css("font-weight","normal")
-                    $("article li").children().css("display","none");
                     $("article").css("display","none");
                     $("article h2:contains('"+$(this).text()+"')").parent().css("display","block")
                 });
-            });
-            function menu(obj){
-              if (!obj.length) return;
-              $("div").removeClass("menue");
-              $(obj).hover(function(){
-              $(this).find('ul').slideDown(500,function(){
-                $(this).css({
-                    overflow: "visible"
-                });     
-                });
-              },function(){
-              $(this).find('ul').first().stop(true, true).slideUp(500);
-            });
-            }
-            $(document).ready(function(){
-                    menu($("ul li"));
             });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -159,6 +135,45 @@
                         <h2><a name="news">Docu</a></h2>
                         <p>Referenz</p>
                         Newslisten
+                    </article>
+                    <article>
+                        <h2 style="text-align: right;"><a name="kontakt">Kontakt</a></h2>
+                        <div id="box">
+                        <form class="formular" action="#" method="post">
+                          <fieldset>
+                          <legend>Kontaktformular</legend>
+                          <ol class="clearfix">
+                            <li>
+                              <label for="firstname">Vorname:</label>
+                              <input type="text" name="vname" class="name" id="vname" value="" />
+                            </li>
+                            <li>
+                              <label for="lastname">Nachname</label>
+                              <input type="text" name="nname" id="nname" class="name" value="" />
+                            </li>
+                            <li>
+                              <label for="email">E-Mail(optional):</label>
+                              <input type="text" name="email" id="email" value="" />
+                            </li>
+                             <li>
+                              <label for="quelle">gefunden:</label>
+                                    <input type="checkbox" name="auswahl" id="auswahl1" class="auswahl" />Googlesuche<br>
+                                    <input type="checkbox" name="auswahl" id="auswahl2" class="auswahl" />Bekannter<br>
+                                    <input type="checkbox" name="auswahl" id="auswahl3" class="auswahl" />Verlinkung<br>
+                                    <input type="checkbox" name="auswahl" id="auswahl4" class="auswahl" />Zeitschrift<br>
+                                    <input type="checkbox" name="auswahl" id="auswahl5" class="auswahl" />24-fair.com
+                            </li>
+                            <li>
+                              <label for="content">Nachricht:</label>
+                              <textarea cols="37" rows="4" name="textfeld" id="textfeld"></textarea>
+                            </li>
+                            <li class="last">
+                              <input type="button" name="submit" id="submit" value="Absenden" />
+                            </li>
+                          </ol>
+                          </fieldset>
+                        </form>
+                        </div>
                     </article>
                 </div>
                 <div id="contentRight">

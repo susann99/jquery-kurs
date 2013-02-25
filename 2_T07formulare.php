@@ -107,63 +107,87 @@
               background: #1843C2;
               text-shadow: none;
             }
-        }
         </style>
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
         <script type="text/javascript" >
     $(document).ready(function(){
-        $(".name").change(function(){
-            var name = $(this).val();
+    $(this).data({
+         formdata:
+          [
+           {
+            sel:"#vname",
+            iafter:"#vname",
+            errtext:"Bitte mindesten 3 Zeichen eingeben",
+           },
+           {
+            sel:"#nname",
+            iafter:"#nname",
+            errtext:"Bitte mindesten 3 Zeichen eingeben",
+           },
+           {
+            sel:"#email",
+            iafter:"#email",
+            errtext:"Bitte mindesten 3 Zeichen eingeben" 
+           },
+           {
+            class:".auswahl",
+            iafter:"#auswahl1",
+            errtext:"Bitte auswählen" 
+           },
+           {
+            sel:"#content",
+            iafter:"#content",
+            errtext:"Bitte einen Kommentar eingeben" 
+           }
+         ]
+     });
+        $("#vname").change(function(){
             $(".error").remove();
-            $(this).removeClass("error-input");
-            if(name.length < 4){
-                $(this).addClass("error-input");
-                $('<span class="error">Bitte mindesten 3 Zeichen eingeben</span>').insertAfter(this);
-                var self = $(this);
-                setTimeout(function(){
-                    self.focus();
-                }, 1); 
-               
-            } 
+            if($(this).val().length < 3)getCheck(0,1);
         });
-         $("#email").change(function(){
-            var email = $(this).val();
-            $("#error-email").remove();
-            $(this).removeClass("error-input");
-            if(email.length < 4){
-                $(this).addClass("error-input");
-                $('<span id="error-email" class="error">Bitte mindesten 3 Zeichen eingeben</span>').insertAfter(this);
-                var self = $("#auswahl1");
-                setTimeout(function(){
-                    self.focus();
-                }, 1); 
-            } 
+        $("#nname").change(function(){
+            $(".error").remove();
+            if($(this).val().length < 3)getCheck(1,1);
         });
-         $("#content").change(function(){
-            var content = $(this).val();
-            $("#error-email").remove();
-            $(this).removeClass("error-input");
-            if(content.length < 10){
-                $(this).addClass("error-input");
-                $('<span id="error-email" class="error">Bitte einen Kommentar eingeben x</span>').insertAfter(this);
-                var self = $(this);
-                setTimeout(function(){
-                    self.focus();
-                }, 1);  
-            } 
+        $("#email").change(function(){
+            $(".error").remove();
+           if($(this).val().length < 3)getCheck(2,1);
+        });
+        $("#content").change(function(){
+            $(".error").remove();
+            if($(this).val().length < 3)getCheck(4,1);
         });
         $("#submit").click(function(){
-            $(".error").remove();
-            $(".auswahl").removeClass("error-input");
+            if($("#vname").val().length < 3) {
+                getCheck(0,1);
+            } else 
+            if($("#nname").val().length < 3){
+                getCheck(1,1);
+            } else
+            if($("#email").val().length < 3){
+                getCheck(2,1);
+            } else
             if(!$(".auswahl").is(":checked")){
-                $(".auswahl").addClass("error-input");
-                $('<span class="error">Bitte auswählen</span>').insertAfter("#auswahl1");
-                var self = $("#auswahl1");
-                setTimeout(function(){
+                getCheck(3,1);
+            } else
+            if($("#content").val().length < 3){
+               getCheck(4,1);
+            } else $(".error").remove();
+        });
+        
+        function getCheck(a,err){        
+            $(".error").remove();
+            var e = $(document).data().formdata[a];
+            $(e.class).removeClass("error-input");
+            if(err>0){
+                $(e.class).addClass("error-input");
+                $('<span class="error">'+e.errtext+'</span>').insertAfter(e.iafter);
+                var self = $(e.iafter);
+                 setTimeout(function(){
                     self.focus();
                 }, 1);            
             } 
-        });
+        }
     });
 
         </script>
@@ -171,8 +195,7 @@
         <title>Formular Tag07</title>
     </head>
     <body>
-    <div id="box">
-
+<div id="box">
 <form class="formular" action="#" method="post">
   <fieldset>
   <legend>Kontaktformular</legend>
@@ -183,7 +206,7 @@
     </li>
     <li>
       <label for="lastname">Nachname</label>
-      <input type="text" name="nname" id="nname" class="name" value="" />
+      <input type="text" name="nname" class="name" id="nname" value="" />
     </li>
     <li>
       <label for="email">E-Mail(optional):</label>
