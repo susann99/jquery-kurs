@@ -8,7 +8,7 @@
 * {margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; }
 body,html {height:100%;}
 #inhalt {
-    margin:auto; margin-top:20px; padding:5px; max-width:1024px; min-height: 500px;
+    margin:auto; margin-top:20px; padding:5px; max-width:900px; min-height: 500px;
     box-shadow:1px 2px 4px 1px #B43104;border-radius:12px;
     background:-moz-linear-gradient(top, #fff, #adf); /* Firefox */
     background:-webkit-linear-gradient(top, #fff, #adf); /* Safari, Chrome */
@@ -37,44 +37,44 @@ nav {
     background: #adf;
     height: 30px;
 }
-.naviRot {
+.navired {
     background-color: red;
     color:#fff;
     font-weight: bold;
 }
-.naviBlau {
+.naviblue {
     background-color: blue;
     color:#fff;
     font-weight: bold;
 }
-.naviGruen {
+.navigreen {
     background-color: green;
     color:#fff;
     font-weight: bold;
 }
-.naviOrang {
+.naviorange {
     background-color: orange;
     color:#fff;
     font-weight: bold;
 }
-.naviMangenta {
+.navimangenta {
     background-color: magenta;
     color:#fff;
     font-weight: bold;
 }
-.naviYellow {
+.naviyellow {
     background-color: yellowgreen;
     color:#fff;
     font-weight: bold;
 }
 #content {
     margin:5px; margin-left:20px;
-    min-height: 480px;
+    min-height: 523px;
 }
 #contentRight{
     position: absolute;z-index: 100;top:135px;right:10px;
     border: brown thin dotted;border-radius:10px;
-    width:300px;height:430px;
+    width:300px;height:523px;
     text-align:center;
     padding:5px;
     padding-top:5px;
@@ -83,20 +83,34 @@ nav {
     border-radius:5px;
     border: orange thin solid;
 }
-#contentLeft article h2 {
-    display: none;
-}
-#contentLeft article h1 {
-    font-size: 24px;
-}
 #contentRight article p {
     text-align: left;
     margin-left:20px;
 }
-#contentLeft{
+#contentRight article h2 {
+    font-size: 24px;
+    text-align: right;
+    margin-right: 220px;
+}
+#contentLeft {
     margin:10px;
     margin-top:30px;
     width:600px;
+}
+#contentLeft article h2 {
+    display: none;
+}
+#contentLeft article h1 {
+    font-size: 40px;
+    margin-bottom:30px;
+    color: #adf;
+    font-weight: bold;
+    text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+}
+#contentLeft article {
+    margin:10px;
+    margin-top:10px;
+    width:560px;
 }
 #contentLeft ol {
     margin-left:30px;
@@ -104,11 +118,6 @@ nav {
 }
 article {
     display: none;
-}
-article h2 {
-    font-size: 24px;
-    text-align: right;
-    margin-right: 220px;
 }
 footer {
     position: relative;right: 5px;

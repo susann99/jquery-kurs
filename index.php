@@ -7,13 +7,14 @@
         <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
             $(document).ready(function(){
-                var arrColor = ["Rot","Blau","Gruen","Orang","Yellow","Mangenta"];
-                $("nav a").each(function(index){
+                var arrColor = ["red","blue","green","orange","yellow","mangenta"];
+                $("nav a.n0").each(function(index){
                     $(this).addClass("navi"+arrColor[index % arrColor.length]);
+		    $("article h1").eq(index).css("color",arrColor[index % arrColor.length]);
                 });
                 $("nav a").click(function(){
                     $("article").css("display","none");
-                    $("article h2:contains('"+$(this).text()+"')").parent().css("display","block")
+                    $("article h2:contains('"+$(this).text()+"')").parent().css("display","block");
                 });
             });
         </script>
@@ -38,7 +39,7 @@
                             <li><a href="#">Downloads</a></li>
                     </ul>
                     </li>
-                    <li class="n0"><a href="#doku">Doku</a>
+                    <li><a class="n0" href="#doku">Doku</a>
                     
                         <ul>
                             <li>Videos</li>
@@ -48,7 +49,7 @@
                         </ul>
     
                     </li>
-                    <li class="n0"><a href="#links">Links</a>
+                    <li><a class="n0" href="#links">Links</a>
                         <ul>
                             <li>Arbeitsumgebung</li>
                             <li>jQuery</li>
@@ -57,8 +58,8 @@
                             <li>weitere Framworks</li>
                         </ul>
                     </li>
-                    <li class="n0"><a href="#profil">Profil</a></li>
-                    <li class="n0"><a href="#kontakt">Kontakt</a></li>
+                    <li><a class="n0" href="#profil">Profil</a></li>
+                    <li><a class="n0" href="#kontakt">Kontakt</a></li>
                </ul>
             </nav>
             <div id="content" style="clear: both;">
@@ -68,7 +69,7 @@
                     </div>
                     <article>
                         <h2><a name="home">Home</a></h2>
-                        <h1>Dies ist ein kleines jQuery-Beispielprojekt</h1>
+                        <h1>jQuery-Beispielprojekt</h1>
                         <h3>Da ich selber noch nicht der jQueryChrack bin habe ich ein einfaches Konzept gewählt:</h3>
                         <ul>
                             <li>
@@ -92,11 +93,13 @@
                     </article>
                     <article>
                         <h2><a name="news">News</a></h2>
+			<h1>Projekt - News</h1>
                         <p>Hier könnt Ihr den aktuellen Fortschritt des Projektes verfolgen. Dazu verwende ich die Listendarstellungen von jQuery z.B. mit der Zebradarstellung.</p>
                         Newslisten
                     </article>
                     <article>
                         <h2><a name="inhalt">Inhalt</a></h2>
+			<h1>Projekt - Inhalt</h1>
                         <p>Der Inhalt ist mit einem Arkkordeon umgesetzt. Das heißt die Artikel sind ausklappbar.</p>
                         <ol>
                             <li>
@@ -132,7 +135,8 @@
                         </ol>
                     </article>
                     <article>
-                        <h2><a name="news">Docu</a></h2>
+                        <h2><a name="doku">Doku</a></h2>
+			<h1>Dokumentation</h1>
                         <p>Referenz</p>
                         Newslisten
                     </article>
@@ -165,7 +169,7 @@
                           </li>
                           <li>
                             <label for="nachricht">Nachricht:</label>
-                            <textarea cols="26" rows="7" name="nachricht" id="nachricht"></textarea>
+                            <textarea cols="26" rows="14" name="nachricht" id="nachricht"></textarea>
                           </li>
                           <li class="last">
                             <input type="button" name="submit" id="submit" value="Absenden" />
