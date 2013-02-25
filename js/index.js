@@ -21,56 +21,99 @@ function menu(obj){
  });
  // Formular
 $(document).ready(function(){
-  $(".name").change(function(){
-    var name = $(this).val();
-    $(".error").remove();
-    $(this).removeClass("error-input");
-    if(name.length < 4){
-        $(this).addClass("error-input");
-        $('<span class="error">Bitte mindesten 3 Zeichen eingeben</span>').insertAfter(this);
-        var self = $(this);
-        setTimeout(function(){
-            self.focus();
-        }, 1); 
-     } 
+    $("#vname").data(
+           {
+            sel:"#vname",
+            iafter:"#vname",
+            errtext:"Bitte mindesten 3 Zeichen eingeben!"
+           }
+    );
+    $("#nname").data(
+           {
+            sel:"#nname",
+            iafter:"#nname",
+            errtext:"Bitte mindesten 3 Zeichen eingeben!"
+           }
+    );
+    $("#email").data(
+           {
+            sel:"#email",
+            iafter:"#email",
+            errtext:"Bitte eine gültige Email eingeben!" 
+           }
+    );
+    $(".auswahl").data(
+           {
+            sel:".auswahl",
+            iafter:"#auswahl1",
+            errtext:"Bitte auswählen!" 
+           }
+    );
+    $("#nachricht").data(
+           {
+            sel:"#nachricht",
+            iafter:"#nachricht",
+            errtext:"Bitte einen Kommentar eingeben!" 
+            }
+    );
+    $("#vname").change(function(){
+        setCheckRemove();
+        if($(this).val().length < 3)getCheck($(this),1);
+    });
+    $("#nname").change(function(){
+        setCheckRemove();
+        if($(this).val().length < 3)getCheck($(this),1);
     });
     $("#email").change(function(){
-       var email = $(this).val();
-       $("#error-email").remove();
-       $(this).removeClass("error-input");
-       if(email.length < 4){
-           $(this).addClass("error-input");
-           $('<span id="error-email" class="error">Bitte mindesten 3 Zeichen eingeben</span>').insertAfter(this);
-           var self = $("#auswahl1");
-           setTimeout(function(){
-               self.focus();
-           }, 1); 
-       } 
+       setCheckRemove();
+       if(!getCheckEmail($(this).val()))getCheck($(this),1);
     });
-    $("#textfeld").change(function(){
-       var content = $(this).val();
-       $("#error-email").remove();
-       $(this).removeClass("error-input");
-       if(content.length < 10){
-           $(this).addClass("error-input");
-           $('<span id="error-email" class="error">Bitte einen Kommentar eingeben x</span>').insertAfter(this);
-           var self = $(this);
-           setTimeout(function(){
-               self.focus();
-           }, 1);  
-       } 
+    $("#nachricht").change(function(){
+        setCheckRemove();
+        if($(this).val().length < 3)getCheck($(this),1);
     });
     $("#submit").click(function(){
-        $(".error").remove();
-        $(".auswahl").removeClass("error-input");
+        setCheckRemove();
+        if($("#vname").val().length < 3) {
+            getCheck($("#vname"),1);
+        } else 
+        if($("#nname").val().length < 3){
+            getCheck($("#nname"),1);
+        } else
+        if(!getCheckEmail($("#email").val())){
+            getCheck($("#email"),1);
+        } else
         if(!$(".auswahl").is(":checked")){
-            $(".auswahl").addClass("error-input");
-            $('<span class="error">Bitte auswählen</span>').insertAfter("#auswahl1");
-            var self = $("#auswahl1");
-            setTimeout(function(){
+            getCheck($(".auswahl"),1);
+        } else
+        if($("#nachricht").val().length < 3){
+           getCheck($("#nachricht"),1);
+        } else {
+            setCheckRemove(); 
+        }
+    });
+    function setCheckRemove(){
+        $("input").removeClass("error-input");
+        $("textarea").removeClass("error-input");
+        $(".error").remove();
+    }
+    function getCheckEmail(email){
+        if(!email.match(/\w[a-z0-9\.\-]+@\w[a-z0-9\.\-]+\.\w[a-z]+/gi))return false;
+        return true;
+    }
+    function getCheck(a,err){
+        var sel = a.data("sel");   
+        var errtext = a.data("errtext");
+        var iafter = a.data("iafter");
+        setCheckRemove();
+        if(err>0){
+            $(sel).addClass("error-input");
+            $('<span class="error">'+errtext+'</span>').insertAfter(iafter);
+            var self = $(iafter);
+             setTimeout(function(){
                 self.focus();
             }, 1);            
         } 
-    });
+    }
 });
 

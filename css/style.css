@@ -15,7 +15,7 @@ body,html {height:100%;}
     background:-ms-linear-gradient(top, #fff, #adf); /* IE */
     background:linear-gradient(top, #fff, #adf);
     position: relative; top:20px;left:30px;
-    height:80%;
+    min-height: 500px;
 }
 header {
     border-radius:10px 10px 0px 0px;
@@ -69,11 +69,18 @@ nav {
 }
 #content {
     margin:5px; margin-left:20px;
-    height: 80%;
+    min-height: 480px;
 }
 #contentRight{
-    position: absolute;z-index: 100;top:150px;right:10px;
-    width:auto;
+    position: absolute;z-index: 100;top:145px;right:10px;
+    border: brown thin dotted;border-radius:10px;
+    width:300px;height:430px;
+    text-align:center;
+    padding-top:15px;
+}
+#contentRight img {
+    border-radius:5px;
+    border: orange thin solid;
 }
 #contentLeft{
     margin:10px;
@@ -86,12 +93,14 @@ article {
     display: none;
 }
 article h2 {
-    font-size: 22px;
+    font-size: 24px;
+    text-align: right;
+    margin-right: 220px;
 }
 footer {
     margin-top: 26px;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-right: 20%;
     text-align: right;
 }
 a {
@@ -164,7 +173,8 @@ nav li li a {
 }
 form {
  padding: 0;
- margin: 0;
+ padding-top: 10px;
+ margin-left: 20px;
  width: 480px;
  border-radius:10px;
  background:-moz-linear-gradient(bottom left, buttonface, #adf); /* Firefox */
@@ -172,10 +182,10 @@ form {
  background:-o-linear-gradient(bottom left, buttonface, #adf); /* Opera */
  background:-ms-linear-gradient(bottom left, buttonface, #adf); /* IE */
  background:linear-gradient(bottom left, buttonface, #adf);
- -webkit-box-shadow: 2px 1px 16px 2px #113B90;
- -moz-box-shadow: 2px 1px 16px 2px #113B90;
- -ms-box-shadow: 2px 1px 16px 2px #113B90;
- box-shadow: 2px 1px 16px 2px #113B90;
+ -webkit-box-shadow: 1px 1px 8px 1px #113B90;
+ -moz-box-shadow: 1px 1px 8px 1px #113B90;
+ -ms-box-shadow: 1px 1px 8px 1px #113B90;
+ box-shadow: 1px 1px 8px 1px #113B90;
 }
 fieldset {
    border: none;
@@ -201,7 +211,7 @@ label {
 }
 #box li {
    float: left;
-   padding: 10px;
+   padding: 5px;
    display:block;
 }
 #box li.last {
@@ -216,16 +226,18 @@ input, textarea {
  -moz-box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
  -ms-box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
  box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
-
  background-color: whitesmoke;
  color: #4d4d4d;
  border: 1px solid #45709A;
  font: 12px Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
  padding: 6px 8px;
 }
+input[type="text"]{
+ width:190px;   
+}
 textarea {
  border-radius: 10px;
- width: 400px;
+ width: 410px;
  overflow: auto;
 }
 input[type="button"] {

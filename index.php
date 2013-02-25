@@ -137,42 +137,42 @@
                         Newslisten
                     </article>
                     <article>
-                        <h2 style="text-align: right;"><a name="kontakt">Kontakt</a></h2>
+                        <h2><a name="kontakt">Kontakt</a></h2>
                         <div id="box">
                         <form class="formular" action="#" method="post">
-                          <fieldset>
-                          <legend>Kontaktformular</legend>
-                          <ol class="clearfix">
-                            <li>
-                              <label for="firstname">Vorname:</label>
-                              <input type="text" name="vname" class="name" id="vname" value="" />
-                            </li>
-                            <li>
-                              <label for="lastname">Nachname</label>
-                              <input type="text" name="nname" id="nname" class="name" value="" />
-                            </li>
-                            <li>
-                              <label for="email">E-Mail(optional):</label>
-                              <input type="text" name="email" id="email" value="" />
-                            </li>
-                             <li>
-                              <label for="quelle">gefunden:</label>
-                                    <input type="checkbox" name="auswahl" id="auswahl1" class="auswahl" />Googlesuche<br>
-                                    <input type="checkbox" name="auswahl" id="auswahl2" class="auswahl" />Bekannter<br>
-                                    <input type="checkbox" name="auswahl" id="auswahl3" class="auswahl" />Verlinkung<br>
-                                    <input type="checkbox" name="auswahl" id="auswahl4" class="auswahl" />Zeitschrift<br>
-                                    <input type="checkbox" name="auswahl" id="auswahl5" class="auswahl" />24-fair.com
-                            </li>
-                            <li>
-                              <label for="content">Nachricht:</label>
-                              <textarea cols="37" rows="4" name="textfeld" id="textfeld"></textarea>
-                            </li>
-                            <li class="last">
-                              <input type="button" name="submit" id="submit" value="Absenden" />
-                            </li>
-                          </ol>
-                          </fieldset>
-                        </form>
+                        <fieldset>
+                        <legend>Kontaktformular</legend>
+                        <ol class="clearfix">
+                          <li>
+                            <label for="firstname">Vorname:</label>
+                            <input type="text" name="vname" class="name" id="vname" value="" />
+                          </li>
+                          <li>
+                            <label for="lastname">Nachname:</label>
+                            <input type="text" name="nname" class="name" id="nname" value="" />
+                          </li>
+                          <li>
+                            <label for="email">E-Mail(optional):</label>
+                            <input type="text" name="email" id="email" value="" />
+                          </li>
+                           <li>
+                            <label for="quelle">gefunden:</label>
+                                  <input type="checkbox" name="auswahl" id="auswahl1" class="auswahl" /> Googlesuche<br>
+                                  <input type="checkbox" name="auswahl" id="auswahl2" class="auswahl" /> Bekannter<br>
+                                  <input type="checkbox" name="auswahl" id="auswahl3" class="auswahl" /> Verlinkung<br>
+                                  <input type="checkbox" name="auswahl" id="auswahl4" class="auswahl" /> Zeitschrift<br>
+                                  <input type="checkbox" name="auswahl" id="auswahl5" class="auswahl" /> 24-fair.com
+                          </li>
+                          <li>
+                            <label for="nachricht">Nachricht:</label>
+                            <textarea cols="26" rows="7" name="nachricht" id="nachricht"></textarea>
+                          </li>
+                          <li class="last">
+                            <input type="button" name="submit" id="submit" value="Absenden" />
+                          </li>
+                        </ol>
+                        </fieldset>
+                      </form>
                         </div>
                     </article>
                 </div>
@@ -180,8 +180,8 @@
                     <img src="images/Amelia-Earhart.png">
                 </div>
             </div>
-            <footer>(c) susann rieder 2013 - Kontakt</footer>
         </div>
+        <footer>(c) susann rieder 2013</footer>
     </body>
 </html>
 
