@@ -1,0 +1,286 @@
+/* 
+    Document   : css
+    Created on : 14.02.2013, 10:44:27
+    Author     : cpi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+* {margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; }
+body,html {height:100%;}
+#inhalt {
+    margin:auto; margin-top:20px; padding:5px; max-width:1024px; min-height: 500px;
+    box-shadow:1px 2px 4px 1px #B43104;border-radius:12px;
+    background:-moz-linear-gradient(top, #fff, #adf); /* Firefox */
+    background:-webkit-linear-gradient(top, #fff, #adf); /* Safari, Chrome */
+    background:-o-linear-gradient(top, #fff, #adf); /* Opera */
+    background:-ms-linear-gradient(top, #fff, #adf); /* IE */
+    background:linear-gradient(top, #fff, #adf);
+    position: relative; top:20px;left:30px;
+}
+header {
+    border-radius:10px 10px 0px 0px;
+    padding:5px;
+    background:-moz-linear-gradient(top, #EEB937, #FADD67); /* Firefox */
+    background:-webkit-linear-gradient(top, #EEB937, #FADD67); /* Safari, Chrome */
+    background:-o-linear-gradient(top, #EEB937, #FADD67); /* Opera */
+    background:-ms-linear-gradient(top, #EEB937, #FADD67); /* IE */
+    background:linear-gradient(top, #EEB937, #FADD67);  
+}
+header h1 {
+    font-size:30px;
+    letter-spacing:0.3em;
+    color: yellow;
+    padding:5px;
+    text-shadow:brown 2px 1px 4px;
+}
+nav {
+    background: #adf;
+    height: 30px;
+}
+.naviRot {
+    background-color: red;
+    color:#fff;
+    font-weight: bold;
+}
+.naviBlau {
+    background-color: blue;
+    color:#fff;
+    font-weight: bold;
+}
+.naviGruen {
+    background-color: green;
+    color:#fff;
+    font-weight: bold;
+}
+.naviOrang {
+    background-color: orange;
+    color:#fff;
+    font-weight: bold;
+}
+.naviMangenta {
+    background-color: magenta;
+    color:#fff;
+    font-weight: bold;
+}
+.naviYellow {
+    background-color: yellowgreen;
+    color:#fff;
+    font-weight: bold;
+}
+#content {
+    margin:5px; margin-left:20px;
+    min-height: 480px;
+}
+#contentRight{
+    position: absolute;z-index: 100;top:135px;right:10px;
+    border: brown thin dotted;border-radius:10px;
+    width:300px;height:430px;
+    text-align:center;
+    padding:5px;
+    padding-top:5px;
+}
+#contentRight img {
+    border-radius:5px;
+    border: orange thin solid;
+}
+#contentLeft article h2 {
+    display: none;
+}
+#contentLeft article h1 {
+    font-size: 24px;
+}
+#contentRight article p {
+    text-align: left;
+    margin-left:20px;
+}
+#contentLeft{
+    margin:10px;
+    margin-top:30px;
+    width:600px;
+}
+#contentLeft ol {
+    margin-left:30px;
+    margin-top: 10px;
+}
+article {
+    display: none;
+}
+article h2 {
+    font-size: 24px;
+    text-align: right;
+    margin-right: 220px;
+}
+footer {
+    position: relative;right: 5px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	color:#000000;
+}
+nav ul {
+	list-style-type:none;
+	margin:0px;
+}
+nav ul ul {
+	display:none;
+        position:absolute;
+	width:150px;
+	margin:0;
+	left:0px;
+	top:26px;
+}
+nav li {
+	float:left;
+	position:relative;
+	padding:5px 8px 5px 5px;
+}
+nav li a{
+  padding:4px 8px;
+  border: blue solid thin;
+}
+nav li a:hover{
+  color:red;
+  background-color: yellow;
+  border: #B43104 solid thin;
+}
+nav li li {
+	float:none;
+	width:150px; /* ie6 */
+	background-color:#CCCCCC;
+	padding:0;
+}
+
+nav li li a {
+	width:147px;
+	margin:0 0 0 0;
+	padding:0;
+	line-height:20px;
+	display:inline-block;  /* ie6 */
+}
+.menue li:hover ul ul {
+	display:none;
+}
+
+.menue li:hover ul {
+	display:block;
+}
+.menue li li:hover ul {
+	display:block;
+}
+/* Formular */
+#box {
+    position:relativ;
+}
+.error-input {border: red thin solid; color: red;}
+.error {color: red;text-align: center; position: absolute;z-index: 1000;width: 180px;height: 40px;padding: 8px;font-weight: bolder;
+       border: red thin solid; color: red;background-color: whitesmoke;opacity: 0.8;border-radius:6px;
+       webkit-box-shadow: 1px 1px 10px 1px #113B90;
+       -moz-box-shadow: 1px 1px 10px 1px #113B90;
+       -ms-box-shadow: 1px 1px 10px 1px #113B90;
+       box-shadow: 1px 1px 10px 1px #113B90;
+}
+form {
+ padding: 0;
+ padding-top: 10px;
+ margin-left: 20px;
+ width: 480px;
+ border-radius:10px;
+ background:-moz-linear-gradient(bottom left, buttonface, #adf); /* Firefox */
+ background:-webkit-linear-gradient(bottom left, buttonface, #adf); /* Safari, Chrome */
+ background:-o-linear-gradient(bottom left, buttonface, #adf); /* Opera */
+ background:-ms-linear-gradient(bottom left, buttonface, #adf); /* IE */
+ background:linear-gradient(bottom left, buttonface, #adf);
+ -webkit-box-shadow: 1px 1px 8px 1px #113B90;
+ -moz-box-shadow: 1px 1px 8px 1px #113B90;
+ -ms-box-shadow: 1px 1px 8px 1px #113B90;
+ box-shadow: 1px 1px 8px 1px #113B90;
+}
+fieldset {
+   border: none;
+   margin: 0;
+   padding: 10px 20px 25px;
+}
+fieldset legend {
+     font-weight: bold;
+     font-size: 22px;
+     margin:15px 0 0 6px;
+}
+label {
+   display:block;
+   cursor: pointer;
+   font-weight: bold;
+   line-height: 24px;
+ }
+#box ol {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display:block;
+}
+#box li {
+   float: left;
+   padding: 5px;
+   display:block;
+}
+#box li.last {
+   float: none;
+   clear: both;
+   text-align: right;
+   display:block;
+}
+input, textarea {
+ border-radius: 5px;
+ -webkit-box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
+ -moz-box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
+ -ms-box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
+ box-shadow: 1px 0px 3px 1px #ccc,inset 2px 1px 2px #ccc;
+ background-color: whitesmoke;
+ color: #4d4d4d;
+ border: 1px solid #45709A;
+ font: 12px Helvetica, Arial, "Nimbus Sans L", FreeSans, sans-serif;
+ padding: 6px 8px;
+}
+input[type="text"]{
+ width:190px;   
+}
+textarea {
+ border-radius: 10px;
+ width: 410px;
+ overflow: auto;
+}
+input[type="button"] {
+ background-color: #234DCD;
+ color: #fff;
+ cursor: pointer;
+ font: italic bold 1em/1.2 Georgia, "Times New Roman ", Times, Cambria, "Nimbus Roman No9 L ", serif;
+ border: 1px solid #1944C3;
+ padding: 5px 10px;
+ width: auto;
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px;
+ border-radius: 4px;
+ background:-moz-linear-gradient(top, #1944C3, #0E398E); /* Firefox */
+ background:-webkit-linear-gradient(top, #1944C3, #0E398E); /* Safari, Chrome */
+ background:-o-linear-gradient(top, #1944C3, #0E398E); /* Opera */
+ background:-ms-linear-gradient(top, #1944C3, #0E398E); /* IE */
+ background:linear-gradient(top, #1944C3, #0E398E);
+ -webkit-box-shadow: 1px 1px 2px 1px #09345E;
+ -moz-box-shadow: 1px 1px 2px 1px #09345E;
+ -ms-box-shadow: 1px 1px 2px 1px #09345E;
+ box-shadow: 1px 1px 2px 1px #09345E;
+ text-shadow: 1px 1px 3px #333;
+ }
+ input[type="button"]:hover {
+   background: #1843C2;
+   text-shadow: none;
+ }
+
+
+
+
+
