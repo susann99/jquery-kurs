@@ -117,12 +117,12 @@
            {
             sel:"#vname",
             iafter:"#vname",
-            errtext:"Bitte mindesten 3 Zeichen eingeben",
+            errtext:"Bitte mindesten 3 Zeichen eingeben"
            },
            {
             sel:"#nname",
             iafter:"#nname",
-            errtext:"Bitte mindesten 3 Zeichen eingeben",
+            errtext:"Bitte mindesten 3 Zeichen eingeben"
            },
            {
             sel:"#email",
@@ -130,7 +130,7 @@
             errtext:"Bitte mindesten 3 Zeichen eingeben" 
            },
            {
-            class:".auswahl",
+            sel:".auswahl",
             iafter:"#auswahl1",
             errtext:"Bitte auswählen" 
            },
@@ -142,29 +142,30 @@
          ]
      });
         $("#vname").change(function(){
-            $(".error").remove();
+            setCheckRemove();
             if($(this).val().length < 3)getCheck(0,1);
         });
         $("#nname").change(function(){
-            $(".error").remove();
+            setCheckRemove();
             if($(this).val().length < 3)getCheck(1,1);
         });
         $("#email").change(function(){
-            $(".error").remove();
-           if($(this).val().length < 3)getCheck(2,1);
+           setCheckRemove();
+           if(!getCheckEmail($(this).val()))getCheck(2,1);
         });
         $("#content").change(function(){
-            $(".error").remove();
+            setCheckRemove();
             if($(this).val().length < 3)getCheck(4,1);
         });
         $("#submit").click(function(){
+            setCheckRemove();
             if($("#vname").val().length < 3) {
                 getCheck(0,1);
             } else 
             if($("#nname").val().length < 3){
                 getCheck(1,1);
             } else
-            if($("#email").val().length < 3){
+            if(!getCheckEmail($("#email").val())){
                 getCheck(2,1);
             } else
             if(!$(".auswahl").is(":checked")){
@@ -172,15 +173,24 @@
             } else
             if($("#content").val().length < 3){
                getCheck(4,1);
-            } else $(".error").remove();
+            } else {
+                setCheckRemove(); 
+            }
         });
-        
-        function getCheck(a,err){        
+        function setCheckRemove(){
+            $("input").removeClass("error-input");
+            $("textarea").removeClass("error-input");
             $(".error").remove();
+        }
+        function getCheckEmail(email){
+            if(!email.match(/\w[a-z0-9\.\-]+@\w[a-z0-9\.\-]+\.\w[a-z]+/gi))return false;
+            return true;
+        }
+        function getCheck(a,err){        
+            setCheckRemove();
             var e = $(document).data().formdata[a];
-            $(e.class).removeClass("error-input");
             if(err>0){
-                $(e.class).addClass("error-input");
+                $(e.sel).addClass("error-input");
                 $('<span class="error">'+e.errtext+'</span>').insertAfter(e.iafter);
                 var self = $(e.iafter);
                  setTimeout(function(){
