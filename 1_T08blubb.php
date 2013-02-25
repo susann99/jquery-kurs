@@ -14,6 +14,11 @@
                 alert("test1");
             }
         });
+        $("html").click(function(event){
+            if(event.target == event.currentTarget){
+                alert("test2");
+            }
+        });
     });
 
         </script>
@@ -21,13 +26,10 @@
         <title>Formular Tag07</title>
     </head>
     <body>
-<div class="box">a
-</div>
-        <div class="box">b
-</div>
-        <div class="box">c
-</div>
-        <div>frei</div>
+<div class="box">aaaaaaaaaaa</div>
+<div class="box">bbbbbbbbbbbbbb</div>
+<div class="box">cccccccccccccccc</div>
+<div>frei eieieieieieieie</div>
 </body>
 </html>
 
