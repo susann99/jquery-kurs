@@ -54,6 +54,12 @@ $(document).ready(function(){
         });
     });
 });
+//Inhalt
+$(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
 
 // Formular
 $(document).ready(function(){

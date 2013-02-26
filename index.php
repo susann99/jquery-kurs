@@ -11,7 +11,7 @@
         <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
             $(document).ready(function(){
-                var arrColor = ["red","blue","green","orange","yellow","mangenta"];
+                var arrColor = ["green","blue","red","orange","yellow","mangenta"];
                 $("nav a.n0").each(function(index){
                     $(this).addClass("navi"+arrColor[index % arrColor.length]);
 		    $("article h1").eq(index).css("color",arrColor[index % arrColor.length]);
@@ -35,31 +35,30 @@
                 <ul>
                     <li><a class="n0" href="#home">Home</a></li>
                     <li><a class="n0" href="#news">News</a></li>
-                    <li><a class="n0" href="#inhalt">Inhalt</a>
+                    <li><a class="n0" href="#inhalt">Roter Faden</a>
                     <ul>
-                            <li><a href="#">Kapitel</a></li>
                             <li><a href="#">Beispiele</a></li>
-                            <li><a href="#">Projekt</a></li>
+			    <li><a href="#">Codeschnipsel</a></li>
+                            <li><a href="#">Tipps</a></li>
                             <li><a href="#">Downloads</a></li>
                     </ul>
                     </li>
                     <li><a class="n0" href="#doku">Doku</a>
-                    
                         <ul>
-                            <li>Videos</li>
-                            <li>Bücher</li>
-                            <li>Websites</li>
-                            <li>Kursanbieter</li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Bücher</a></li>
+                            <li><a href="#">Websites</a></li>
+                            <li><a href="#">Kursanbieter</a></li>
                         </ul>
     
                     </li>
                     <li><a class="n0" href="#links">Links</a>
                         <ul>
-                            <li>Arbeitsumgebung</li>
-                            <li>jQuery</li>
-                            <li>Javascript</li>
-                            <li>HTML/CSS</li>
-                            <li>weitere Framworks</li>
+                            <li><a href="#">Arbeitsumgebung</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">HTML/CSS</a></li>
+                            <li><a href="#">weitere Framworks</a></li>
                         </ul>
                     </li>
                     <li><a class="n0" href="#profil">Profil</a></li>
@@ -96,58 +95,91 @@
                                 Ein Galerie auf jeder Seite.
                                 <h4>Hier klicken und der Kasten zeigt mehrere Animation, Schrift und Kastenbreite</h4>
                             </li>
-                            <li>Eine Formularanwendung: Kontaktseite.</li>
-                            <li style="clear: both;">HTML5 und CSS3, Google</li>
+                            <li>Eine Formularanwendung: Kontaktseite. HTML5 und CSS3, Google.</li>
                         </ul>
                     </article>
                     <article>
-                        <h2><a name="news">News</a></h2>
-			<h1>Projekt - News</h1>
+                        <h2><a name="news">Logbuch</a></h2>
+			<h1>Projekt - Logbuch</h1>
                         <p>Hier könnt Ihr den aktuellen Fortschritt des Projektes verfolgen. Dazu verwende ich die Listendarstellungen von jQuery z.B. mit der Zebradarstellung.</p>
                         Newslisten
                     </article>
                     <article>
-                        <h2><a name="inhalt">Inhalt</a></h2>
-			<h1>Projekt - Inhalt</h1>
-                        <p>Der Inhalt ist mit einem Arkkordeon umgesetzt. Das heißt die Artikel sind ausklappbar.</p>
-                        <ol>
-                            <li>
-                                Einf&uuml;hrung
-                                <p>
-                                    1. Was ist jQuery<br>
-                                    2. Wie wird es Eingebunden<br>
-                                    3. Erste Finger&uuml;bungen
-                                </p>
-                            </li>
-                            <li>
-                                Selectoren
-                                <p>
-                                    1. Selectoren<br>
-                                    2. Beispiele<br>
-                                    3. Projekt
-                                </p>
-                            </li>
-                            <li>
-                                best Practic mit each, modulo, this
-                                <p>
-                                    for each Schleife in jQuery: $.each(arrColor, function(index, value) {...});
-                                </p>
-                            </li>
-                             <li>
-                                ToDo-Listen
-                                <p>
-                                    1. Einarbeitung NetBeans<br>
-                                    2. GitHub<br>
-                                    3. kleines Tutorial erstellen
-                                </p>
-                            </li>
-                        </ol>
+                        <h2><a name="roterfaden">Roter Faden</a></h2>
+			<h1>Der Rote Faden</h1>
+                        <p>Dieser Workflow, eine Empfehlung zum Abarbeiten, ist mit einem Arkkordeon umgesetzt. Das heißt die Artikel sind ausklappbar.</p>
+                        <div id="accordion">
+			    <h3>Einführung</h3>
+			    <div>
+			      <p></p>
+				<ul>
+				    <li>Übersicht von JavaScript Frameworks</li>
+				    <li>Abgrenzungen zu anderen Frameworks</li>
+				    <li>Konzepte zur Anwendung von jQuery</li>
+				    <li>Übersicht und Aufgaben von Plugins</li>
+				    <li>Kompatibilität zu anderen Frameworks und Browsern</li>
+				    <li>Anwendungsfälle und Anwendungsgebiete</li>
+				    <li>Barrierefreiheit und Suchmaschinenoptimierung</li>
+				</ul>
+			    </div>
+			    <h3>jQuery Basics</h3>
+			    <div>
+			      <p></p>
+				<ul>
+				    <li>Funktionen, Selektoren, Attribute</li>
+				    <li>Einbinden und strukturieren von Scripten in HTML-Dokumenten</li>
+				    <li>DOM-Objektmodell</li>
+				    <li>$() Funktion</li>
+				    <li>Filterauswahlen</li>
+				    <li>Zugriff auf HTML-Elemente</li>
+				    <li>Verkettung von Funktionen</li>
+				    <li>Eventhandling und Callbacks</li>
+				</ul>
+			    </div>
+			    <h3>Verändern von HTML und CSS</h3>
+			    <div>
+			      <p></p>
+			      <ul>
+				<li>Verändern und Ersetzen von HTML-Elementen</li>
+				<li>Verändern und Ersetzen von Text</li>
+				<li>CSS-Eigenschaften verändern</li>
+				<li>Farbanimationen</li>
+				<li>Show/Hide/Toggle-Effekte</li>
+				<li>Drag & Drop Effekte</li>
+				<li>Easing Effekte</li>
+			      </ul>
+			    </div>
+			    <h3>Plugins</h3>
+			    <div>
+			      <p></p>
+			      <ul>
+				<li>jQuery UI Draggable Plugin</li>
+				<li>jQuery UI Droppable Plugin</li>
+				<li>jQuery UI Sortable Plugin</li>
+			      </ul>
+			    </div>
+			    <h3>Ajax</h3>
+			    <div>
+			      <p></p>
+			      <ul>
+				<li>Aufbau einer Ajax Anwendung</li>
+				<li>Vor- und Nachteile von Ajax</li>
+				<li>Sicherheitsrisiken</li>
+				<li>Anforderungen an die Client Plattform</li>
+				<li>Anforderungen an die Server Plattform</li>
+				<li>Ajax basierende Anwendungsbeispiele</li>
+				<li>Daten abrufen</li>
+				<li>Parameter senden</li>
+				<li>Responses verarbeiten</li>
+				<li>XML verarbeiten</li>
+				<li>JSON</li>
+				<li>Ajax mit PHP, ActionScript, Perl CF und Python, ASP.NET</li>
+			      </ul>
+			    </div>
+			 </div>
                     </article>
                     <article>
-                        <h2><a name="doku">Doku</a></h2>
-			<h1>Dokumentation</h1>
-                        <p>Referenz</p>
-                        Newslisten
+                        
                     </article>
                     <article>
                         <h2><a name="kontakt">Kontakt</a></h2>
@@ -208,6 +240,18 @@
                             (Quelle: http://de.wikipedia.org)
                             <h4>Um von Bild1 zu Bild2 zu wechseln auf das Bild oder auf den Link Bild 1 bzw. Bild 2 klicken.</h4>
                         </p>
+                    </article>
+		    <article>
+			<h2><a name="roterfaden">Roter Faden</a></h2>
+			<div class="img"> 
+                            <img class="bild" name="roter1" id="roter1" src="images/marine1.jpg">
+                        </div>
+                        <br>
+                        <p><h3>Ein Faden im Tauwerk</h3>
+			    Unter einem roten Faden versteht man Richtlinie die sich durch ein Projekt zieht. <br>
+			    Der Begriff stammt aus der  britischen Marine, hier war in das gesamte Tauwerk der königlichen Flotte
+			    ein roter Faden mit eingeflochten. An diesem Faden war zu erkennen das diese Tau zur englichen Flotte gehört.
+			</p>
                     </article>
                     <article>
                         <h2><a name="kontakt">Kontakt</a></h2>
