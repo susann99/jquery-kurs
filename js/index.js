@@ -19,7 +19,43 @@ function menu(obj){
   $(document).ready(function(){
   menu($("ul li"));
  });
- // Formular
+ // Home - Animation
+$(document).ready(function(){
+     $(".home li").eq(0).click(function() {
+                $(this).fadeOut(1000).fadeIn(1000);
+     });
+     $(".home li").eq(1).click(function() {
+                 $(".home li").eq(2).slideToggle(500);
+     });
+     $(".home li").eq(4).click(function() {
+                $(".home li").eq(4).animate({fontSize:"20px",width:"400px"},500);
+     });
+
+// Home Bilder
+
+    $("#ame2").click(function() {
+        $("#home1").fadeOut(1000,function(){
+            $("#home2").fadeIn(1000);
+        });
+    });
+    $("#ame1").click(function() {
+        $("#home2").fadeOut(1000,function(){
+            $("#home1").fadeIn(1000);
+        });
+    });
+    $("#home1").click(function() {
+        $("#home1").fadeOut(1000,function(){
+            $("#home2").fadeIn(1000);
+        });
+    });
+    $("#home2").click(function() {
+        $("#home2").fadeOut(1000,function(){
+            $("#home1").fadeIn(1000);
+        });
+    });
+});
+
+// Formular
 $(document).ready(function(){
     $("#vname").data(
            {

@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <!-- http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css -->
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
+        <script src="js/jquery-ui.js"></script>
+        <!-- http://code.jquery.com/ui/1.10.1/jquery-ui.js -->
         <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
             $(document).ready(function(){
@@ -70,25 +74,30 @@
                     <article>
                         <h2><a name="home">Home</a></h2>
                         <h1>jQuery-Beispielprojekt</h1>
-                        <h3>Da ich selber noch nicht der jQueryChrack bin habe ich ein einfaches Konzept gewählt:</h3>
-                        <ul>
+                        <h4>Achtung die Text-Kästen können auch per Klick Animiert werden,</h4> 
+                        dies soll einen kleinen Überblick verschaffen, was jQuery alles an Animation kann. Natürlich gibts noch mehr.
+                        <h3>Das Konzepte ist:</h3>
+                        <ul class="home">
                             <li>
-                                der gesamte Content ist auf einer Seite (Klorolle), soll aber durch jQuery wie eine Seitennavigation aussehen
+                                Der gesamte Content ist auf einer Seite (Klorolle), soll aber durch jQuery wie eine Seitennavigation aussehen.
+                                <h4>Dieser Kasten blendet bei Klick ein -und aus</h4>
                             </li>
                             <li>
-                                einfache listen als Navigation, mit Anker, Ausklappmenü
+                                Einfache Listen als Navigation, mit Anker, Ausklappmenü.
+                                <h4>Hier klicken und der Kasten (Geld...) klappt ein-/aus (slideToggle)</h4>
+                            </li>
+                            <li style="clear: both;">
+                                Geldwerter Content wird nicht durch jQuery ins Document geschieben, Kontaktdaten und persönliche Daten schon.
                             </li>
                             <li>
-                                Geldwerter Content wird nicht durch jQuery erzeugt
+                                Der Content soll hübsch in Arkkordeon und Karteikarten dargestellt werden, da wo es Sinn macht
                             </li>
-                            <li>
-                                der Content soll hübsch in Arkkordeon und Karteikarten dargestellt werden, da wo es Sinn macht
+                            <li style="clear: both;">
+                                Ein Galerie auf jeder Seite.
+                                <h4>Hier klicken und der Kasten zeigt mehrere Animation, Schrift und Kastenbreite</h4>
                             </li>
-                            <li>
-                                Ein Galerie auf jeder Seite
-                            </li>
-                            <li>Eine Formularanwendung: Kontaktseite</li>
-                            <li>HTML5 und CSS3, Google</li>
+                            <li>Eine Formularanwendung: Kontaktseite.</li>
+                            <li style="clear: both;">HTML5 und CSS3, Google</li>
                         </ul>
                     </article>
                     <article>
@@ -183,9 +192,21 @@
                 <div id="contentRight">
                     <article>
                         <h2><a name="home">Home</a></h2>
-                        <img src="images/Amelia-Earhart.png">
+                        <div class="imghome"> 
+                            <img class="bildhome" name="home1" id="home1" src="images/Amelia-Earhart.png">
+                            <img class="bildhome" name="home2" id="home2" src="images/amelia_earhart2.jpg">
+                        </div>
+                        <br>
+                        <p><small>Bildquelle: Google | <a id="ame1" href="#"> Bild 1</a> | <a id="ame2" href="#"> Bild 2</a></small></p>
+                       
+                        
                         <p>
-                            Homedaten
+                        <h3>Amelia Earhart</h3>
+                            Amelia Mary Earhart war eine US-amerikanische Flugpionierin und Frauenrechtlerin.<br><br>  
+                            24. Juli 1897 in Atchison, Kansas; <br>verschollen am 2. Juli 1937 im Pazifischen Ozean, 
+                            für tot erklärt am 5. Januar 1939.<br> 
+                            (Quelle: http://de.wikipedia.org)
+                            <h4>Um von Bild1 zu Bild2 zu wechseln auf das Bild oder auf den Link Bild 1 bzw. Bild 2 klicken.</h4>
                         </p>
                     </article>
                     <article>
