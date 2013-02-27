@@ -54,13 +54,27 @@ $(document).ready(function(){
         });
     });
 });
-//Inhalt
+//roter faden
 $(function() {
     $( "#accordion" ).accordion({
       heightStyle: "content"
     });
   });
-
+ $(document).ready(function(){
+     $('#s1').cycle('fade');//galerie auf der rechten 
+//    $('#s1').cycle({ //galerie auf der rechten Seite
+//    fx:    'shuffle', 
+//    delay: -4000 
+//    });
+ });
+//Buchempfehlung mit Tabs aus der UI
+$(function() {
+    $( "#tabs" ).tabs();
+});
+//Tooltipps
+$(function() {
+    $(document).tooltip();
+  });
 // Formular
 $(document).ready(function(){
     $("#vname").data(
