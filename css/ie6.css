@@ -1,0 +1,9 @@
+﻿
+
+/* IE-Patch für IE 7*/
+*:first-child+html .group { min-height: 0; } 
+
+/* IE-Patch für IE 6*/
+* html .group { height: 1%; }
+
+

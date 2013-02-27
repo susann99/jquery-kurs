@@ -46,7 +46,7 @@
                             <li><a href="#">Downloads</a></li>
                     </ul>
                     </li>
-                    <li><a class="n0" href="#doku">Doku</a>
+                    <li><a class="n0" href="#doku">Lernmaterial</a>
                         <ul>
                             <li><a href="#">Videos</a></li>
                             <li><a href="#">Bücher</a></li>
