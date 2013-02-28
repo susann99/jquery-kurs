@@ -75,7 +75,55 @@ $(function() {
 $(function() {
     $(document).tooltip();
   });
-// Formular
+// Beispiele
+$(document).ready(function(){
+    $('.paginated tr').mouseover(function(){
+        $(this).addClass('hover');
+    });
+    $('.paginated tr').mouseout(function(){
+        $(this).removeClass('hover');
+    });
+    $('.paginated tr:even').addClass('even'); 
+    $("#bshow").click(function(){
+        $("#dshow").show(300);
+    });
+    $("#bhide").click(function(){
+        $("#dshow").hide(300);
+    });
+    $("#bfadeout").click(function() {
+        $("#dfade").fadeOut(300);
+    });
+    $("#bfadein").click(function() {
+        $("#dfade").fadeIn(300);
+    });
+    $("#bslidedown").click(function() {
+            $("#dslide").slideDown(500);
+    });
+    $("#bslideup").click(function() {
+        $("#dslide").slideUp(500);
+    });
+ });
+ // Logbuch
+ $(function() {
+    $( ".column" ).sortable({
+      connectWith: ".column"
+    });
+ 
+    $( ".portlet" ).addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-minusthick'></span>")
+        .end()
+      .find( ".portlet-content" );
+ 
+    $( ".portlet-header .ui-icon" ).click(function() {
+      $( this ).toggleClass( "ui-icon-minusthick" ).toggleClass( "ui-icon-plusthick" );
+      $( this ).parents( ".portlet:first" ).find( ".portlet-content" ).toggle();
+    });
+ 
+    $( ".column" ).disableSelection();
+  });
+    // Formular
 $(document).ready(function(){
     $("#vname").data(
            {

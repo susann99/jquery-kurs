@@ -49,7 +49,6 @@ td * {
         <!-- http://code.jquery.com/ui/1.10.1/jquery-ui.js -->
         <script type="text/javascript">
             $(document).ready(function(){
-         
 		$('.paginated tr').mouseover(function(){
 		    $(this).addClass('hover');
 		});

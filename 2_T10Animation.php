@@ -32,24 +32,34 @@
 		}
 		#hill2 {
 			background: transparent url(images/spritely/hill2.png) 0 258px repeat-x;
+                   
 		}
 		#hill1 {
 			background: transparent url(images/spritely/hill-with-windmill.png) 0 104px repeat-x;
+                        z-index: 124;
 		}
-		#balloons {
-                        position: relative;
-                        left: 720px;
-			background: transparent url(images/spritely/balloons.png) 0 0 repeat-y;
-		}
-		#bird {
-			background: transparent url(images/spritely/bird-forward-back.png) 0 0 no-repeat;
-			position: absolute;
+                #bird {
+			background: transparent url(images/spritely/flyer-forward-back.png) 0 0 no-repeat;
 			top: 150px;
 			left: 65px;
-			width: 180px;
+			width: 184px;
 			height: 123px;
-			z-index: 2000;
+			z-index: 200;
 			cursor: pointer;
+		}
+                .blase {
+                    z-index: 2020;
+                    color:blue;
+                    position: relative;
+                    width: 60px;
+                    height: 20px;
+                    top: 20px;
+                    left: 300px;
+                }
+		#balloons {
+                        z-index: 2000;
+                        left: 720px;
+			background: transparent url(images/spritely/kuh.png) 0 0 repeat-y;
 		}
 	</style>
 	
@@ -75,6 +85,9 @@
 					.isDraggable()
 					.activeOnClick()
 					.active();
+                                $("#bird").click(function(){
+                                    $('<span class="blase">Amelia</span>').insertAfter(this);
+                                })
 				$('#clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 10});
 				$('#hill2').pan({fps: 30, speed: 2, dir: 'left', depth: 30});
 				$('#hill1').pan({fps: 30, speed: 3, dir: 'left', depth: 70});
@@ -154,11 +167,11 @@
 		<div id="bg" class="stage"></div>
 		<div id="clouds" class="stage"></div>
 		<div id="hill2" class="stage"></div>
+                <div id="bird"></div>
 		<div id="hill1" class="stage"></div>
                 <div id="balloons" class="stage"></div>
-		<div id="logo">Spritely</div>
-	</div>
-	<div id="bird"></div>
+		<div id="logo">Amelia on fly</div>
+        </div>
 	
 	<div id="mainContent">
 		<h1>Spritely 0.4 Examples</h1>

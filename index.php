@@ -13,6 +13,9 @@
         <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
             $(document).ready(function(){
+                $("article").css("display","none");
+                $("#contentLeft h2").css("display","none");
+                $("#contentRight").css("display","block");
                 var arrColor = ["green","blue","red","orange","yellow","mangenta"];
                 $("nav a.n0").each(function(index){
                     $(this).addClass("navi"+arrColor[index % arrColor.length]);
@@ -38,11 +41,11 @@
                 <ul>
                     <li><a class="n0" href="#home">Home</a></li>
                     <li><a class="n0" href="#logbuch">Logbuch</a></li>
-                    <li><a class="n0" href="#inhalt">Roter Faden</a>
+                    <li><a class="n0" href="#roterfaden">Roter Faden</a>
                     <ul>
                             <li><a href="#buch">Buchempfehlung</a></li>
-			    <li><a href="#">Beispiele</a></li>
-                            <li><a href="#">Tipps</a></li>
+			    <li><a href="#beispiel">Beispiele</a></li>
+                            <li><a href="#tipps">Tipps</a></li>
                             <li><a href="#">Downloads</a></li>
                     </ul>
                     </li>
@@ -102,10 +105,54 @@
                         </ul>
                     </article>
                     <article>
-                        <h2><a name="logbuch">Logbuch</a></h2>
-			<h1>Projekt - Logbuch</h1>
-                        <p>Hier könnt Ihr den aktuellen Fortschritt des Projektes verfolgen. Dazu verwende ich die Listendarstellungen von jQuery z.B. mit der Zebradarstellung.</p>
-                        Newslisten
+                        <h2><a name="tipps">Tipps</a></h2>
+			<h1>Ein paar Tipps</h1>
+                        <p>Hier könnt Ihr den aktuellen Fortschritt des Projektes verfolgen. Mit Interactions/Sortable/Portlets uas der UI.</p>
+                       <div class="column">
+ 
+                        <div class="portlet">
+                          <div class="portlet-header"> Was ist jQuery?</div>
+                          <div class="portlet-content">
+                              Ein Javascript-Framwork! Erweiterungen einer Programmiersprache wie eine Art Akkuschrauber mit schönen Aufsätzen (Toolset).
+                          </div>
+                        </div>
+
+                        <div class="portlet">
+                          <div class="portlet-header">Javascript-Framwork</div>
+                          <div class="portlet-content">
+                              <ul>
+                                  <li>Ext JS</li>
+                                  <li>Dojo - Dojo Community + node.js</li>
+                                  <li>GWT (typisch Google, immer etwas komplex)</li>
+                                  <li>script.aculo.us - Frackles</li>
+                              </ul>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="column">
+
+                        <div class="portlet">
+                          <div class="portlet-header">Shopping</div>
+                          <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                        </div>
+
+                      </div>
+
+                      <div class="column">
+
+                        <div class="portlet">
+                          <div class="portlet-header">Links</div>
+                          <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                        </div>
+
+                        <div class="portlet">
+                          <div class="portlet-header">Images</div>
+                          <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                        </div>
+
+                      </div>
                     </article>
                     <article>
                         <h2><a name="roterfaden">Roter Faden</a></h2>
@@ -242,6 +289,79 @@
 
                     </article>
                     <article>
+                        <h2><a name="beispiel">Beispiele</a></h2>
+			<h1>Beispiele mit Zebra</h1>
+                        <h4>Die Tabelle ist als Zebra mit einer Mouseoverfunktion umgesetzt. Wird folgende Collectio mit dem Filterselector even (also alle ungeraden) erzeugt: 
+                            <br>$('.paginated tr:even').addClass('even');  </h4>
+                        <table id="sortable" class="paginated">
+                        <thead>
+                                <tr>
+                                    <th class="numeric">Nr.</th>
+                                    <th>Animation</th>
+                                    <th>Code</th>
+                                    <th>Erläuterung</th>
+                                </tr>
+                        </thead>
+                            <tbody>
+                                <tr>
+                                        <td>1</td>
+                                        <td>show()</td>
+                                        <td>$("#test").show(300);</td>
+                                        <td>
+                                            <button id="bshow">Fahne Anzeigen</button>
+                                            <div id="dshow">
+                                                <img src="images/anima1.png">
+                                            </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>2</td>
+                                        <td>hide()</td>
+                                        <td>$("#test").hide(300);</td>
+                                        <td><button id="bhide">Fahne Weg</button></td>
+                                </tr>
+                                <tr>
+                                        <td>3</td>
+                                        <td>fadeOut()</td>
+                                        <td>$("#test").fadeOut(300);</td>
+                                        <td>
+                                            <button id="bfadeout">Fahne Ausblenden</button>
+                                            <div id="dfade">
+                                                <img src="images/anima1.png">
+                                            </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>4</td>
+                                        <td>fadeIn()</td>
+                                        <td>$("#test").fadeIn(300);</td>
+                                        <td>
+                                            <button id="bfadein">Fahne Einblenden</button>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>5</td>
+                                        <td>slideUp()</td>
+                                        <td>$("#test").slideUp(300);</td>
+                                        <td>
+                                            <button id="bslideup">Fahne Einklappen</button>
+                                            <div id="dslide">
+                                                <img src="images/anima1.png">
+                                            </div>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>6</td>
+                                        <td>slideDown()</td>
+                                        <td>$("#test").slideDown(300);</td>
+                                        <td>
+                                            <button id="bslidedown">Fahne Ausklappen</button>
+                                        </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    <article>
                         <h2><a name="kontakt">Kontakt</a></h2>
                         <div id="box">
                         <form class="formular" action="#" method="post">
@@ -329,11 +449,12 @@
                     </article>
                     <article>
                         <h2><a name="buch">Buchempfehlung bei Amazoon</a></h2>
+                        <div>
                         <a href="http://www.amazon.de/gp/product/3836218100/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3836218100&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3836218100&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3836218100" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                         <a href="http://www.amazon.de/gp/product/B008UCNMHI/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008UCNMHI&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=B008UCNMHI&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B008UCNMHI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                         <a href="http://www.amazon.de/gp/product/3836216787/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3836216787&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3836216787&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3836216787" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                         <a href="http://www.amazon.de/gp/product/3645601678/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3645601678&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3645601678&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3645601678" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                        <br><br>
+                        </div>
                         <hr>
                         <h4>Kostenlose EDV-Bücher online</h4>
                         Auch ein Blick auf das <a href="http://openbook.galileocomputing.de/javascript_ajax/">kostenlose Onlineangebot</a> von Gelileo Press lohnt sich. Ist nur leider kein jQuery-Buch dabei.
