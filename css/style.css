@@ -7,8 +7,32 @@
 */
 * {margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; }
 body,html {height:100%;}
+h3 {
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 16px;
+    color: darkblue;
+    clear: both; 
+}
+h4 {
+    margin-top:10px;
+    padding-left:30px;
+    padding-bottom:10px;
+    font-size: 12px;
+    color: green;
+    background-image: url("../images/anima1.png");
+    background-repeat:no-repeat;
+    background-position-x:2px;
+}
+h2 {
+    clear: both; 
+}
+small {
+    font-size: 10px;
+}
+
 #inhalt {
-    margin:auto; margin-top:20px; padding:5px; max-width:1024px; min-height: 500px;
+    margin:auto; margin-top:20px; padding:5px; max-width:900px; min-height: 500px;
     box-shadow:1px 2px 4px 1px #B43104;border-radius:12px;
     background:-moz-linear-gradient(top, #fff, #adf); /* Firefox */
     background:-webkit-linear-gradient(top, #fff, #adf); /* Safari, Chrome */
@@ -33,82 +57,155 @@ header h1 {
     padding:5px;
     text-shadow:brown 2px 1px 4px;
 }
+/* menue */
 nav {
     background: #adf;
     height: 30px;
 }
-.naviRot {
+.navired {
     background-color: red;
     color:#fff;
     font-weight: bold;
 }
-.naviBlau {
+.naviblue {
     background-color: blue;
     color:#fff;
     font-weight: bold;
 }
-.naviGruen {
+.navigreen {
     background-color: green;
     color:#fff;
     font-weight: bold;
 }
-.naviOrang {
+.naviorange {
     background-color: orange;
     color:#fff;
     font-weight: bold;
 }
-.naviMangenta {
+.navimangenta {
     background-color: magenta;
     color:#fff;
     font-weight: bold;
 }
-.naviYellow {
+.naviyellow {
     background-color: yellowgreen;
     color:#fff;
     font-weight: bold;
 }
+nav ul {
+	list-style-type:none;
+	margin:0px;
+}
+nav ul ul {
+	display:none;
+        position:absolute;
+	width:150px;
+	margin:0;
+        padding-top:1px;
+	left:8px;
+	top:26px;
+}
+nav li {
+	float:left;
+	position:relative;
+	padding:5px 8px 5px 5px;
+}
+nav li a {
+  padding:4px 8px;
+  border: blue solid thin;
+}
+nav li a:hover{
+  color:red;
+  background-color: yellow;
+  border: #B43104 solid thin;
+}
+nav li li {
+	float:none;
+	width:150px; /* ie6 */
+	background-color:#adf;
+        opacity: 0.9;
+	padding:0px;
+        background:-moz-linear-gradient(top, #fff, #c8c8c8); /* Firefox */
+        background:-webkit-linear-gradient(top, #fff, #c8c8c8); /* Safari, Chrome */
+        background:-o-linear-gradient(top, #fff, #c8c8c8); /* Opera */
+        background:-ms-linear-gradient(top, #fff, #c8c8c8); /* IE */
+        background:linear-gradient(top, #fff, #c8c8c8);  
+}
+
+nav li li a {
+        color:darkblue;
+        font-weight: bold;
+	width:140px;
+	margin:0 0 0 0;
+	padding:3px;
+        padding-left:5px;
+	line-height:20px;
+        opacity: 1;
+	display:inline-block;  /* ie6 */
+        border: #45709A dotted thin;
+}
+.menue li:hover ul ul {
+	display:none;
+}
+
+.menue li:hover ul {
+	display:block;
+}
+.menue li li:hover ul {
+	display:block;
+}
+/* content */
 #content {
     margin:5px; margin-left:20px;
-    min-height: 480px;
+    min-height: 523px;
 }
 #contentRight{
     position: absolute;z-index: 100;top:135px;right:10px;
     border: brown thin dotted;border-radius:10px;
-    width:300px;height:430px;
+    width:300px;min-height:523px;
     text-align:center;
     padding:5px;
     padding-top:5px;
+    display: none;
 }
 #contentRight img {
     border-radius:5px;
     border: orange thin solid;
 }
-#contentLeft article h2 {
-    display: none;
-}
-#contentLeft article h1 {
-    font-size: 24px;
+#contentRight article {
+    text-align: left;
+    width:280px;
+    margin-left: 14px;
 }
 #contentRight article p {
-    text-align: left;
     margin-left:20px;
+    font-size:10px;
 }
-#contentLeft{
+#contentRight article h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 16px;
+}
+#contentLeft {
     margin:10px;
     margin-top:30px;
-    width:600px;
+    width:530px;
+}
+#contentLeft article h1 {
+    font-size: 40px;
+    margin-bottom:20px;
+    color: #adf;
+    font-weight: bold;
+    text-shadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+}
+#contentLeft article {
+    margin:10px;
+    margin-top:10px;
+    width:520px;
 }
 #contentLeft ol {
     margin-left:30px;
     margin-top: 10px;
-}
-article {
-    display: none;
-}
-article h2 {
-    font-size: 24px;
-    text-align: right;
-    margin-right: 220px;
 }
 footer {
     position: relative;right: 5px;
@@ -122,55 +219,31 @@ a {
 a:hover {
 	color:#000000;
 }
-nav ul {
-	list-style-type:none;
-	margin:0px;
+.nix  {
+        color:blue;
 }
-nav ul ul {
-	display:none;
-        position:absolute;
-	width:150px;
-	margin:0;
-	left:0px;
-	top:26px;
+/* Home */
+.home {
+  margin:10px; padding:10px;
+  list-style-type:none; 
 }
-nav li {
-	float:left;
-	position:relative;
-	padding:5px 8px 5px 5px;
-}
-nav li a{
-  padding:4px 8px;
-  border: blue solid thin;
-}
-nav li a:hover{
-  color:red;
-  background-color: yellow;
-  border: #B43104 solid thin;
-}
-nav li li {
-	float:none;
-	width:150px; /* ie6 */
-	background-color:#CCCCCC;
-	padding:0;
+.home li {
+  margin-right: 10px;
+  margin-bottom: 8px;
+  padding:10px;
+  width: 180px;
+  border: brown thin dotted;
+  border-radius:10px;
+  float:left;
 }
 
-nav li li a {
-	width:147px;
-	margin:0 0 0 0;
-	padding:0;
-	line-height:20px;
-	display:inline-block;  /* ie6 */
+img[name=home2]{
+   display: none; 
+   width: 274px;
 }
-.menue li:hover ul ul {
-	display:none;
-}
-
-.menue li:hover ul {
-	display:block;
-}
-.menue li li:hover ul {
-	display:block;
+.rightpics {
+    width: 280px;
+    height: 200px;
 }
 /* Formular */
 #box {
@@ -279,7 +352,47 @@ input[type="button"] {
    background: #1843C2;
    text-shadow: none;
  }
+ .listenormal {
+     margin-left:20px;
+ }
+/* Tabelle Zebra */
+table {
+	width: 500px;
+	margin: 10px;
+}
+th {
+	background: #CCCCCC;
+	padding: 2px 11px;
+	border-right: 1px solid #fff;
+}
+td {
+	padding: 6px 11px;
+	vertical-align: top;
+}
+td * {
+	padding: 6px 11px;
+}
 
+.even {
+	background-color:#EEEEEE;
+}
+.hover {
+	background-color:#EEEEFF;
+}
+#dshow {
+    display: none;
+}
+/* Tipps*/
+  .column { width: 260px; float: left; padding-bottom: 100px; }
+  .portlet { margin: 0 1em 1em 0; }
+  .portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+  .portlet-header .ui-icon { float: right; }
+  .portlet-content { padding: 0.4em; }
+  .ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+  .ui-sortable-placeholder * { visibility: hidden; }
+  .column ul {
+      margin-left:18px;
+  }
 
 
 

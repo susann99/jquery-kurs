@@ -19,7 +19,111 @@ function menu(obj){
   $(document).ready(function(){
   menu($("ul li"));
  });
- // Formular
+ // Home - Animation
+$(document).ready(function(){
+     $(".home li").eq(0).click(function() {
+                $(this).fadeOut(1000).fadeIn(1000);
+     });
+     $(".home li").eq(1).click(function() {
+                 $(".home li").eq(2).slideToggle(500);
+     });
+     $(".home li").eq(4).click(function() {
+                $(".home li").eq(4).animate({fontSize:"20px",width:"400px"},500);
+     });
+
+// Home Bilder
+
+    $("#ame2").click(function() {
+        $("#home1").fadeOut(1000,function(){
+            $("#home2").fadeIn(1000);
+        });
+    });
+    $("#ame1").click(function() {
+        $("#home2").fadeOut(1000,function(){
+            $("#home1").fadeIn(1000);
+        });
+    });
+    $("#home1").click(function() {
+        $("#home1").fadeOut(1000,function(){
+            $("#home2").fadeIn(1000);
+        });
+    });
+    $("#home2").click(function() {
+        $("#home2").fadeOut(1000,function(){
+            $("#home1").fadeIn(1000);
+        });
+    });
+});
+//roter faden
+$(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
+ $(document).ready(function(){
+     $('#s1').cycle('fade');//galerie auf der rechten 
+//    $('#s1').cycle({ //galerie auf der rechten Seite
+//    fx:    'shuffle', 
+//    delay: -4000 
+//    });
+ });
+//Buchempfehlung mit Tabs aus der UI
+$(function() {
+    $( "#tabs" ).tabs();
+});
+//Tooltipps
+$(function() {
+    $(document).tooltip();
+  });
+// Beispiele
+$(document).ready(function(){
+    $('.paginated tr').mouseover(function(){
+        $(this).addClass('hover');
+    });
+    $('.paginated tr').mouseout(function(){
+        $(this).removeClass('hover');
+    });
+    $('.paginated tr:even').addClass('even'); 
+    $("#bshow").click(function(){
+        $("#dshow").show(300);
+    });
+    $("#bhide").click(function(){
+        $("#dshow").hide(300);
+    });
+    $("#bfadeout").click(function() {
+        $("#dfade").fadeOut(300);
+    });
+    $("#bfadein").click(function() {
+        $("#dfade").fadeIn(300);
+    });
+    $("#bslidedown").click(function() {
+            $("#dslide").slideDown(500);
+    });
+    $("#bslideup").click(function() {
+        $("#dslide").slideUp(500);
+    });
+ });
+ // Logbuch
+ $(function() {
+    $( ".column" ).sortable({
+      connectWith: ".column"
+    });
+ 
+    $( ".portlet" ).addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-minusthick'></span>")
+        .end()
+      .find( ".portlet-content" );
+ 
+    $( ".portlet-header .ui-icon" ).click(function() {
+      $( this ).toggleClass( "ui-icon-minusthick" ).toggleClass( "ui-icon-plusthick" );
+      $( this ).parents( ".portlet:first" ).find( ".portlet-content" ).toggle();
+    });
+ 
+    $( ".column" ).disableSelection();
+  });
+    // Formular
 $(document).ready(function(){
     $("#vname").data(
            {
