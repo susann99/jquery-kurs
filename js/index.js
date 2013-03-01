@@ -221,6 +221,6 @@ $(document).ready(function(){
     }
 });
 $(document).ready(function(){
-    $("#contentRight article p:contains('Kontaktdaten')").html("Susann Rieder<br>E-Mail: susann_rieder@yahoo.de");
-})
+    $("#contentRight article p:contains('Kontaktdaten')").html("<br><br>Susann Rieder<br>E-Mail: susann_rieder@yahoo.de<br>Tel: 04531 886918");
+});
 

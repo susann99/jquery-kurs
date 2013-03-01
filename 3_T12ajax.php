@@ -17,8 +17,8 @@
                             success: function(data,textStatus,jqXHR){
                               //console.log("ok -> data: %o textStatus: %o, jqXHR: %o", data,textStatus,jqXHR );
                               $("#ausgabe").html(data);
-                              var test =$("#ausgabe").$("body").children().html();
-                              $("#ausgabe").html(test);
+                              //var test =$("#website").children().html();
+                              //$("#ausgabe").html(test);
                               console.log(test);
                               $("#myDialog").dialog();
                             },
