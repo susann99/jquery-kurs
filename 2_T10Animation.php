@@ -6,9 +6,7 @@
 	<title>Spritely 0.4 Examples</title>
 	<meta name="viewport" content="width = 320" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	
 	<style type="text/css">
 		#stage {
 			top: 0px;
@@ -62,23 +60,17 @@
 			background: transparent url(images/spritely/kuh.png) 0 0 repeat-y;
 		}
 	</style>
-	
 	<!-- IE6 fixes are found in styles/ie6.css -->
 	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" /><![endif]-->
-	
 	<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
-	
 	<script src="js/jquery-ui-1.7.2.spritely.custom.min.js" type="text/javascript"></script>
 	<script src="js/jquery.spritely-0.4.js" type="text/javascript"></script>
-
 	<script type="text/javascript">
-
 		(function($) {
 			$(document).ready(function() {
 				$('#logo').click(function() {
 					document.location.href = 'http://www.spritely.net/';
 				});
-			
 				$('#bird')
 					.sprite({fps: 9, no_of_frames: 3})
 					.spRandom({top: 50, bottom: 200, left: 300, right: 320})
@@ -157,7 +149,6 @@
 				
 			});
 		})(jQuery);
-	
 	</script>
 </head>
 <body>
