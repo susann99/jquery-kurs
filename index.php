@@ -56,7 +56,6 @@
                             <li><a href="#">Websites</a></li>
                             <li><a href="#">Kursanbieter</a></li>
                         </ul>
-    
                     </li>
                     <li><a class="n0" href="#links">Links</a>
                         <ul>
@@ -128,30 +127,22 @@
                               </ul>
                           </div>
                         </div>
-
                       </div>
-
                       <div class="column">
-
                         <div class="portlet">
                           <div class="portlet-header">Shopping</div>
                           <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
                         </div>
-
                       </div>
-
                       <div class="column">
-
                         <div class="portlet">
                           <div class="portlet-header">Links</div>
                           <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
                         </div>
-
                         <div class="portlet">
                           <div class="portlet-header">Images</div>
                           <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
                         </div>
-
                       </div>
                     </article>
                     <article>
@@ -286,7 +277,6 @@
                         Für 29,99 Kindle, Autoren: Jonathan Chaffer, Karl Swedberg, Volkmar Gronau<br>
                         Verlag: dpunkt.verlag; Auflage: 1. Auflage (Übers. d. 3. engl. Aufl.) (3. Juli 2012)<br><br>
                        <a href="http://www.amazon.de/gp/product/B008UCNMHI/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008UCNMHI&linkCode=as2&tag=portalfurwand-21" title="Kindle Buch bei Amazoon">jQuery lernen und einsetzen: Bessere Webanwendungen mit einfachen JavaScript-Techniken entwickeln</a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B008UCNMHI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
                     </article>
                     <article>
                         <h2><a name="beispiel">Beispiele</a></h2>

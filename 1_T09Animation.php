@@ -4,19 +4,19 @@
        <meta charset="utf-8">
        <style type="text/css"> 
            *{margin:0; padding:0; font:14px;}
-button {width:100px;}
-p,h1,h2 {margin:20px auto;}
-h1 {font-size:20px}
-h2 {font-size:16px}
-#content {margin:20px auto; width:720px;}
-           #normal {
-               color: red;
-           }
-           p {
-               color:red;
-               border: teal thin solid;
-               width:auto;
-           }
+            button {width:100px;}
+            p,h1,h2 {margin:20px auto;}
+            h1 {font-size:20px}
+            h2 {font-size:16px}
+            #content {margin:20px auto; width:720px;}
+                       #normal {
+                           color: red;
+                       }
+                       p {
+                           color:red;
+                           border: teal thin solid;
+                           width:auto;
+                       }
            
         </style>
         <link rel="stylesheet" href="css/jquery-ui.css" />
@@ -175,6 +175,15 @@ mauris vel est.
 Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
+<ul>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+</ul>
+<ol type="1">
+    <li>hhhhh</li>
+    <li>hhhhh</li>
+</ol>
 </p>
 </div>
 </div>
