@@ -107,7 +107,6 @@
                     <article>
                         <h2><a name="tipps">Tipps</a></h2>
 			<h1>Ein paar Tipps</h1>
-                        <p>Hier könnt Ihr den aktuellen Fortschritt des Projektes verfolgen. Mit Interactions/Sortable/Portlets uas der UI.</p>
                        <div class="column">
  
                         <div class="portlet">
@@ -128,28 +127,29 @@
                               </ul>
                           </div>
                         </div>
-
                       </div>
-
                       <div class="column">
-
                         <div class="portlet">
-                          <div class="portlet-header">Shopping</div>
-                          <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                          <div class="portlet-header">Projekt in Github anlegen</div>
+                          <div class="portlet-content">Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->..<br>add, commit, Remote, pull, push</div>
                         </div>
-
                       </div>
-
                       <div class="column">
-
                         <div class="portlet">
-                          <div class="portlet-header">Links</div>
-                          <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                          <div class="portlet-header">Konzepte - jQuery</div>
+                          <div class="portlet-content">jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.</div>
                         </div>
 
                         <div class="portlet">
-                          <div class="portlet-header">Images</div>
-                          <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+                          <div class="portlet-header">Colection, Selektor, Filter, Methoden</div>
+                          <div class="portlet-content">
+			      <ul>
+                                  <li>Colection: Auswahl von DOM-Objekten</li>
+                                  <li>wird mittels Selektoren eingegrenzt</li>
+                                  <li>Filter = Untergruppe von Selectoren</li>
+                                  <li>machen etwas mit der Colection z.B. .append()</li>
+                              </ul>
+			  </div>
                         </div>
 
                       </div>

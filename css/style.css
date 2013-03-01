@@ -383,7 +383,7 @@ td * {
     display: none;
 }
 /* Tipps*/
-  .column { width: 260px; float: left; padding-bottom: 100px; }
+  .column { width: 260px; float: left; padding-bottom: 20px; }
   .portlet { margin: 0 1em 1em 0; }
   .portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
   .portlet-header .ui-icon { float: right; }
@@ -391,7 +391,7 @@ td * {
   .ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
   .ui-sortable-placeholder * { visibility: hidden; }
   .column ul {
-      margin-left:18px;
+      margin-left:14px;
   }
 
 
