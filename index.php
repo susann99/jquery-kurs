@@ -26,21 +26,6 @@
                     $("article").css("display","none");
                     $("article h2:contains('"+$(this).text()+"')").parent().css("display","block");
                 });
-                $.ajax({
-                    url:"logbuch.html",
-                    context: document.body,
-                    success: function(data,textStatus,jqXHR){
-                        //console.log("ok -> data: %o textStatus: %o, jqXHR: %o", data,textStatus,jqXHR );
-                        $("#todo").html(data);
-                        $("#web").accordion({
-                            heightStyle: "content",
-                            collapsible: true
-                        });
-                    },
-                    error: function(data,textStatus,jqXHR){
-                                               
-                    }
-                });
                 //                $("#todo").load("logbuch.html #web",function(){
                 //                    
                 //                        $("#web").accordion({

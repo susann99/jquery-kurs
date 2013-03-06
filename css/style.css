@@ -392,6 +392,9 @@ td * {
 .column ul {
     margin-left:14px;
 }
+#todo ul {
+    margin-left: 20px;
+}
 
 
 
