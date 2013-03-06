@@ -21,6 +21,7 @@ function menu(obj){
  });
  // Home - Animation
 $(document).ready(function(){
+    $("#todo").load("todo2.html div#web");
      $(".home li").eq(0).click(function() {
                 $(this).fadeOut(1000).fadeIn(1000);
      });
@@ -54,6 +55,11 @@ $(document).ready(function(){
         });
     });
 });
+$(function() {
+    $( "#web" ).accordion({
+      heightStyle: "content"
+    });
+  });
 //roter faden
 $(function() {
     $( "#accordion" ).accordion({

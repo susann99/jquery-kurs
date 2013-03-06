@@ -12,18 +12,15 @@
                     $("button").click(function(){
                         $.ajax({
                             url:"todo.html",
-                            data:{text: $(this).text(), name:'susann'},//name werden per Post übertragen $_POS["name"];
-                            type: 'POST',
+                            context: document.body,
                             success: function(data,textStatus,jqXHR){
                               //console.log("ok -> data: %o textStatus: %o, jqXHR: %o", data,textStatus,jqXHR );
                               $("#ausgabe").html(data);
-                              //var test =$("#website").children().html();
-                              //$("#ausgabe").html(test);
                               console.log(test);
                               $("#myDialog").dialog();
                             },
                             error: function(data,textStatus,jqXHR){
-                               //console.log("error -> data: %o textStatus: %o, jqXHR: %o", data,textStatus,jqXHR); 
+                               
                             }
                         });
                     });

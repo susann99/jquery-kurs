@@ -2,12 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>JQuery-Einführunggg</title>
+<title>JQuery-Einführung</title>
+<style>
+    * {margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; }
+    body,html {height:100%;}
+    #web h1 {
+        margin-top:10px;
+        margin-bottom:10px;
+        font-size: 16px;
+        color: darkblue;
+    }
+</style>
 </head>
-<body id="website">
+<body>
+<div id="web">
 <h1>JQuery-Kurs</h1>
 <a href="index.php">Inhalt</a>
-<p>
 <h1>Tag 01</h1>
 <h2>1. Was ist jQuery</h2>
 <small>Quelle: Frank Bongers, Maximilian Vollendorf, jQuery - Das Praxisbuch, 2010, Galileo Press</small><br>
@@ -27,8 +37,6 @@ Ein Javascript-Framwork:<br>
 		<li>Verkettbarkeit (Chaining): $("div").hide().css(color,"blue").slideDown();</li>
 		<li>Erweiterbar (Plugins): Oberflächenbibliothek jQuery UI</li>
 	</ul>
-</p>
-<p>
 	<h2>2. Wie wird es Eingebunden</h2>
 	<ol>
 		<li>1.JQuery von http://jquery.com runterlden</li>
@@ -36,7 +44,6 @@ Ein Javascript-Framwork:<br>
 		<li>3.mit <xmp><script src="../lib/jquery-1.9.1.min.js" type="text/javascript"></script></xmp> im HEAD einbinden</li>
 		<li>Browser: ab IE 6, Firefox 3.6, Chrom hat der Vorteil das die Console den DOM schön darstellt</li>
 	</ol>
-</p>
 <p>3. Erste Fingerübungen</p>
 <p>4. Projekt in Github anlegen</p>
 Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->...
@@ -45,13 +52,12 @@ Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->...
     <li>add, commit, Remote, pull, push</li>
 </ul>
 <p>5. Virtualbox für PHP: http://192.168.56.101/ hat nicht so geklappt, ssh Server tut nicht</p>
-<p class="artikel">
+
 <h2>5. Praxis</h2>
 <ol>
 	<li>1.Fragen ein-ausklappen aller Arkordeon</li>
 	<li>2.Idee für Übungsaufgabe: die Links zu weiter Frameworks aktivieren</li>
 </ol>
-</p>
 <h2>6. Nützliche Links:</h2>
 <ul>
 	<li>http://jquery.com/</li>
@@ -294,13 +300,6 @@ e1.Name = "Joe";   // The set accessor is invoked here
         <li>ajax, Wiederholung durch Projektarbeit</li>
         <li>Anforderungen an die Server Plattform</li>
 </ul>
-<h2>Projekt</h2>
-<ul>
-        <li>index.js aufräumen und Plugin für Bilderwechsel einbauen</li>
-        <li>Todoliste mittels Ajax einbauen (Layout einfallen lassen)</li>
-</ul>
-<div id="myDialog" title="Meldung von Ajax">
-    Übertragung abgeschlossen! Alle Daten da?
 </div>
 </body>
 </html>

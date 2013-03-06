@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>muster</title>
+        <title>kleine Galerie</title>
         <style>
 /*            img[name=home2]{
                 display: none; 
@@ -17,17 +17,25 @@
 		$(document).ready(function() {
 //		 var mp = new ImgFade("bilder");
 //               new ImgFade("bilder2");
-                    $("#bilder").ImgFade();
+                    $(".Fadeimg").ImgFade();
+                    
                 });
         </script>
     </head>
     <body>
-        <div id="bilder"> 
+        <div id="bilder" class="Fadeimg"> 
                   <img class="bildhome" name="home1" id="home1" src="images/Amelia-Earhart.png" width="267" height="188">
                   <img class="bildhome" name="home2" id="home2" src="images/amelia_earhart2.jpg" width="267" height="188">
                   <img class="bildhome" name="home3" id="home3" src="images/marine1.jpg" width="267" height="188">
                   <img class="bildhome" name="home4" id="home4" src="images/marine2.jpg" width="267" height="188">
                   <img class="bildhome" name="home4" id="home5" src="images/marine3.jpg" width="267" height="188">
-        </div>        
+        </div>  
+        <div id="bilder2" class="Fadeimg"> 
+                  <img class="bildhome" name="home1" id="home1" src="images/Amelia-Earhart.png" width="267" height="188">
+                  <img class="bildhome" name="home2" id="home2" src="images/amelia_earhart2.jpg" width="267" height="188">
+                  <img class="bildhome" name="home3" id="home3" src="images/marine1.jpg" width="267" height="188">
+                  <img class="bildhome" name="home4" id="home4" src="images/marine2.jpg" width="267" height="188">
+                  <img class="bildhome" name="home4" id="home5" src="images/marine3.jpg" width="267" height="188">
+        </div>
     </body>
 </html>

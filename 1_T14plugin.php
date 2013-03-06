@@ -6,44 +6,6 @@
         <title>RR - Meßwerte und Berechnungen</title>
         <link rel="stylesheet" href="css/jquery-ui.css" />
         <link rel="stylesheet" href="css/rr.css" />
-        <style>
-
-            html, body {
-              margin: 0;
-              padding: 0;
-            }
-
-            body {
-              font: 80% Verdana, Helvetica, Arial, sans-serif;
-              color: #000;
-              background: #fff;
-            }
-            #container {
-              margin: 10px 2em;
-            }
-
-            h1 {
-              font-size: 2.5em;
-              margin-bottom: 0;
-            }
-
-            h2 {
-              font-size: 1.3em;
-              margin-bottom: .5em;
-            }
-            h3 {
-              font-size: 1.1em;
-              margin-bottom: 0;
-            }
-
-            code {
-              font-size: 1.2em;
-            }
-
-            a {
-              color: #06581f;
-            }
-        </style>
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
         <script src="js/jquery-ui.js" type="text/javascript"></script>
         <script src="js/rrplugin.js"></script>
@@ -112,7 +74,7 @@
 //                                return {x:-index,y:-2*index};//callback
 //                            }
 //                        });
-                    $.fn.schatten.defs.copies=3;
+                    $.fn.schatten.defs.copies=4;
                     $('h1').schatten({
                         copyOffset: function(index){
                             return {x:-index,y:index};//callback
@@ -122,6 +84,7 @@
         </script>
     </head>
     <body>
+        <div id="container">
         <h1>RR Meßwerte</h1>
         <table id="rrtabelle">
             <thead>
@@ -146,14 +109,14 @@
                     <td></td>
                 </tr>
                 <tr id="mittelmo">
-                    <td>MittelMo:</td>
-                    <td></td>
+                    <td>Mittel</td>
+                    <td>morgens:</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr id="mittelab">
-                    <td>MittelAb:</td>
-                    <td></td>
+                    <td>Mittel</td>
+                    <td>abends:</td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -197,6 +160,6 @@
                 </tr>
             </tbody>
         </table>
-
+        </div>
     </body>
 </html>

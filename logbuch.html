@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery-Einführung</title>
+
+    </head>
+    <body>
+        <div id="web">
+            <h3>Tag 1</h3>
+            <div>
+                <h2>1. Was ist jQuery</h2>
+                <small>Quelle: Frank Bongers, Maximilian Vollendorf, jQuery - Das Praxisbuch, 2010, Galileo Press</small><br>
+                Ein Javascript-Framwork:<br>
+                <ul>
+                    <li>Erweiterungen einer Programmiersprache wie eine Art Akkuschrauber mit schönen Aufsätzen (Toolset)</li>
+                    <li>Weiter JS-Frameworks: 
+                        <ul>
+                            <li>Ext JS - http://www.extjs.com/ + http://www.sencha.com/</li>
+                            <li>Dojo - Dojo Community http://www.dojotoolkit.org/ + node.js</li>
+                            <li>GWT - http://code.google.com/webtoolkit/ (typisch Google, immer etwas komplex)</li>
+                            <li>script.aculo.us - Frackles</li>
+                        </ul>
+                    </li>
+                    <li>Lib oder Framework? Bei Javascript bis vor kurzem Browserabhängig</li>
+                    <li>Codeknappheit $(): $("div#d1").show();</li>
+                    <li>Verkettbarkeit (Chaining): $("div").hide().css(color,"blue").slideDown();</li>
+                    <li>Erweiterbar (Plugins): Oberflächenbibliothek jQuery UI</li>
+                </ul>
+                <h2>2. Wie wird es Eingebunden</h2>
+                <ol>
+                    <li>1.JQuery von http://jquery.com runterlden</li>
+                    <li>2.in einem lib-Verzeichnis z.B. ablegen</li>
+                    <li>3.mit <xmp><script src="../lib/jquery-1.9.1.min.js" type="text/javascript"></script></xmp> im HEAD einbinden</li>
+                    <li>Browser: ab IE 6, Firefox 3.6, Chrom hat der Vorteil das die Console den DOM schön darstellt</li>
+                </ol>
+                <p>3. Erste Fingerübungen</p>
+                <p>4. Projekt in Github anlegen</p>
+                Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->...
+                <ul>
+                    <li>git@github.com:susann99/jquery-kurs.git</li>
+                    <li>add, commit, Remote, pull, push</li>
+                </ul>
+                <p>5. Virtualbox für PHP: http://192.168.56.101/ hat nicht so geklappt, ssh Server tut nicht</p>
+
+                <h2>5. Praxis</h2>
+                <ol>
+                    <li>1.Fragen ein-ausklappen aller Arkordeon</li>
+                    <li>2.Idee für Übungsaufgabe: die Links zu weiter Frameworks aktivieren</li>
+                </ol>
+                <h2>6. Nützliche Links:</h2>
+                <ul>
+                    <li>http://jquery.com/</li>
+                    <li>http://netbeans.org/downloads/</li>
+                    <li>http://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-142931.html</li>
+                    <li>http://www.vhs-hamburg.de/home/kurse/kursdetails-44?kid=216840</li>
+                </ul>
+            </div>
+            <h3>Tag 2</h3>
+            <div>
+                <h2>1. Weiter mit Selectoren</h2>
+                <ul>
+                    <li>index.php ein kleines Projekt: jQuery-Tutorial</li>
+                    <li>Mouseover-Effekte in der Navigation</li>
+                    <li>Navigation durch den DOM</li>
+                    <li>Text ein- und ausklappen</li>
+                </ul>
+                <h2>2. Git und NetBeans</h2>
+                <ul>
+                    <li>Mit Branches arbeiten</li>
+                    <li>NB: Codevervollständigung, Farben für CSS picken</li>
+                </ul>
+                <h2>3. Git in einer Branche Tag2 arbeiten</h2>
+                <ul>
+                    <li>Menüpunkt->Team->Git->create Branche</li>
+                    <li>.....</li>
+                </ul>
+            </div>
+            <h3>Tag 3</h3>
+            <div>
+                <h2>Grundlegendes zu jQuery</h2>
+                <ul>
+                    <li>Konzepte zur Anwendung von jQuery:<br>jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.
+                        Damit ergibt sich die Möglichkeit, HTML-Dokumente zu erstellen, welche auch bei deaktiviertem JavaScript funktionieren. </li>
+                    <li>Übersicht und Aufgaben von Plugins: <br>Plugin sind Erweierungen, werden als zip geladen, 
+                        entpakt und wie ext. Javascript und css-Dateien eingebunden</li>
+                    <li>Kompatibilität zu anderen Frameworks und Browsern:<br>Browser ist Entstehungsgrund<br>
+                        jQuery reserviert im globalen Namensraum die Variablen $ und jquery.
+                        Um Kollisionen mit anderen JavaScript-Bibliotheken zu verhindern kann die Variable $ umbenannt werden.
+                        (Im Beispiel wird das jQuery-Objekt über jq referenziert.)
+                        <code>var jq = jQuery.noConflict();</code>
+                    </li>
+                    <li>Barrierefreiheit:<br>siehe Konzept<br> und Suchmaschinenoptimierung: Solange ma kaum Textmanipulationen 
+                        in den Containern vornimmt müßte das sehr gut funktionieren. 
+                        Da der Content in einfacher Reihnform vorhanden ist.
+                    </li>
+                </ul>
+                <h2>2. Git und NetBeans</h2>
+                <ul>
+                    <li>Mit Branches pushen</li>
+                    <li>Branches löschen</li>
+                </ul>
+                <h2>3. Projekt</h2>
+                <ul>
+                    <li>
+                        Menü, Content auf Click einblenden, 
+                        aus dem linktext den text im h2 finden 
+                        und übergeordneten Container anzeigen
+                    </li>
+                </ul>
+                <h2>4. Praxis</h2>
+                <ul>
+                    <li>
+                        Eltern und Kinder:<br>
+                        $("#contentLeft li").children("p").css("display","none");
+                        $("#contentLeft li").parent().css("color","green");
+                    </li>
+                    <li>
+                        Schleifen:<br>
+                        <code>
+                            $("#navigation a").each(function(index){
+                            $(this).addClass("navi"+arrColor[index % arrColor.length]);
+                            });
+                        </code>
+                    </li>
+                    <li>Filterauswahlen: z.B. :eq(n)</li>
+                    <li>
+                        Eventhandling und Callbacks:<br>
+                        Callback Funktion ist die Funktion die in der Funktion aufgerufen wird:  $(".text").click( function() {...
+                    </li>
+                </ul>
+            </div>
+            <h3>Tag 4</h3>
+            <div>
+                <h2>Noch mehr Filter</h2>
+                <ul>
+                    <li>Filterarten:Collection, not, eq, filter, first, last, slice, end</li>
+                    <li>Verändern von HTML und CSS</li>
+                    <li>Traversierung: Bewegung im DOM, 
+                        Traverse über Kind- oder Elternknoten:<br>
+                        .childrin(),contens(),parent(),next(),prev(),
+                    </li>
+                    <li>Einstieg Animation: show, hide</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>
+                        HTML 5 Elemente wie nav und article eingesetzt
+                    </li>
+                    <li>
+                        Smarty aufsetzen
+                    </li>
+                </ul>
+            </div>
+            <h3>Tag 5</h3>
+            <div>
+                <h2>Events und Event-Handling,  Inhalte, Attribute, Datenspeicher</h2>
+                <ul>
+                    <li>Accessoren – Eigenschaften der Collection: data, get, index:
+                        public string Name 
+                        {
+                        get 
+                        { 
+                        return name; 
+                        }
+                        set 
+                        {
+                        name = value; 
+                        }
+                        }
+                        Wenn Sie der Eigenschaft einen Wert zuweisen, wird der set-Accessor mit einem Argument aufgerufen, das den neuen Wert angibt. Beispiel:
+                        e1.Name = "Joe";   // The set accessor is invoked here       
+                    </li>
+                    <li>Events und Event-Handling</li>
+                    <li>Inhalte, Attribute, Datenspeicher</li>
+                    <li>Einstieg Formulare</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>Menü vorbereiten</li>
+                </ul>
+            </div>
+            <h3>Tag 6</h3>
+            <div>
+                <h2>Übung Event,  Inhalte, Attribute, Datenspeicher</h2>
+                <ul>
+                    <li>Events und Event-Handling: Contextmenü, <br>
+                        MouseEnter/Leave: Tritt ein, wenn der Mauszeiger in die Grenzen dieses Elements eintritt/verläßt. </li>
+                    <li>Inhalte, Attribute, Datenspeicher</li>
+                    <li>Einstieg Formulare</li>
+                    <li>Drag & Drop Effekte</li>
+                    <li>Easing Effekte</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>
+                        Todo Liste einbinden und mit jQuery als Karteikarte darstellen
+                    </li>
+                    <li>Menü aufziehen</li>
+                </ul>
+            </div>
+            <h3>Tag 7</h3>
+            <div>
+                <h2>Formulare</h2>
+                <ul>
+                    <li>Formularfelder prüfen</li>
+
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>
+                        Formular einbauen
+                    </li>
+
+                </ul>
+            </div>
+            <h3>Tag 8</h3>
+            <div>
+                <h2>Formulare</h2>
+                <ul>
+                    <li>Formularfelder E-Mail prüfen</li>
+                    <li>blubber geklärt</li>
+                    <li>dataobjekt verwendet auch direkt an ein Kollektion gebunden</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>Formular eingebauen</li>
+                    <li>Menue nochmal angehübscht</li>
+                    <li>Navigation auf linken und rechten Container bezogen</li>
+
+                </ul>
+            </div>
+            <h3>Tag 9</h3>
+            <div>
+                <h2>Animation</h2>
+                <ul>
+                    <li>Farbanimationen - Plugin - Nachmittag</li>
+                    <li>Show/Hide/Toggle-Effekte - schon gemacht</li>
+                    <li>Animate, Queue, Verkettung, Easing, delay</li>
+                    <li>Drag & Drop Effekte, Draggable</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>Bild und Contentwechsel rechter Kasten</li>
+                    <li>Homesite mit Animationsbeispielen</li>
+
+                </ul>
+            </div>
+            <h3>Tag 10</h3>
+            <div>
+                <h2>weiter mit Animation und Plugins</h2>
+                <ul>
+                    <li>Animate, Queue, Verkettung, Easing, delay</li>
+                    <li>3D - Geschichten Nachmittag</li>
+                    <li>Projektarbeit</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>Galerie einbauen</li>
+                    <li>die ToDo Liste bei den News einbauen</li>
+                    <li>Links aus Text generieren für die Dokuseite</li>
+
+                </ul>
+            </div>
+            <h3>Tag 11</h3>
+            <div>
+                <h2>weiter mit Animation und Plugins</h2>
+                <ul>
+                    <li>Spritely</li>
+                    <li>Tabelle Zebra</li>
+                    <li>UI</li>
+                    <li>unaufdringliches JS</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>Beispiele, Zebra</li>
+                    <li>Tipps</li>
+                    <li>Beispiel</li>
+                    <li>soll auch ohne JS funktionieren</li>
+
+                </ul>
+            </div>
+            <h3>Tag 12</h3>
+            <div>
+                <h2>Ajax</h2>
+                <ul>
+                    <li>Ajax Grundfunktion, Todo einlesen</li>
+                    <li>php/smarty als Quelle</li>
+                    <li>Module</li>
+                    <li>Plan fürs Wochende</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>index.js aufräumen und Module bauen</li>
+                    <li>Todoliste mittels Ajax einbauen</li>
+                </ul>
+            </div>
+            <h3>Tag 13</h3>
+            <div>
+                <h2>Plugin</h2>
+                <ul>
+                    <li>Plugin für Bilderwechsel</li>
+                    <li>Problem: Variablen und Operatorübergaben</li>
+                </ul>
+                <h2>Projekt</h2>
+                <ul>
+                    <li>index.js aufräumen und Module bauen</li>
+                    <li>Todoliste mittels Ajax einbauen</li>
+                </ul>
+            </div>
+            <h3>Tag 14</h3>
+            <div>
+                <h2>Plugin</h2>
+                <ul>
+                    <li>Plugin aus Buch nachhacken</li>
+                    <li>ajax, Wiederholung durch Projektarbeit</li>
+                    <li>Anforderungen an die Server Plattform</li>
+                </ul>
+            </div>
+            </div>
+    </body>
+</html>

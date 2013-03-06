@@ -19,13 +19,37 @@
                 var arrColor = ["green","blue","red","orange","yellow","mangenta"];
                 $("nav a.n0").each(function(index){
                     $(this).addClass("navi"+arrColor[index % arrColor.length]);
-		    $("article h1").eq(index).css("color",arrColor[index % arrColor.length]);
+                    $("article h1").eq(index).css("color",arrColor[index % arrColor.length]);
                 });
                 $(".start").css("display","block");
                 $("nav a").click(function(){
                     $("article").css("display","none");
                     $("article h2:contains('"+$(this).text()+"')").parent().css("display","block");
                 });
+                $.ajax({
+                    url:"logbuch.html",
+                    context: document.body,
+                    success: function(data,textStatus,jqXHR){
+                        //console.log("ok -> data: %o textStatus: %o, jqXHR: %o", data,textStatus,jqXHR );
+                        $("#todo").html(data);
+                        $("#web").accordion({
+                            heightStyle: "content",
+                            collapsible: true
+                        });
+                    },
+                    error: function(data,textStatus,jqXHR){
+                                               
+                    }
+                });
+                //                $("#todo").load("logbuch.html #web",function(){
+                //                    
+                //                        $("#web").accordion({
+                //                            heightStyle: "content",
+                //                            collapsible: true
+                //                        });
+                //                  
+                //           
+                //                });
             });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -37,17 +61,17 @@
                 <h1>jQuery Kurs</h1>
             </header>
             <nav>
-            <!--[if IE 6]><div id="ie6"></div><![endif]--> 
+                <!--[if IE 6]><div id="ie6"></div><![endif]--> 
                 <ul>
                     <li><a class="n0" href="#home">Home</a></li>
                     <li><a class="n0" href="#logbuch">Logbuch</a></li>
                     <li><a class="n0" href="#roterfaden">Roter Faden</a>
-                    <ul>
+                        <ul>
                             <li><a href="#buch">Buchempfehlung</a></li>
-			    <li><a href="#beispiel">Beispiele</a></li>
+                            <li><a href="#beispiel">Beispiele</a></li>
                             <li><a href="#tipps">Tipps</a></li>
-                            <li><a href="#">Downloads</a></li>
-                    </ul>
+                            <li><a href="#todo">Todo</a></li>
+                        </ul>
                     </li>
                     <li><a class="n0" href="#doku">Lernmaterial</a>
                         <ul>
@@ -68,12 +92,12 @@
                     </li>
                     <li><a class="n0" href="#profil">Profil</a></li>
                     <li><a class="n0" href="#kontakt">Kontakt</a></li>
-               </ul>
+                </ul>
             </nav>
             <div id="content" style="clear: both;">
                 <div id="contentLeft">
                     <div>
-                        
+
                     </div>
                     <article class="start">
                         <h2><a name="home">Home</a></h2>
@@ -105,132 +129,132 @@
                     </article>
                     <article>
                         <h2><a name="tipps">Tipps</a></h2>
-			<h1>Ein paar Tipps</h1>
-                       <div class="column">
- 
-                        <div class="portlet">
-                          <div class="portlet-header"> Was ist jQuery?</div>
-                          <div class="portlet-content">
-                              Ein Javascript-Framwork! Erweiterungen einer Programmiersprache wie eine Art Akkuschrauber mit schönen Aufsätzen (Toolset).
-                          </div>
-                        </div>
+                        <h1>Ein paar Tipps</h1>
+                        <div class="column">
 
-                        <div class="portlet">
-                          <div class="portlet-header">Javascript-Framwork</div>
-                          <div class="portlet-content">
-                              <ul>
-                                  <li>Ext JS</li>
-                                  <li>Dojo - Dojo Community + node.js</li>
-                                  <li>GWT (typisch Google, immer etwas komplex)</li>
-                                  <li>script.aculo.us - Frackles</li>
-                              </ul>
-                          </div>
+                            <div class="portlet">
+                                <div class="portlet-header"> Was ist jQuery?</div>
+                                <div class="portlet-content">
+                                    Ein Javascript-Framwork! Erweiterungen einer Programmiersprache wie eine Art Akkuschrauber mit schönen Aufsätzen (Toolset).
+                                </div>
+                            </div>
+
+                            <div class="portlet">
+                                <div class="portlet-header">Javascript-Framwork</div>
+                                <div class="portlet-content">
+                                    <ul>
+                                        <li>Ext JS</li>
+                                        <li>Dojo - Dojo Community + node.js</li>
+                                        <li>GWT (typisch Google, immer etwas komplex)</li>
+                                        <li>script.aculo.us - Frackles</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="column">
-                        <div class="portlet">
-                          <div class="portlet-header">Projekt in Github anlegen</div>
-                          <div class="portlet-content">Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->..<br>add, commit, Remote, pull, push</div>
+                        <div class="column">
+                            <div class="portlet">
+                                <div class="portlet-header">Projekt in Github anlegen</div>
+                                <div class="portlet-content">Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->..<br>add, commit, Remote, pull, push</div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="column">
-                        <div class="portlet">
-                          <div class="portlet-header">Konzepte - jQuery</div>
-                          <div class="portlet-content">jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.</div>
+                        <div class="column">
+                            <div class="portlet">
+                                <div class="portlet-header">Konzepte - jQuery</div>
+                                <div class="portlet-content">jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.</div>
+                            </div>
+                            <div class="portlet">
+                                <div class="portlet-header">Colection, Selektor, Filter, Methoden</div>
+                                <div class="portlet-content">
+                                    <ul>
+                                        <li>Colection: Auswahl von DOM-Objekten</li>
+                                        <li>wird mittels Selektoren eingegrenzt</li>
+                                        <li>Filter = Untergruppe von Selectoren</li>
+                                        <li>machen etwas mit der Colection z.B. .append()</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portlet">
-                          <div class="portlet-header">Colection, Selektor, Filter, Methoden</div>
-                          <div class="portlet-content">
-			      <ul>
-                                  <li>Colection: Auswahl von DOM-Objekten</li>
-                                  <li>wird mittels Selektoren eingegrenzt</li>
-                                  <li>Filter = Untergruppe von Selectoren</li>
-                                  <li>machen etwas mit der Colection z.B. .append()</li>
-                              </ul>
-			  </div>
-                        </div>
-                      </div>
                     </article>
                     <article>
                         <h2><a name="roterfaden">Roter Faden</a></h2>
-			<h1>Der Rote Faden</h1>
+                        <h1>Der Rote Faden</h1>
                         <p>
                             Dieser Workflow, eine Empfehlung zum Abarbeiten, ist mit einem Arkkordeon umgesetzt. Das heißt die Artikel sind ausklappbar.
-                            <h4>Dazu muß die <a href="http://jqueryui.com/" title="jQuery UI ist ein sehr Umpfangreiches Plugin, mit vielen Tools.">jQuery UI</a> eingebunden sein.</h4>
+                        <h4>Dazu muß die <a href="http://jqueryui.com/" title="jQuery UI ist ein sehr Umpfangreiches Plugin, mit vielen Tools.">jQuery UI</a> eingebunden sein.</h4>
                         </p>
                         <div id="accordion">
-			    <h3>Einführung</h3>
-			    <div>
-			      <p></p>
-				<ul>
-				    <li>Übersicht von JavaScript Frameworks</li>
-				    <li>Abgrenzungen zu anderen Frameworks</li>
-				    <li>Konzepte zur Anwendung von jQuery</li>
-				    <li>Übersicht und Aufgaben von Plugins</li>
-				    <li>Kompatibilität zu anderen Frameworks und Browsern</li>
-				    <li>Anwendungsfälle und Anwendungsgebiete</li>
-				    <li>Barrierefreiheit und Suchmaschinenoptimierung</li>
-				</ul>
-			    </div>
-			    <h3>jQuery Basics</h3>
-			    <div>
-			      <p></p>
-				<ul>
-				    <li>Funktionen, Selektoren, Attribute</li>
-				    <li>Einbinden und strukturieren von Scripten in HTML-Dokumenten</li>
-				    <li>DOM-Objektmodell</li>
-				    <li>$() Funktion</li>
-				    <li>Filterauswahlen</li>
-				    <li>Zugriff auf HTML-Elemente</li>
-				    <li>Verkettung von Funktionen</li>
-				    <li>Eventhandling und Callbacks</li>
-				</ul>
-			    </div>
-			    <h3>Verändern von HTML und CSS</h3>
-			    <div>
-			      <p></p>
-			      <ul>
-				<li>Verändern und Ersetzen von HTML-Elementen</li>
-				<li>Verändern und Ersetzen von Text</li>
-				<li>CSS-Eigenschaften verändern</li>
-				<li>Farbanimationen</li>
-				<li>Show/Hide/Toggle-Effekte</li>
-				<li>Drag & Drop Effekte</li>
-				<li>Easing Effekte</li>
-			      </ul>
-			    </div>
-			    <h3>Plugins</h3>
-			    <div>
-			      <p></p>
-			      <ul>
-				<li>jQuery UI Draggable Plugin</li>
-				<li>jQuery UI Droppable Plugin</li>
-				<li>jQuery UI Sortable Plugin</li>
-			      </ul>
-			    </div>
-			    <h3>Ajax</h3>
-			    <div>
-			      <p></p>
-			      <ul>
-				<li>Aufbau einer Ajax Anwendung</li>
-				<li>Vor- und Nachteile von Ajax</li>
-				<li>Sicherheitsrisiken</li>
-				<li>Anforderungen an die Client Plattform</li>
-				<li>Anforderungen an die Server Plattform</li>
-				<li>Ajax basierende Anwendungsbeispiele</li>
-				<li>Daten abrufen</li>
-				<li>Parameter senden</li>
-				<li>Responses verarbeiten</li>
-				<li>XML verarbeiten</li>
-				<li>JSON</li>
-				<li>Ajax mit PHP, ActionScript, Perl CF und Python, ASP.NET</li>
-			      </ul>
-			    </div>
-			 </div>
+                            <h3>Einführung</h3>
+                            <div>
+
+                                <ul>
+                                    <li>Übersicht von JavaScript Frameworks</li>
+                                    <li>Abgrenzungen zu anderen Frameworks</li>
+                                    <li>Konzepte zur Anwendung von jQuery</li>
+                                    <li>Übersicht und Aufgaben von Plugins</li>
+                                    <li>Kompatibilität zu anderen Frameworks und Browsern</li>
+                                    <li>Anwendungsfälle und Anwendungsgebiete</li>
+                                    <li>Barrierefreiheit und Suchmaschinenoptimierung</li>
+                                </ul>
+                            </div>
+                            <h3>jQuery Basics</h3>
+                            <div>
+
+                                <ul>
+                                    <li>Funktionen, Selektoren, Attribute</li>
+                                    <li>Einbinden und strukturieren von Scripten in HTML-Dokumenten</li>
+                                    <li>DOM-Objektmodell</li>
+                                    <li>$() Funktion</li>
+                                    <li>Filterauswahlen</li>
+                                    <li>Zugriff auf HTML-Elemente</li>
+                                    <li>Verkettung von Funktionen</li>
+                                    <li>Eventhandling und Callbacks</li>
+                                </ul>
+                            </div>
+                            <h3>Verändern von HTML und CSS</h3>
+                            <div>
+
+                                <ul>
+                                    <li>Verändern und Ersetzen von HTML-Elementen</li>
+                                    <li>Verändern und Ersetzen von Text</li>
+                                    <li>CSS-Eigenschaften verändern</li>
+                                    <li>Farbanimationen</li>
+                                    <li>Show/Hide/Toggle-Effekte</li>
+                                    <li>Drag & Drop Effekte</li>
+                                    <li>Easing Effekte</li>
+                                </ul>
+                            </div>
+                            <h3>Plugins</h3>
+                            <div>
+
+                                <ul>
+                                    <li>jQuery UI Draggable Plugin</li>
+                                    <li>jQuery UI Droppable Plugin</li>
+                                    <li>jQuery UI Sortable Plugin</li>
+                                </ul>
+                            </div>
+                            <h3>Ajax</h3>
+                            <div>
+
+                                <ul>
+                                    <li>Aufbau einer Ajax Anwendung</li>
+                                    <li>Vor- und Nachteile von Ajax</li>
+                                    <li>Sicherheitsrisiken</li>
+                                    <li>Anforderungen an die Client Plattform</li>
+                                    <li>Anforderungen an die Server Plattform</li>
+                                    <li>Ajax basierende Anwendungsbeispiele</li>
+                                    <li>Daten abrufen</li>
+                                    <li>Parameter senden</li>
+                                    <li>Responses verarbeiten</li>
+                                    <li>XML verarbeiten</li>
+                                    <li>JSON</li>
+                                    <li>Ajax mit PHP, ActionScript, Perl CF und Python, ASP.NET</li>
+                                </ul>
+                            </div>
+                        </div>
                     </article>
                     <article>
                         <h2><a name="buch">Buchempfehlung</a></h2>
-			<h1>JQuery: Das Praxisbuch</h1>
+                        <h1>JQuery: Das Praxisbuch</h1>
                         <h4>Der hier angezeigt Content in mit dem <a href="http://jqueryui.com/tabs/" title="Karteikartenreiter aus der UI">Widgets "Tabs"</a> aus der der jQuery UI dargestellt.</h4>
                         <div id="tabs">
                             <ul>
@@ -240,11 +264,11 @@
                             </ul>
                             <div id="tab-1">
                                 <h3>JQuery: Das Praxisbuch</h3>
-                                 Autoren: Maximilian Vollendorf und Frank Bongers, Verlag: Galileo Computing, 2011
-                                 <br><br>   
-                                 Das Buch bietet einen umfassenden Einstieg mit vielen Codebeispielen (die meißten sind auch fehlerfrei)
-                                 zum Nachtippen, die DVD ist sensationell, auch Linuxfreunde werden bedacht.
-                                 <br><br> 
+                                Autoren: Maximilian Vollendorf und Frank Bongers, Verlag: Galileo Computing, 2011
+                                <br><br>   
+                                Das Buch bietet einen umfassenden Einstieg mit vielen Codebeispielen (die meißten sind auch fehlerfrei)
+                                zum Nachtippen, die DVD ist sensationell, auch Linuxfreunde werden bedacht.
+                                <br><br> 
                                 <a style="color:blue" href="http://www.galileocomputing.de/katalog/buecher/titel/gp/titelID-2930" title="JQuery bei Galileo">Kostet zur Zeit: 34 Euro</a> 
                             </div>
                             <div id="tab-2">
@@ -282,118 +306,123 @@
                         <h3>jQuery lernen und einsetzen</h3>
                         Für 29,99 Kindle, Autoren: Jonathan Chaffer, Karl Swedberg, Volkmar Gronau<br>
                         Verlag: dpunkt.verlag; Auflage: 1. Auflage (Übers. d. 3. engl. Aufl.) (3. Juli 2012)<br><br>
-                       <a href="http://www.amazon.de/gp/product/B008UCNMHI/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008UCNMHI&linkCode=as2&tag=portalfurwand-21" title="Kindle Buch bei Amazoon">jQuery lernen und einsetzen: Bessere Webanwendungen mit einfachen JavaScript-Techniken entwickeln</a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B008UCNMHI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                        <a href="http://www.amazon.de/gp/product/B008UCNMHI/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008UCNMHI&linkCode=as2&tag=portalfurwand-21" title="Kindle Buch bei Amazoon">jQuery lernen und einsetzen: Bessere Webanwendungen mit einfachen JavaScript-Techniken entwickeln</a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B008UCNMHI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                     </article>
                     <article>
                         <h2><a name="beispiel">Beispiele</a></h2>
-			<h1>Beispiele mit Zebra</h1>
+                        <h1>Beispiele mit Zebra</h1>
                         <h4>Die Tabelle ist als Zebra mit einer Mouseoverfunktion umgesetzt. Wird folgende Collectio mit dem Filterselector even (also alle ungeraden) erzeugt: 
                             <br>$('.paginated tr:even').addClass('even');  </h4>
                         <table id="sortable" class="paginated">
-                        <thead>
+                            <thead>
                                 <tr>
                                     <th class="numeric">Nr.</th>
                                     <th>Animation</th>
                                     <th>Code</th>
                                     <th>Erläuterung</th>
                                 </tr>
-                        </thead>
+                            </thead>
                             <tbody>
                                 <tr>
-                                        <td>1</td>
-                                        <td>show()</td>
-                                        <td>$("#test").show(300);</td>
-                                        <td>
-                                            <button id="bshow">Fahne Anzeigen</button>
-                                            <div id="dshow">
-                                                <img src="images/anima1.png">
-                                            </div>
-                                        </td>
+                                    <td>1</td>
+                                    <td>show()</td>
+                                    <td>$("#test").show(300);</td>
+                                    <td>
+                                        <button id="bshow">Fahne Anzeigen</button>
+                                        <div id="dshow">
+                                            <img src="images/anima1.png">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                        <td>2</td>
-                                        <td>hide()</td>
-                                        <td>$("#test").hide(300);</td>
-                                        <td><button id="bhide">Fahne Weg</button></td>
+                                    <td>2</td>
+                                    <td>hide()</td>
+                                    <td>$("#test").hide(300);</td>
+                                    <td><button id="bhide">Fahne Weg</button></td>
                                 </tr>
                                 <tr>
-                                        <td>3</td>
-                                        <td>fadeOut()</td>
-                                        <td>$("#test").fadeOut(300);</td>
-                                        <td>
-                                            <button id="bfadeout">Fahne Ausblenden</button>
-                                            <div id="dfade">
-                                                <img src="images/anima1.png">
-                                            </div>
-                                        </td>
+                                    <td>3</td>
+                                    <td>fadeOut()</td>
+                                    <td>$("#test").fadeOut(300);</td>
+                                    <td>
+                                        <button id="bfadeout">Fahne Ausblenden</button>
+                                        <div id="dfade">
+                                            <img src="images/anima1.png">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                        <td>4</td>
-                                        <td>fadeIn()</td>
-                                        <td>$("#test").fadeIn(300);</td>
-                                        <td>
-                                            <button id="bfadein">Fahne Einblenden</button>
-                                        </td>
+                                    <td>4</td>
+                                    <td>fadeIn()</td>
+                                    <td>$("#test").fadeIn(300);</td>
+                                    <td>
+                                        <button id="bfadein">Fahne Einblenden</button>
+                                    </td>
                                 </tr>
                                 <tr>
-                                        <td>5</td>
-                                        <td>slideUp()</td>
-                                        <td>$("#test").slideUp(300);</td>
-                                        <td>
-                                            <button id="bslideup">Fahne Einklappen</button>
-                                            <div id="dslide">
-                                                <img src="images/anima1.png">
-                                            </div>
-                                        </td>
+                                    <td>5</td>
+                                    <td>slideUp()</td>
+                                    <td>$("#test").slideUp(300);</td>
+                                    <td>
+                                        <button id="bslideup">Fahne Einklappen</button>
+                                        <div id="dslide">
+                                            <img src="images/anima1.png">
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                        <td>6</td>
-                                        <td>slideDown()</td>
-                                        <td>$("#test").slideDown(300);</td>
-                                        <td>
-                                            <button id="bslidedown">Fahne Ausklappen</button>
-                                        </td>
+                                    <td>6</td>
+                                    <td>slideDown()</td>
+                                    <td>$("#test").slideDown(300);</td>
+                                    <td>
+                                        <button id="bslidedown">Fahne Ausklappen</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </article>
                     <article>
+                        <h2><a name="logbuch">Logbuch</a></h2>
+                        <h1>Logbuch</h1>
+                        <div id="todo">hier steht die todoliste</div>
+                    </article>
+                    <article>
                         <h2><a name="kontakt">Kontakt</a></h2>
                         <div id="box">
-                        <form class="formular" action="#" method="post">
-                        <fieldset>
-                        <legend>Kontaktformular</legend>
-                        <ol class="clearfix">
-                          <li>
-                            <label for="firstname">Vorname:</label>
-                            <input type="text" name="vname" class="name" id="vname" value="" />
-                          </li>
-                          <li>
-                            <label for="lastname">Nachname:</label>
-                            <input type="text" name="nname" class="name" id="nname" value="" />
-                          </li>
-                          <li>
-                            <label for="email">E-Mail(optional):</label>
-                            <input type="text" name="email" id="email" value="" />
-                          </li>
-                           <li>
-                            <label for="quelle">gefunden:</label>
-                                  <input type="checkbox" name="auswahl" id="auswahl1" class="auswahl" /> Googlesuche<br>
-                                  <input type="checkbox" name="auswahl" id="auswahl2" class="auswahl" /> Bekannter<br>
-                                  <input type="checkbox" name="auswahl" id="auswahl3" class="auswahl" /> Verlinkung<br>
-                                  <input type="checkbox" name="auswahl" id="auswahl4" class="auswahl" /> Zeitschrift<br>
-                                  <input type="checkbox" name="auswahl" id="auswahl5" class="auswahl" /> 24-fair.com
-                          </li>
-                          <li>
-                            <label for="nachricht">Nachricht:</label>
-                            <textarea cols="26" rows="14" name="nachricht" id="nachricht"></textarea>
-                          </li>
-                          <li class="last">
-                            <input type="button" name="submit" id="submit" value="Absenden" />
-                          </li>
-                        </ol>
-                        </fieldset>
-                      </form>
+                            <form class="formular" action="#" method="post">
+                                <fieldset>
+                                    <legend>Kontaktformular</legend>
+                                    <ol class="clearfix">
+                                        <li>
+                                            <label for="firstname">Vorname:</label>
+                                            <input type="text" name="vname" class="name" id="vname" value="" />
+                                        </li>
+                                        <li>
+                                            <label for="lastname">Nachname:</label>
+                                            <input type="text" name="nname" class="name" id="nname" value="" />
+                                        </li>
+                                        <li>
+                                            <label for="email">E-Mail(optional):</label>
+                                            <input type="text" name="email" id="email" value="" />
+                                        </li>
+                                        <li>
+                                            <label for="quelle">gefunden:</label>
+                                            <input type="checkbox" name="auswahl" id="auswahl1" class="auswahl" /> Googlesuche<br>
+                                            <input type="checkbox" name="auswahl" id="auswahl2" class="auswahl" /> Bekannter<br>
+                                            <input type="checkbox" name="auswahl" id="auswahl3" class="auswahl" /> Verlinkung<br>
+                                            <input type="checkbox" name="auswahl" id="auswahl4" class="auswahl" /> Zeitschrift<br>
+                                            <input type="checkbox" name="auswahl" id="auswahl5" class="auswahl" /> 24-fair.com
+                                        </li>
+                                        <li>
+                                            <label for="nachricht">Nachricht:</label>
+                                            <textarea cols="26" rows="14" name="nachricht" id="nachricht"></textarea>
+                                        </li>
+                                        <li class="last">
+                                            <input type="button" name="submit" id="submit" value="Absenden" />
+                                        </li>
+                                    </ol>
+                                </fieldset>
+                            </form>
                         </div>
                     </article>
                 </div>
@@ -407,49 +436,49 @@
                         <small>Bildquelle: Google/wikipedia.org | <a id="ame1" href="#"> Bild 1</a> | <a id="ame2" href="#"> Bild 2</a></small>
                         <p>
                         <h3>Amelia Earhart</h3>
-                            Amelia Mary Earhart war eine US-amerikanische Flugpionierin und Frauenrechtlerin.<br><br>  
-                            24. Juli 1897 in Atchison, Kansas; <br>verschollen am 2. Juli 1937 im Pazifischen Ozean, 
-                            für tot erklärt am 5. Januar 1939.<br> 
-                            <small>(Quelle: http://de.wikipedia.org)</small>
-                            <h4>Um von Bild1 zu Bild2 zu wechseln auf das Bild oder auf den Link Bild 1 bzw. Bild 2 klicken.</h4>
+                        Amelia Mary Earhart war eine US-amerikanische Flugpionierin und Frauenrechtlerin.<br><br>  
+                        24. Juli 1897 in Atchison, Kansas; <br>verschollen am 2. Juli 1937 im Pazifischen Ozean, 
+                        für tot erklärt am 5. Januar 1939.<br> 
+                        <small>(Quelle: http://de.wikipedia.org)</small>
+                        <h4>Um von Bild1 zu Bild2 zu wechseln auf das Bild oder auf den Link Bild 1 bzw. Bild 2 klicken.</h4>
                         </p>
                     </article>
                     <article>
-			<h2><a name="logbuch">Logbuch</a></h2>
+                        <h2><a name="logbuch">Logbuch</a></h2>
                         <iframe width="280" height="220" src="http://www.youtube.com/embed/ioZCEpRLpxo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
                         <p>
                         <h3>Amelia</h3> 
-                            <a style="float: left;margin:3px;" href="http://www.amazon.de/gp/product/B003V3FNY6/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=B003V3FNY6&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=B003V3FNY6&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B003V3FNY6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                            Eine Filmbiografie von Mira Nair (mit Hilary Swank in der Titelrolle und 
-                            Richard Gere als ihrem Ehemann G.P. Putnam) kam in den USA im Herbst 2009 in die Kinos, 
-                            der Filmstart in Deutschland war im Juni 2010. <br><small>Quelle: wikipedia.org/Amazon</small>
+                        <a style="float: left;margin:3px;" href="http://www.amazon.de/gp/product/B003V3FNY6/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=B003V3FNY6&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=B003V3FNY6&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B003V3FNY6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                        Eine Filmbiografie von Mira Nair (mit Hilary Swank in der Titelrolle und 
+                        Richard Gere als ihrem Ehemann G.P. Putnam) kam in den USA im Herbst 2009 in die Kinos, 
+                        der Filmstart in Deutschland war im Juni 2010. <br><small>Quelle: wikipedia.org/Amazon</small>
                         </p>
                     </article>
-		    <article>
-			<h2><a name="roterfaden">Roter Faden</a></h2>
-			<div id="s1" class="rightpics">
-                                <img src="images/marine1.jpg" width="267" height="188" />
-                                <img src="images/marine2.jpg" width="267" height="188" />
-                                <img src="images/marine3.jpg" width="267" height="188" />
+                    <article>
+                        <h2><a name="roterfaden">Roter Faden</a></h2>
+                        <div id="s1" class="rightpics">
+                            <img src="images/marine1.jpg" width="267" height="188" />
+                            <img src="images/marine2.jpg" width="267" height="188" />
+                            <img src="images/marine3.jpg" width="267" height="188" />
                         </div>
                         <small>Bildquelle: Google/wikipedia.org</small>
                         <br>
                         <p><h3>Ein Faden im Tauwerk</h3>
-			    Unter einem roten Faden versteht man eine Richtlinie, die sich durch ein Projekt zieht. <br>
-			    Der Begriff stammt aus der  britischen Marine. In das gesamte Tauwerk der königlichen Flotte war 
-			    ein roter Faden eingeflochten.<br>
-                            <small>(Quelle: http://de.wikipedia.org)</small>
-                            <h4>Die kleine Slideshow ist mit dem jQuery-Plugin <a href="http://malsup.com/jquery/cycle/begin.html">cycle</a> umgesetzt:</h4>
-                            ist einfach Einzubinden und bietet viele Varianten, z.B. Galerie mit Bilderauswahl.
-                         </p>
+                        Unter einem roten Faden versteht man eine Richtlinie, die sich durch ein Projekt zieht. <br>
+                        Der Begriff stammt aus der  britischen Marine. In das gesamte Tauwerk der königlichen Flotte war 
+                        ein roter Faden eingeflochten.<br>
+                        <small>(Quelle: http://de.wikipedia.org)</small>
+                        <h4>Die kleine Slideshow ist mit dem jQuery-Plugin <a href="http://malsup.com/jquery/cycle/begin.html">cycle</a> umgesetzt:</h4>
+                        ist einfach Einzubinden und bietet viele Varianten, z.B. Galerie mit Bilderauswahl.
+                        </p>
                     </article>
                     <article>
                         <h2><a name="buch">Buchempfehlung bei Amazoon</a></h2>
                         <div>
-                        <a href="http://www.amazon.de/gp/product/3836218100/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3836218100&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3836218100&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3836218100" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                        <a href="http://www.amazon.de/gp/product/B008UCNMHI/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008UCNMHI&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=B008UCNMHI&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B008UCNMHI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                        <a href="http://www.amazon.de/gp/product/3836216787/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3836216787&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3836216787&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3836216787" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                        <a href="http://www.amazon.de/gp/product/3645601678/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3645601678&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3645601678&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3645601678" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                            <a href="http://www.amazon.de/gp/product/3836218100/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3836218100&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3836218100&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3836218100" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                            <a href="http://www.amazon.de/gp/product/B008UCNMHI/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008UCNMHI&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=B008UCNMHI&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B008UCNMHI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                            <a href="http://www.amazon.de/gp/product/3836216787/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3836216787&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3836216787&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3836216787" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                            <a href="http://www.amazon.de/gp/product/3645601678/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=3645601678&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=3645601678&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=3645601678" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                         </div>
                         <hr>
                         <h4>Kostenlose EDV-Bücher online</h4>

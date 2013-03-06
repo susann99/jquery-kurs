@@ -40,7 +40,9 @@
 //           }
 //       };
 //     var options = $.extend(defs,opts);
-       return this.each(function(){
+console.log($(this));
+console.log(this);
+       return $(this).each(function(){
             var originalElem = $(this);
             for(var i = 0; i < options.copies; i++){
                 var offset = options.copyOffset(i);
