@@ -9,9 +9,11 @@
         <script src="js/jquery-ui.js"></script>
         <!-- http://code.jquery.com/ui/1.10.1/jquery-ui.js -->
         <script src="js/jquery.cycle.all.js" type="text/javascript"></script>
+        <script src="js/srplugins.js"></script>
         <!-- http://malsup.github.com/jquery.cycle.all.js -->
         <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
+            // Navigation
             $(document).ready(function(){
                 $("article").css("display","none");
                 $("#contentLeft h2").css("display","none");
@@ -26,15 +28,6 @@
                     $("article").css("display","none");
                     $("article h2:contains('"+$(this).text()+"')").parent().css("display","block");
                 });
-                //                $("#todo").load("logbuch.html #web",function(){
-                //                    
-                //                        $("#web").accordion({
-                //                            heightStyle: "content",
-                //                            collapsible: true
-                //                        });
-                //                  
-                //           
-                //                });
             });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -55,7 +48,6 @@
                             <li><a href="#buch">Buchempfehlung</a></li>
                             <li><a href="#beispiel">Beispiele</a></li>
                             <li><a href="#tipps">Tipps</a></li>
-                            <li><a href="#todo">Todo</a></li>
                         </ul>
                     </li>
                     <li><a class="n0" href="#doku">Lernmaterial</a>
@@ -414,18 +406,21 @@
                 <div id="contentRight">
                     <article class="start">
                         <h2><a name="home">Home</a></h2>
-                        <div class="rightpics"> 
+                        <div id="bilder" class="Fadeimg"> 
                             <img class="bildhome" name="home1" id="home1" src="images/Amelia-Earhart.png" width="267" height="188">
                             <img class="bildhome" name="home2" id="home2" src="images/amelia_earhart2.jpg" width="267" height="188">
-                        </div>
-                        <small>Bildquelle: Google/wikipedia.org | <a id="ame1" href="#"> Bild 1</a> | <a id="ame2" href="#"> Bild 2</a></small>
+                            <img class="bildhome" name="home3" id="home3" src="images/Amelia-Earhart3.jpg" width="267" height="188">
+                            <img class="bildhome" name="home4" id="home4" src="images/Amelia-Earhart4.jpg" width="267" height="188">
+                            <button style="float: right;margin: 8px;"> Bild >> </button>
+                        </div> 
+                        <small>Bildquelle: Google/wikipedia.org</small>
                         <p>
                         <h3>Amelia Earhart</h3>
                         Amelia Mary Earhart war eine US-amerikanische Flugpionierin und Frauenrechtlerin.<br><br>  
                         24. Juli 1897 in Atchison, Kansas; <br>verschollen am 2. Juli 1937 im Pazifischen Ozean, 
                         für tot erklärt am 5. Januar 1939.<br> 
                         <small>(Quelle: http://de.wikipedia.org)</small>
-                        <h4>Um von Bild1 zu Bild2 zu wechseln auf das Bild oder auf den Link Bild 1 bzw. Bild 2 klicken.</h4>
+                        <h4>Um von Bild1 zu Bild2 zu wechseln auf das Bild klicken.</h4>
                         </p>
                     </article>
                     <article>
@@ -441,7 +436,7 @@
                     </article>
                     <article>
                         <h2><a name="roterfaden">Roter Faden</a></h2>
-                        <div id="s1" class="rightpics">
+                        <div id="taue" class="rightpics">
                             <img src="images/marine1.jpg" width="267" height="188" />
                             <img src="images/marine2.jpg" width="267" height="188" />
                             <img src="images/marine3.jpg" width="267" height="188" />
@@ -468,6 +463,23 @@
                         <hr>
                         <h4>Kostenlose EDV-Bücher online</h4>
                         Auch ein Blick auf das <a href="http://openbook.galileocomputing.de/javascript_ajax/">kostenlose Onlineangebot</a> von Gelileo Press lohnt sich. Ist nur leider kein jQuery-Buch dabei.
+                    </article>
+                    <article>
+                        <h2><a name="beispiel">Beispiele</a></h2>
+                        <div id="zebra" class="rightpics">
+                            <img src="images/zebra1.jpg" width="267" height="188" />
+                            <img src="images/zebra2.jpg" width="267" height="188" />
+                        </div>  
+                        <small>Bildquelle: Google/wikipedia.org</small>
+                        <br>
+                        <p>
+                            <h3>Warum hat ein Zebra Streifen?</h3>
+                            Wahrscheinlich sind die Tierchen damit für die Facetenaugen von Bremsen und anderen Fliegen unsichtbar. Also statt Mückenspray das Knast gesteifte überziehen.
+                            <br>
+                            <h4>Weitere Beispiele</h4><br>
+                            <button id="zebrasort">Zebra mit Sortierung</button><br><br>
+                            <button id="zebraseite">Zebra mit Blättern</button>
+                        </p>
                     </article>
                     <article>
                         <h2><a name="kontakt">Kontakt</a></h2>

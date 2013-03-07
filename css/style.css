@@ -30,6 +30,9 @@ h2 {
 small {
     font-size: 10px;
 }
+button {
+    padding:5px;
+}
 
 #inhalt {
     margin:auto; margin-top:20px; padding:5px; max-width:900px; min-height: 500px;

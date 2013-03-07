@@ -17,11 +17,14 @@ function menu(obj) {
 	$(this).find('ul').first().stop(true, true).slideUp(500);
     });
 }
+// Menu
 $(document).ready(function() {
     menu($("ul li"));
 });
-// Home - Animation
 $(document).ready(function() {
+    // Home Bilder - Plugin
+    $(".Fadeimg").ImgFade();
+    // Home - Animation
     $(".home li").eq(0).click(function() {
 	$(this).fadeOut(1000).fadeIn(1000);
     });
@@ -31,31 +34,8 @@ $(document).ready(function() {
     $(".home li").eq(4).click(function() {
 	$(".home li").eq(4).animate({fontSize: "20px", width: "400px"}, 500);
     });
-
-// Home Bilder
-
-    $("#ame2").click(function() {
-	$("#home1").fadeOut(1000, function() {
-	    $("#home2").fadeIn(1000);
-	});
-    });
-    $("#ame1").click(function() {
-	$("#home2").fadeOut(1000, function() {
-	    $("#home1").fadeIn(1000);
-	});
-    });
-    $("#home1").click(function() {
-	$("#home1").fadeOut(1000, function() {
-	    $("#home2").fadeIn(1000);
-	});
-    });
-    $("#home2").click(function() {
-	$("#home2").fadeOut(1000, function() {
-	    $("#home1").fadeIn(1000);
-	});
-    });
 });
-// logbuch
+// logbuch Ajax
 $(document).ready(function() {
     var schongeladen = 0;
     $("nav a:contains('Logbuch')").click(function() {
@@ -74,7 +54,7 @@ $(document).ready(function() {
 		});
 	    },
 	    error: function(data, textStatus, jqXHR) {
-
+                $("#todo").html("<h2 class=\"error\">Error: Logbuch nicht geladen!</h2>")
 	    }
 	});
     });
@@ -86,11 +66,8 @@ $(function() {
     });
 });
 $(document).ready(function() {
-    $('#s1').cycle('fade');//galerie auf der rechten 
-//    $('#s1').cycle({ //galerie auf der rechten Seite
-//    fx:    'shuffle', 
-//    delay: -4000 
-//    });
+    $('#taue').cycle('fade');//roter Faden
+    $('#zebra').cycle('fade');//Zebra
 });
 //Buchempfehlung mit Tabs aus der UI
 $(function() {
@@ -127,26 +104,6 @@ $(document).ready(function() {
     $("#bslideup").click(function() {
 	$("#dslide").slideUp(500);
     });
-});
-// Logbuch
-$(function() {
-    $(".column").sortable({
-	connectWith: ".column"
-    });
-
-    $(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
-	    .find(".portlet-header")
-	    .addClass("ui-widget-header ui-corner-all")
-	    .prepend("<span class='ui-icon ui-icon-minusthick'></span>")
-	    .end()
-	    .find(".portlet-content");
-
-    $(".portlet-header .ui-icon").click(function() {
-	$(this).toggleClass("ui-icon-minusthick").toggleClass("ui-icon-plusthick");
-	$(this).parents(".portlet:first").find(".portlet-content").toggle();
-    });
-
-    $(".column").disableSelection();
 });
 // Formular
 $(document).ready(function() {
