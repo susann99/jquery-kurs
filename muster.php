@@ -34,13 +34,14 @@
     <body>
 
         <div id ="daten">
-            http://jquery.com/jQuery doeioug094gu e90utq90u4 0u0u9er0q89u u90uergu
-            http://www.jqueryui.com jQuery UI er0gier  erii9ugw90uweu890
-            http://plugins.jquery.com/ jQuery Plugins er0gß0erg rergjrijg
-            http://jquerymobile.com jQuery Mobile wergoweropgioer ieoprguioug
-             http://try.jquery.com/ jQuery UNI, free Video dfgkfl dfklgjkldfj dfgkldfgjkg
-            http://www.blogrammierer.de/jquery-die-23-besten-bildergalerie-plugins/ die 23 besten Bildergalerie dfglödglödfgj nmmnnnfighuir eroueiout 
+            http://jquery.com/jQuery 
+            http://www.jqueryui.com jQuery UI er0gier  
+            http://plugins.jquery.com/ jQuery Plugins 
+            http://jquerymobile.com jQuery Mobile 
+            http://try.jquery.com/ jQuery UNI, free Video
+            http://www.blogrammierer.de/jquery-die-23-besten-bildergalerie-plugins/ die 23 besten Bildergalerie 
             http://info.scratch.mit.edu/de/Scratch_1.4_Download Scratch-Spiele Programmieren für Kinder
+            https://developer.palm.com/content/resources/develop/phonegap_einfuehrung_teil_1_webos.html phonegab
         </div>
         <div id="footer">hier stehen die Links</div>
     </body>
