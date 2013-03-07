@@ -17,8 +17,8 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
-			min-width: 900px;
+			width: 500px;
+			min-width: 400px;
 			height: 359px;
 			overflow: hidden;
 		}
@@ -39,7 +39,7 @@
                 #bird {
 			background: transparent url(images/spritely/flyer-forward-back.png) 0 0 no-repeat;
 			top: 150px;
-			left: 65px;
+			left: 20px;
 			width: 184px;
 			height: 123px;
 			z-index: 200;
@@ -52,11 +52,11 @@
                     width: 60px;
                     height: 20px;
                     top: 20px;
-                    left: 300px;
+                    left: 100px;
                 }
 		#balloons {
                         z-index: 2000;
-                        left: 720px;
+                        left: 150px;
 			background: transparent url(images/spritely/kuh.png) 0 0 repeat-y;
 		}
 	</style>
@@ -73,7 +73,7 @@
 				});
 				$('#bird')
 					.sprite({fps: 9, no_of_frames: 3})
-					.spRandom({top: 50, bottom: 200, left: 300, right: 320})
+					.spRandom({top: 50, bottom: 200, left: 150, right: 200})
 					.isDraggable()
 					.activeOnClick()
 					.active();
