@@ -45,7 +45,6 @@ $(document).ready(function() {
 	    context: document.body,
 	    success: function(data, textStatus, jqXHR) {
 		schongeladen++;
-		console.log("ok -> data: %o textStatus: %o, jqXHR: %o", data,textStatus,jqXHR );
 		$("#todo").html(data);
 		$("#web").accordion({
 		    heightStyle: "content",
