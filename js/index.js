@@ -37,7 +37,6 @@ $(document).ready(function() {
 });
 (function($) {
     $(document).ready(function() {
-
 	$('#bird')
 		.sprite({
 	    fps: 12,
