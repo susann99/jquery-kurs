@@ -4,12 +4,16 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/jquery-ui.css" type="text/css"/>
         <link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css -->
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+	<script src="js/jquery.spritely-0.6.1.js" type="text/javascript"></script>
         <script src="js/jquery-ui.js"></script>
         <!-- http://code.jquery.com/ui/1.10.1/jquery-ui.js -->
         <script src="js/jquery.cycle.all.js" type="text/javascript"></script>
         <script src="js/srplugins.js"></script>
+	<script src="js/jquery.spritely-0.6.1.js" type="text/javascript"></script>
         <!-- http://malsup.github.com/jquery.cycle.all.js -->
         <script src="js/index.js" type="text/javascript" ></script>
         <script type="text/javascript" >
@@ -31,12 +35,20 @@
 	    });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <title>jQuery -Kurs Inhalt</title>
+        <title>Amelia's jQuery -Kurs</title>
     </head>
     <body>
+	<div id="ameliacontainer">
+	    <div id="stage" class="stage">
+		<div id="tap" class="stage"></div>
+		<div id="clouds" class="stage"></div>
+		<div id="bird"></div>
+	    </div>
+	</div>
         <div id="inhalt" class="menue">
-            <header>Eine Einf&uuml;hrung in das JavaScript-Framework
-                <h1>jQuery Kurs</h1>
+            <header>
+                <h1><font class="amelia">Amelia's</font> jQuery -Kurs</h1>
+		&ThinSpace; Eine Einf&uuml;hrung in das JavaScript-Framework
             </header>
             <nav>
                 <!--[if IE 6]><div id="ie6"></div><![endif]--> 
@@ -118,20 +130,29 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column">
                             <div class="portlet">
                                 <div class="portlet-header">Projekt in Github anlegen</div>
-                                <div class="portlet-content">Kann ich direkt aus NetBeans benutzen: Menuepunkt->Team->git->..<br>add, commit, Remote, pull, push</div>
+                                <div class="portlet-content">Kann ich direkt aus NetBeans benutzen:<br>Menuepunkt:Team:git:..<br>add, commit, Remote, pull, push</div>
                             </div>
-                        </div>
+
+			</div>
+
                         <div class="column">
-                            <div class="portlet">
+			    <div class="portlet">
                                 <div class="portlet-header">Konzepte - jQuery</div>
                                 <div class="portlet-content">jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.</div>
                             </div>
+			    <div class="portlet">
+                                <div class="portlet-header">Filter, Methoden</div>
+                                <div class="portlet-content">
+                                    <ul>
+                                        <li>Filter = Untergruppe von Selectoren z.B. eq()</li>
+                                        <li>Methoden = machen etwas mit der Colection z.B. .addClass()</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="portlet">
-                                <div class="portlet-header">Colection, Selektor, Filter, Methoden</div>
+                                <div class="portlet-header">Colection, Selektor</div>
                                 <div class="portlet-content">
                                     <ul>
                                         <li>Colection: Auswahl von DOM-Objekten</li>
@@ -202,7 +223,6 @@
                             </div>
                             <h3>Ajax</h3>
                             <div>
-
                                 <ul>
                                     <li>Aufbau einer Ajax Anwendung</li>
                                     <li>Vor- und Nachteile von Ajax</li>
@@ -474,7 +494,6 @@
                     </article>
                     <article>
                         <h2><a name="kontakt">Kontakt</a></h2>
-                        <img src="images/Amelia-Earhart.png">
                         <p>
                             Kontaktdaten
                         </p>

@@ -45,6 +45,7 @@ button {
     position: relative; top:20px;left:30px;
 }
 header {
+    font-size:14px;
     border-radius:10px 10px 0px 0px;
     padding:5px;
     background:-moz-linear-gradient(top, #EEB937, #FADD67); /* Firefox */
@@ -54,11 +55,17 @@ header {
     background:linear-gradient(top, #EEB937, #FADD67);  
 }
 header h1 {
-    font-size:30px;
-    letter-spacing:0.3em;
-    color: yellow;
-    padding:5px;
-    text-shadow:brown 2px 1px 4px;
+    font-size:20px;
+    padding:0px;
+    text-shadow:#888 1px 1px 4px;
+}
+.amelia {
+    margin-right:20px;
+    font-weight: 100;
+    font-size:40px;
+    font-style: italic;
+    color: darkred;
+    font-family: Lobster;
 }
 /* menue */
 nav {
@@ -385,8 +392,8 @@ td * {
     display: none;
 }
 /* Tipps*/
-.column { width: 260px; float: left; padding-bottom: 20px; }
-.portlet { margin: 0 1em 1em 0; }
+.column { width: 260px; float: left; padding-bottom: 0px; }
+.portlet { margin: 0 0.5em 0.5em 0; }
 .portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
 .portlet-header .ui-icon { float: right; }
 .portlet-content { padding: 0.4em; }
@@ -400,10 +407,41 @@ td * {
 }
 #linktipps ul {
     margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 #linktipps li {
-    margin-top: 10px;
+    margin-top: 6px;
+}
+#containeramelia  {
+	width: 900px;
+	min-width:400px;
+	padding-top:359px;
+	position:relative;
+	width:100%;
+}
+#stage {
+    top: 0px;
+    left: 100px;
+    z-index: 100;
+}
+.stage {
+    position: absolute;
+    width: 1200px;
+    min-width: 400px;
+    height: 130px;
+    overflow: hidden;
+}
+#clouds {
+    background: transparent url(../images/spritely/cloud.png) 600px 0 repeat-x;
+}
+#bird {
+    background: transparent url(../images/spritely/flyer-forward-back.png) 0 0 no-repeat;
+    top: 0px;
+    left: 100px;
+    width: 184px;
+    height: 123px;
+    z-index: 4000;
+    cursor: pointer;
 }
 
 

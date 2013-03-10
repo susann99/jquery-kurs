@@ -35,27 +35,70 @@ $(document).ready(function() {
 	$(".home li").eq(4).animate({fontSize: "20px", width: "400px"}, 500);
     });
 });
+(function($) {
+    $(document).ready(function() {
+
+	$('#bird')
+		.sprite({
+	    fps: 12,
+	    no_of_frames: 3,
+	    start_at_frame: 1,
+	    // the following are optional: new in version 0.6...
+
+	    on_first_frame: function(obj) {
+		if (window.console) {
+		    console.log('first frame');
+		}
+	    },
+	    on_last_frame: function(obj) {
+		// you could stop the sprite here with, e.g.
+		// obj.spStop();
+		if (window.console) {
+		    console.log('last frame');
+		}
+	    },
+	    on_frame: {
+		1: function(obj) {
+		    // you could change the 'state' of the
+		    // sprite here with, e.g. obj.spState(2);
+		    if (window.console) {
+			console.log('frame 2');
+		    }
+		}
+	    }
+	})
+		.spRandom({top: -10, bottom: 20, left: 450, right: 600})
+		.isDraggable()
+		.activeOnClick()
+		.active();
+	$('#clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 10});
+	$('#clouds').spRelSpeed(8);
+
+
+
+    });
+})(jQuery);
 // logbuch Ajax
 $(document).ready(function() {
     var schongeladen = 0;
     $("nav a:contains('Logbuch')").click(function() {
-	if(schongeladen<1)
-	$.ajax({
-	    url: "logbuch.html",
-	    context: document.body,
-	    success: function(data, textStatus, jqXHR) {
-		schongeladen++;
-		$("#todo").html(data);
-		$("#web").accordion({
-		    heightStyle: "content",
-		    collapsible: true,
-		    active: 16
-		});
-	    },
-	    error: function(data, textStatus, jqXHR) {
-                $("#todo").html("<h2 class=\"error\">Error: Logbuch nicht geladen!</h2>")
-	    }
-	});
+	if (schongeladen < 1)
+	    $.ajax({
+		url: "logbuch.html",
+		context: document.body,
+		success: function(data, textStatus, jqXHR) {
+		    schongeladen++;
+		    $("#todo").html(data);
+		    $("#web").accordion({
+			heightStyle: "content",
+			collapsible: true,
+			active: 16
+		    });
+		},
+		error: function(data, textStatus, jqXHR) {
+		    $("#todo").html("<h2 class=\"error\">Error: Logbuch nicht geladen!</h2>")
+		}
+	    });
     });
     $("#linktipps").linkliste("linktipps.html");
 });
@@ -76,6 +119,24 @@ $(function() {
 //Tooltipps
 $(function() {
     $(document).tooltip();
+});
+//tipps portlet
+$(function() {
+    $(".column").sortable({
+	connectWith: ".column"
+    });
+    $(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+	    .find(".portlet-header")
+	    .addClass("ui-widget-header ui-corner-all")
+	    .prepend("<span class='ui-icon ui-icon-minusthick'></span>")
+	    .end()
+	    .find(".portlet-content");
+    $(".portlet-content").hide(10);
+    $(".portlet-header .ui-icon").click(function() {
+	$(this).toggleClass("ui-icon-minusthick").toggleClass("ui-icon-plusthick");
+	$(this).parents(".portlet:first").find(".portlet-content").toggle();
+    });
+    $(".column").disableSelection();
 });
 // Beispiele
 $(document).ready(function() {
