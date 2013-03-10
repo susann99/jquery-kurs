@@ -77,7 +77,8 @@
 			    }
 			}
 		    })
-			    .spRandom({top: 50, bottom: 200, left: 300, right: 320})
+			    .spRandom({top: 50, bottom: 200, left: 300, right: 320, speed: 4000,
+          pause: 3000})
 			    .isDraggable()
 			    .activeOnClick()
 			    .active();

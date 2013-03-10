@@ -443,6 +443,11 @@ td * {
     z-index: 4000;
     cursor: pointer;
 }
+a.linkerlinks{
+    color:blue;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 
 

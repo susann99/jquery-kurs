@@ -12,8 +12,6 @@ jQuery.extend({
         bild1.fadeOut(1000,function(){
             bild2.fadeIn(1000);
         });
-        console.log(bild1);
-        console.log(bild2);
     }
 });
 // $(".home li").eq(0).click(function() {

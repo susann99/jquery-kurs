@@ -16,6 +16,7 @@
 	<script src="js/jquery.spritely-0.6.1.js" type="text/javascript"></script>
         <!-- http://malsup.github.com/jquery.cycle.all.js -->
         <script src="js/index.js" type="text/javascript" ></script>
+	<script src="js/linker.js"></script>
         <script type="text/javascript" >
 	    // Navigation
 	    $(document).ready(function() {

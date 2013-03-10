@@ -37,38 +37,27 @@ $(document).ready(function() {
 });
 (function($) {
     $(document).ready(function() {
-	$('#bird')
-		.sprite({
+	$('#bird').
+		click(function() {
+			$(this).effect("explode", function() {
+			$(this).fadeIn(200);
+		    });
+		}).
+	sprite({
 	    fps: 12,
 	    no_of_frames: 3,
-	    start_at_frame: 1,
+	    start_at_frame: 0
 	    // the following are optional: new in version 0.6...
-
-	    on_first_frame: function(obj) {
-		if (window.console) {
-		    console.log('first frame');
-		}
-	    },
-	    on_last_frame: function(obj) {
-		// you could stop the sprite here with, e.g.
-		// obj.spStop();
-		if (window.console) {
-		    console.log('last frame');
-		}
-	    },
-	    on_frame: {
-		1: function(obj) {
-		    // you could change the 'state' of the
-		    // sprite here with, e.g. obj.spState(2);
-		    if (window.console) {
-			console.log('frame 2');
-		    }
-		}
-	    }
 	})
-		.spRandom({top: -10, bottom: 20, left: 450, right: 600})
+		
+		.spRandom({top: -10, bottom: 20, left: 450, right: 680,speed: 4000,
+          pause: 8000})
 		.isDraggable()
-		.activeOnClick()
+		.activeOnClick(function() {
+		    $(this).effect("explode", function() {
+			$(this).fadeIn(200);
+		    });
+		})
 		.active();
 	$('#clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 10});
 	$('#clouds').spRelSpeed(8);
@@ -79,25 +68,17 @@ $(document).ready(function() {
 })(jQuery);
 // logbuch Ajax
 $(document).ready(function() {
-    var schongeladen = 0;
     $("nav a:contains('Logbuch')").click(function() {
-	if (schongeladen < 1)
-	    $.ajax({
-		url: "logbuch.html",
-		context: document.body,
-		success: function(data, textStatus, jqXHR) {
-		    schongeladen++;
-		    $("#todo").html(data);
-		    $("#web").accordion({
-			heightStyle: "content",
-			collapsible: true,
-			active: 16
-		    });
-		},
-		error: function(data, textStatus, jqXHR) {
-		    $("#todo").html("<h2 class=\"error\">Error: Logbuch nicht geladen!</h2>")
-		}
+	$("#todo").load("logbuch2.html #web", function() {
+	    $("#web").accordion({
+		heightStyle: "content",
+		collapsible: true,
+		active: 16
 	    });
+	    $("#web li").linker({
+		className: 'linkerlinks'
+	    });
+	});
     });
     $("#linktipps").linkliste("linktipps.html");
 });
