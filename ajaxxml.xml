@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<media>
+    <bluray id="34767" title="Avatar">
+        <description>Animationsfilm von Steven Spielberg</description>
+        <genre>Action-Animation</genre>
+    </bluray>
+    <bluray id="56985" title="Transformers 2">
+        <description>Roboter-Action von Micheal Bay</description>
+        <genre>Action</genre>
+    </bluray>
+</media>

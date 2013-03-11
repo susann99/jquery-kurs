@@ -3,7 +3,7 @@ Programmierung - 333/211/2012 - Susann Rieder
 JavaScript - Zeitraum: 16.01.2013 - 13.02.2013
 JavaScript
 
-    Allgemeine Regeln für JavaScript
+    Allgemeine Regeln fï¿½r JavaScript
     Variablen und Werte
     Objekte, Eigenschaften und Methoden
     Funktionen
@@ -11,23 +11,23 @@ JavaScript
     Operatoren
     Bedingte Anweisungen
     Schleifen
-    Reservierte Wörter
+    Reservierte Wï¿½rter
     Event-Handler
     JavaScript-Objektreferenz
-    Objektunabhängige Funktionen
+    Objektunabhï¿½ngige Funktionen
     Anwendungsbeispiele
     Klausur
 
 jQuery - Zeitraum: 14.02.2013 - 14.03.2013
 jQuery
 
-    Einführung
-        Übersicht von JavaScript Frameworks
+    Einfï¿½hrung
+        ï¿½bersicht von JavaScript Frameworks
         Abgrenzungen zu anderen Frameworks
         Konzepte zur Anwendung von jQuery
-        Übersicht und Aufgaben von Plugins
-        Kompatibilität zu anderen Frameworks und Browsern
-        Anwendungsfälle und Anwendungsgebiete
+        ï¿½bersicht und Aufgaben von Plugins
+        Kompatibilitï¿½t zu anderen Frameworks und Browsern
+        Anwendungsfï¿½lle und Anwendungsgebiete
         Barrierefreiheit und Suchmaschinenoptimierung
     jQuery Basics: Funktionen, Selektoren, Attribute
         Einbinden und strukturieren von Scripten in HTML-Dokumenten
@@ -37,10 +37,10 @@ jQuery
         Zugriff auf HTML-Elemente
         Verkettung von Funktionen
         Eventhandling und Callbacks
-    Verändern von HTML und CSS
-        Verändern und Ersetzen von HTML-Elementen
-        Verändern und Ersetzen von Text
-        CSS-Eigenschaften verändern
+    Verï¿½ndern von HTML und CSS
+        Verï¿½ndern und Ersetzen von HTML-Elementen
+        Verï¿½ndern und Ersetzen von Text
+        CSS-Eigenschaften verï¿½ndern
         Farbanimationen
         Show/Hide/Toggle-Effekte
         Drag & Drop Effekte
@@ -68,3 +68,4 @@ jQuery
         Ajax mit ASP.NET
     Projektarbeit: Erstellen einer Ajax-basierten Bildergalerie
     Klausur
+www.primfaces.org
