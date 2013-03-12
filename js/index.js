@@ -38,6 +38,7 @@ $(document).ready(function() {
         }, 500);
     });
 });
+// Animation - Doppeldecker
 (function($) {
     $(document).ready(function() {
         $('#bird').
@@ -132,7 +133,7 @@ $(function() {
     });
     $(".column").disableSelection();
 });
-// Beispiele
+// Beispiele - Tabelle
 $(document).ready(function() {
     $('.paginated tr').mouseover(function() {
         $(this).addClass('hover');
@@ -147,6 +148,7 @@ $(document).ready(function() {
     $("#bhide").click(function() {
         $("#dshow").hide(300);
     });
+    // Animationen
     $("#bfadeout").click(function() {
         $("#dfade").fadeOut(300);
     });
@@ -158,6 +160,16 @@ $(document).ready(function() {
     });
     $("#bslideup").click(function() {
         $("#dslide").slideUp(500);
+    });
+    // Grid ist in tabellen.js
+    $("#datentablet").hide();
+    $("#gridon").click(function(){
+        $("#simpletabelle").hide();
+        $("#datentablet").show(500);
+    });
+     $("#simpleon").click(function(){
+        $("#datentablet").hide();
+         $("#simpletabelle").show(500);
     });
 });
 // Formular

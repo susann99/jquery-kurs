@@ -2,54 +2,61 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <!-- CSS -->
         <link rel="stylesheet" href="css/jquery-ui.css" type="text/css"/>
+        <link rel="stylesheet"
+              type="text/css" href="css/ui-lightness/jquery-ui-1.10.1.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="js/grid/themes/ui.jqgrid.css" />
         <link rel="stylesheet" href="css/style.css" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <!-- http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css -->
+        <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+        <!-- Libs -->
         <script src="js/jquery-1.9.1.js" type="text/javascript" ></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-	<script src="js/jquery.spritely-0.6.1.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
         <script src="js/jquery-ui.js"></script>
-        <!-- http://code.jquery.com/ui/1.10.1/jquery-ui.js -->
+        <!-- Plugins -->
+        <script src="js/jquery.spritely-0.6.1.js" type="text/javascript"></script>
         <script src="js/jquery.cycle.all.js" type="text/javascript"></script>
         <script src="js/srplugins.js"></script>
-	<script src="js/jquery.spritely-0.6.1.js" type="text/javascript"></script>
-        <!-- http://malsup.github.com/jquery.cycle.all.js -->
+        <script src="js/linker.js"></script>
+        <script src="js/grid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+        <script src="js/grid/js/i18n/grid.locale-de.js" type="text/javascript"></script>
+        <!-- Scripte -->
+        <script src="js/tabellen.js"></script>
         <script src="js/index.js" type="text/javascript" ></script>
-	<script src="js/linker.js"></script>
         <script type="text/javascript" >
-	    // Navigation
-	    $(document).ready(function() {
-		$("article").css("display", "none");
-		$("#contentLeft h2").css("display", "none");
-		$("#contentRight").css("display", "block");
-		var arrColor = ["green", "blue", "red", "orange", "yellow", "mangenta"];
-		$("nav a.n0").each(function(index) {
-		    $(this).addClass("navi" + arrColor[index % arrColor.length]);
-		    $("article h1").eq(index).css("color", arrColor[index % arrColor.length]);
-		});
-		$(".start").css("display", "block");
-		$("nav a").click(function() {
-		    $("article").css("display", "none");
-		    $("article h2:contains('" + $(this).text() + "')").parent().css("display", "block");
-		});
-	    });
+            // Navigation
+            $(document).ready(function() {
+                $("article").css("display", "none");
+                $("#contentLeft h2").css("display", "none");
+                $("#contentRight").css("display", "block");
+                var arrColor = ["green", "blue", "red", "orange", "yellow", "mangenta"];
+                $("nav a.n0").each(function(index) {
+                    $(this).addClass("navi" + arrColor[index % arrColor.length]);
+                    $("article h1").eq(index).css("color", arrColor[index % arrColor.length]);
+                });
+                $(".start").css("display", "block");
+                $("nav a").click(function() {
+                    $("article").css("display", "none");
+                    $("article h2:contains('" + $(this).text() + "')").parent().css("display", "block");
+                });
+            });
         </script>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>Amelia's jQuery -Kurs</title>
     </head>
     <body>
-	<div id="ameliacontainer">
-	    <div id="stage" class="stage">
-		<div id="tap" class="stage"></div>
-		<div id="clouds" class="stage"></div>
-		<div id="bird"></div>
-	    </div>
-	</div>
+        <div id="ameliacontainer">
+            <div id="stage" class="stage">
+                <div id="tap" class="stage"></div>
+                <div id="clouds" class="stage"></div>
+                <div id="bird"></div>
+            </div>
+        </div>
         <div id="inhalt" class="menue">
             <header>
                 <h1><font class="amelia">Amelia's</font> jQuery -Kurs</h1>
-		&ThinSpace; Eine Einf&uuml;hrung in das JavaScript-Framework
+                &ThinSpace; Eine Einf&uuml;hrung in das JavaScript-Framework
             </header>
             <nav>
                 <!--[if IE 6]><div id="ie6"></div><![endif]--> 
@@ -136,14 +143,14 @@
                                 <div class="portlet-content">Kann ich direkt aus NetBeans benutzen:<br>Menuepunkt:Team:git:..<br>add, commit, Remote, pull, push</div>
                             </div>
 
-			</div>
+                        </div>
 
                         <div class="column">
-			    <div class="portlet">
+                            <div class="portlet">
                                 <div class="portlet-header">Konzepte - jQuery</div>
                                 <div class="portlet-content">jQuery verfolgt mit dem Ansatz, den JavaScript-Teil vom HTML-Dokument zu trennen das Konzept des unaufdringlichen JavaScripts.</div>
                             </div>
-			    <div class="portlet">
+                            <div class="portlet">
                                 <div class="portlet-header">Filter, Methoden</div>
                                 <div class="portlet-content">
                                     <ul>
@@ -299,76 +306,86 @@
                     </article>
                     <article>
                         <h2><a name="beispiel">Beispiele</a></h2>
-                        <h1>Beispiele mit Zebra</h1>
-                        <h4>Die Tabelle ist als Zebra mit einer Mouseoverfunktion umgesetzt. Wird folgende Collectio mit dem Filterselector even (also alle ungeraden) erzeugt: 
+                        <h1>Tabellen mit Zebra, Sortierung, Blättern</h1>
+                        <h4>Die Tabelle ist als Zebra mit einer Mouseoverfunktion umgesetzt. Wird folgende Collection mit dem Filterselector even (also alle ungeraden) erzeugt: 
                             <br>$('.paginated tr:even').addClass('even');  </h4>
-                        <table id="sortable" class="paginated">
-                            <thead>
-                                <tr>
-                                    <th class="numeric">Nr.</th>
-                                    <th>Animation</th>
-                                    <th>Code</th>
-                                    <th>Erläuterung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>show()</td>
-                                    <td>$("#test").show(300);</td>
-                                    <td>
-                                        <button id="bshow">Fahne Anzeigen</button>
-                                        <div id="dshow">
-                                            <img src="images/anima1.png">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>hide()</td>
-                                    <td>$("#test").hide(300);</td>
-                                    <td><button id="bhide">Fahne Weg</button></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>fadeOut()</td>
-                                    <td>$("#test").fadeOut(300);</td>
-                                    <td>
-                                        <button id="bfadeout">Fahne Ausblenden</button>
-                                        <div id="dfade">
-                                            <img src="images/anima1.png">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>fadeIn()</td>
-                                    <td>$("#test").fadeIn(300);</td>
-                                    <td>
-                                        <button id="bfadein">Fahne Einblenden</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>slideUp()</td>
-                                    <td>$("#test").slideUp(300);</td>
-                                    <td>
-                                        <button id="bslideup">Fahne Einklappen</button>
-                                        <div id="dslide">
-                                            <img src="images/anima1.png">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>slideDown()</td>
-                                    <td>$("#test").slideDown(300);</td>
-                                    <td>
-                                        <button id="bslidedown">Fahne Ausklappen</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div id="simpletabelle">
+                            <div id="tools">
+                                <a id="down" href="#">&lt; </a>
+                                <span id="msg"></span><a id="up" href="#"> &gt;</a>
+                            </div>
+                            <table id="sortable" class="paginated">
+                                <thead>
+                                    <tr>
+                                        <th class="numeric">Nr.</th>
+                                        <th>Animation</th>
+                                        <th>Code</th>
+                                        <th>Erläuterung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>show()</td>
+                                        <td>$("#test").show(300);</td>
+                                        <td>
+                                            <button id="bshow">Fahne Anzeigen</button>
+                                            <div id="dshow">
+                                                <img src="images/anima1.png">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>hide()</td>
+                                        <td>$("#test").hide(300);</td>
+                                        <td><button id="bhide">Fahne Weg</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>fadeOut()</td>
+                                        <td>$("#test").fadeOut(300);</td>
+                                        <td>
+                                            <button id="bfadeout">Fahne Ausblenden</button>
+                                            <div id="dfade">
+                                                <img src="images/anima1.png">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>fadeIn()</td>
+                                        <td>$("#test").fadeIn(300);</td>
+                                        <td>
+                                            <button id="bfadein">Fahne Einblenden</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>slideUp()</td>
+                                        <td>$("#test").slideUp(300);</td>
+                                        <td>
+                                            <button id="bslideup">Fahne Einklappen</button>
+                                            <div id="dslide">
+                                                <img src="images/anima1.png">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>slideDown()</td>
+                                        <td>$("#test").slideDown(300);</td>
+                                        <td>
+                                            <button id="bslidedown">Fahne Ausklappen</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <div id="datentablet">
+                            <table id="list"></table>
+                            <div id="pager"></div>
+                        </div>
                     </article>
                     <article>
                         <h2><a name="logbuch">Logbuch</a></h2>
@@ -485,12 +502,12 @@
                         <small>Bildquelle: Google/wikipedia.org</small>
                         <br>
                         <p>
-			<h3>Warum hat ein Zebra Streifen?</h3>
-			Wahrscheinlich sind die Tierchen damit für die Facetenaugen von Bremsen und anderen Fliegen unsichtbar. Also statt Mückenspray das Knast gesteifte überziehen.
-			<br>
-			<h4>Weitere Beispiele</h4><br>
-			<button id="zebrasort">Zebra mit Sortierung</button><br><br>
-			<button id="zebraseite">Zebra mit Blättern</button>
+                        <h3>Warum hat ein Zebra Streifen?</h3>
+                        Wahrscheinlich sind die Tierchen damit für die Facetenaugen von Bremsen und anderen Fliegen unsichtbar. Also statt Mückenspray das Knast gesteifte überziehen.
+                        <br>
+                        <h4>Weitere Beispiele</h4><br>
+                        <button id="gridon">Tabelle mit jqgrid</button><br><br>
+                        <button id="simpleon">Einfache ZebraTabelle mit Blättern</button>
                         </p>
                     </article>
                     <article>
@@ -499,7 +516,7 @@
                             Kontaktdaten
                         </p>
                     </article>
-		    <article>
+                    <article>
                         <h2>Link<a name="tipps">Tipps</a></h2>
                         <div id="linktipps">
                             Linktipps

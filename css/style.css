@@ -369,19 +369,10 @@ table {
     width: 500px;
     margin: 10px;
 }
-th {
-    background: #CCCCCC;
-    padding: 2px 11px;
-    border-right: 1px solid #fff;
-}
 td {
     padding: 6px 11px;
     vertical-align: top;
 }
-td * {
-    padding: 6px 11px;
-}
-
 .even {
     background-color:#EEEEEE;
 }
@@ -390,6 +381,45 @@ td * {
 }
 #dshow {
     display: none;
+}
+th.asc { 
+    background-image: url(../images/sort_asc.gif); 
+    background-color: #CCCCFF; 
+} 
+
+th.desc { 
+    background-image: url(../images/sort_desc.gif); 
+    background-color: #CCCCFF; 
+} 
+
+
+th { 
+    background-image: url(../images/sort_default.gif);     
+    cursor: pointer; 
+    background-repeat: no-repeat; 
+    background-position: center left; 
+    padding-left: 20px; 
+    text-align:left;
+} 
+#tools {
+    width:120px;
+    margin:15px 10px 10px 10px;
+}
+#msg {
+    padding:4px;
+    background-color:#CCCCCC;
+}
+#up,
+#down {
+    padding:4px;
+    background-color:#CCCCCC;
+}
+#pager {
+    height: 30px;
+}
+#pager input[type="text"]{
+    width: 4px;
+    
 }
 /* Tipps*/
 .column { width: 260px; float: left; padding-bottom: 0px; }
@@ -402,6 +432,8 @@ td * {
 .column ul {
     margin-left:14px;
 }
+
+
 #todo ul {
     margin-left: 20px;
 }
@@ -413,11 +445,11 @@ td * {
     margin-top: 6px;
 }
 #containeramelia  {
-	width: 900px;
-	min-width:400px;
-	padding-top:359px;
-	position:relative;
-	width:100%;
+    width: 900px;
+    min-width:400px;
+    padding-top:359px;
+    position:relative;
+    width:100%;
 }
 #stage {
     top: 0px;
@@ -448,6 +480,7 @@ a.linkerlinks{
     font-weight: bold;
     text-decoration: underline;
 }
+
 
 
 
