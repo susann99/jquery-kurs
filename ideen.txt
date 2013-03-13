@@ -1,1 +1,25 @@
 1. tabs zu besuchten Themen hinzufügen
+2. css frameworks: less, yaml, bootstrap
+3. http://www.w3schools.com
+
+
+link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/prime-ui-0.3-min.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/start/jquery-ui.css" />
+
+  <script src="js/prime-ui-0.3-min.js"></script>
+
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="fr" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/prime-ui-0.3-min.css" />
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/start/jquery-ui.css" />
+
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/prime-ui-0.3-min.js"></script>
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    </head>
