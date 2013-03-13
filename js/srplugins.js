@@ -25,6 +25,7 @@ jQuery.fn.extend({
 		$(img).hide();
 		$(img).eq(0).show();
 		$(rahmen).click(nextBild);
+		
 	    }();
 	});
     }
