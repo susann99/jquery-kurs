@@ -7,7 +7,9 @@
         <!-- http://code.jquery.com/ui/1.10.1/jquery-ui.js -->
         <script type="text/javascript">//UTF8
             $(document).ready(function() {
+                $("#code").hide();
                 $("#senden1").click(function(){
+                     $("#code").show();
                     $.ajax({
                         url:'jasoncontent.php',
                         dataType:'json',
@@ -45,6 +47,10 @@
         <button id="senden3">
             senden3         
         </button>
-
+        <div id="code">
+            <?php
+            show_source(__FILE__);
+            ?>
+        </div>
     </body>
 </html>
