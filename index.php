@@ -21,6 +21,7 @@
         <script src="js/linker.js"></script>
         <script src="js/grid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
         <script src="js/grid/js/i18n/grid.locale-de.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://swfobject.googlecode.com/svn/tags/rc3/swfobject/src/swfobject.js"></script>
         <!-- Scripte -->
         <script src="js/tabellen.js"></script>
         <script src="js/index.js" type="text/javascript" ></script>
@@ -395,7 +396,7 @@
                     <article>
                         <h2><a name="kontakt">Kontakt</a></h2>
                         <div id="box">
-                            <form class="formular" action="#" method="post">
+                            <form class="formular" action="email.php" method="post">
                                 <fieldset>
                                     <legend>Kontaktformular</legend>
                                     <ol class="clearfix">
@@ -454,7 +455,7 @@
                     </article>
                     <article>
                         <h2><a name="logbuch">Logbuch</a></h2>
-                        <iframe width="280" height="220" src="http://www.youtube.com/embed/ioZCEpRLpxo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+			 <div class="secondary">http://www.youtube.com/v/ioZCEpRLpxo&enablejsapi=1&playerapiid=ytplayer</div>
                         <p>
                         <h3>Amelia</h3> 
                         <a style="float: left;margin:3px;" href="http://www.amazon.de/gp/product/B003V3FNY6/ref=as_li_ss_il?ie=UTF8&camp=1638&creative=19454&creativeASIN=B003V3FNY6&linkCode=as2&tag=portalfurwand-21"><img border="0" src="http://ws.assoc-amazon.de/widgets/q?_encoding=UTF8&ASIN=B003V3FNY6&Format=_SL160_&ID=AsinImage&MarketPlace=DE&ServiceVersion=20070822&WS=1&tag=portalfurwand-21" ></a><img src="http://www.assoc-amazon.de/e/ir?t=portalfurwand-21&l=as2&o=3&a=B003V3FNY6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />

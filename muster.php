@@ -1,30 +1,49 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tag 21 Prüfung</title>
-        <style>
-       
-        </style>
-        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-        <script type="text/javascript">
-	    
-        </script>
-    </head>
-    <body>
-       1. Vorbereitung:
-       - Bilder in Verzeichnis laden
-       - DIV-Gerüst mit Kopf, Left und Content
-       2. Leftmenu: 
-       - Bilder als Lightbox, 
-	    - unten eine Filmleiste, darüber großes Bild mit Beschreibung
-	    - bilder als img-tag, title als beschreibung
-	    - div:leinwand, div:filmstreifen, div:info, eventuell scrollnavigation
-       - Diashow
-	    - script läuft automatisch
-       - Collage
-	    - anstelle eines filmstreifens, Collage
-       - Kopf, Logokram
-       
-    </body>
+<head>
+  <meta http-equiv="Content-Type" content="application/text+html;utf-8"/>
+
+  <title>Sandbox</title>
+
+  <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("jquery", "1.3.2");
+    google.load("jqueryui", "1.7.0");
+</script>
+<script type="text/javascript" src="http://swfobject.googlecode.com/svn/tags/rc3/swfobject/src/swfobject.js"></script>
+<script type="text/javascript">
+(function($) {
+    $.fn.simplified = function() {
+    	return this.each(function(i) {
+    		var params = { allowScriptAccess: "always" };
+    		var atts = { id: "ytplayer"+i };
+    		$div = $('<div />').attr('id', "containerplayer"+i);
+    		swfobject.embedSWF("http://www.youtube.com/v/QTQfGd3G6dg&enablejsapi=1&playerapiid=ytplayer"+i, 
+    						   "containerplayer"+i, "425", "356", "8", null, null, params, atts);
+    		$(this).append($div);
+    	});
+    }
+})(jQuery);
+function onYouTubePlayerReady(playerId) {
+    var player = $('#'+playerId)[0];
+    player.addEventListener('onStateChange', 'playerState');
+}
+function playerState(state) {
+    console.log(state);
+}
+
+$(document).ready(function() {
+    $('.secondary').simplified();
+});
+</script>
+</head>
+<body>
+    <div id="container">
+    	<div class="secondary">
+
+        </div>
+    </div>
+</body>
+
 </html>

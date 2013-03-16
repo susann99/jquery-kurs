@@ -275,6 +275,37 @@ $(document).ready(function() {
     }
 });
 $(document).ready(function() {
-    $("#contentRight article p:contains('Kontaktdaten')").html("<br><br>Susann Rieder<br>E-Mail: susann_rieder@yahoo.de<br>Tel: 04531 886918");
+    $("#contentRight article p:contains('Kontaktdaten')")
+	    .html("<br><br>Susann Rieder<br>"+
+		    "E-Mail: susann_rieder@yahoo.de<br>"+
+		    "Facebook: susann rieder<br>"+
+		    "Projekte: <a href=\"http://www.hafenkarriere.de\">Hafenkarriere</a><br><br><br>Mein Zuhause ;-)<br><br>"+
+		    "<img src='fotos/bild9.jpg' width='240px'>"
+	);
 });
+(function($) {
+    $.fn.simplified = function(video) {
+    	return this.each(function(i) {
+    		var params = { allowScriptAccess: "always" };
+    		var atts = { id: "ytplayer"+i };
+    		$div = $('<div />').attr('id', "containerplayer"+i);
+		
+    		swfobject.embedSWF(video+i, 
+    						   "containerplayer"+i, "280", "220", "8", null, null, params, atts);
+    		$(this).append($div);
+    	});
+    }
+})(jQuery);
+function onYouTubePlayerReady(playerId) {
+    var player = $('#'+playerId)[0];
+    player.addEventListener('onStateChange', 'playerState');
+}
+function playerState(state) {
+    console.log("playerlog:"+state);
+}
 
+$(document).ready(function() {
+    var video = $('.secondary').text();
+    $('.secondary').text(" ");
+    $('.secondary').simplified(video);
+});

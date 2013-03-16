@@ -84,26 +84,30 @@ $(document).ready(function (){
         {
             name:'id',
             index:'id', 
-            width:50
+            width:50,
+	    sorttype:"int"
         },
 
         {
             name:'invdate',
             index:'invdate', 
-            width:120
+            width:120,
+	    sorttype:"date"
         },
         {
             name:'tax',
             index:'tax', 
             width:80, 
-            align:"right"
+            align:"right",
+	    sorttype:"int"
         },
 
         {
             name:'total',
             index:'total', 
             width:80,
-            align:"right"
+            align:"right",
+	    sorttype:"int"
         }
         ],
         height: '180',
