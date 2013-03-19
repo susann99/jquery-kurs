@@ -103,6 +103,11 @@ $(function() {
         heightStyle: "content"
     });
 });
+$(function() {
+    $("#accordion3").accordion({
+        heightStyle: "content"
+    });
+});
 $(document).ready(function() {
     $('#taue').cycle('fade');//roter Faden
     $('#zebra').cycle('fade');//Zebra
