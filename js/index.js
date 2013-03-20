@@ -33,7 +33,7 @@ $(document).ready(function() {
     });
     $(".home li").eq(4).click(function() {
         $(".home li").eq(4).animate({
-            fontSize: "20px", 
+            fontSize: "20px",
             width: "400px"
         }, 500);
     });
@@ -42,33 +42,33 @@ $(document).ready(function() {
 (function($) {
     $(document).ready(function() {
         $('#bird').
-        click(function() {
+                click(function() {
             $(this).effect("explode", function() {
                 $(this).fadeIn(200);
             });
         }).
-        sprite({
+                sprite({
             fps: 12,
             no_of_frames: 3,
             start_at_frame: 0
-        // the following are optional: new in version 0.6...
+                    // the following are optional: new in version 0.6...
         })
-		
-        .spRandom({
-            top: -10, 
-            bottom: 20, 
-            left: 450, 
+
+                .spRandom({
+            top: -10,
+            bottom: 20,
+            left: 450,
             right: 680,
             speed: 4000,
             pause: 8000
         })
-        .isDraggable()
-        .activeOnClick()
-        .active();
+                .isDraggable()
+                .activeOnClick()
+                .active();
         $('#clouds').pan({
-            fps: 30, 
-            speed: 0.7, 
-            dir: 'left', 
+            fps: 30,
+            speed: 0.7,
+            dir: 'left',
             depth: 10
         });
         $('#clouds').spRelSpeed(8);
@@ -80,7 +80,7 @@ $(document).ready(function() {
 // logbuch Ajax
 $(document).ready(function() {
     $("nav a:contains('Logbuch')").click(function() {
-        $.ajaxSetup ({
+        $.ajaxSetup({
             // Disable caching of AJAX responses
             cache: false
         });
@@ -103,9 +103,13 @@ $(function() {
         heightStyle: "content"
     });
 });
+//Quellcode
 $(function() {
-    $("#accordion3").accordion({
-        heightStyle: "content"
+    $("#accordion_quellcode").accordion({
+        heightStyle: "fill",
+        collapsible: true,
+        active: 1
+
     });
 });
 $(document).ready(function() {
@@ -126,11 +130,11 @@ $(function() {
         connectWith: ".column"
     });
     $(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
-    .find(".portlet-header")
-    .addClass("ui-widget-header ui-corner-all")
-    .prepend("<span class='ui-icon ui-icon-minusthick'></span>")
-    .end()
-    .find(".portlet-content");
+            .find(".portlet-header")
+            .addClass("ui-widget-header ui-corner-all")
+            .prepend("<span class='ui-icon ui-icon-minusthick'></span>")
+            .end()
+            .find(".portlet-content");
     $(".portlet-content").hide(10);
     $(".portlet-header .ui-icon").click(function() {
         $(this).toggleClass("ui-icon-minusthick").toggleClass("ui-icon-plusthick");
@@ -168,51 +172,51 @@ $(document).ready(function() {
     });
     // Grid ist in tabellen.js
     $("#datentablet").hide();
-    $("#gridon").click(function(){
+    $("#gridon").click(function() {
         $("#simpletabelle").hide();
         $("#datentablet").show(500);
     });
-     $("#simpleon").click(function(){
+    $("#simpleon").click(function() {
         $("#datentablet").hide();
-         $("#simpletabelle").show(500);
+        $("#simpletabelle").show(500);
     });
 });
 // Formular
 $(document).ready(function() {
     $("#vname").data(
-    {
-        sel: "#vname",
-        iafter: "#vname",
-        errtext: "Bitte mindesten 3 Zeichen eingeben!"
-    }
+            {
+                sel: "#vname",
+                iafter: "#vname",
+                errtext: "Bitte mindesten 3 Zeichen eingeben!"
+            }
     );
     $("#nname").data(
-    {
-        sel: "#nname",
-        iafter: "#nname",
-        errtext: "Bitte mindesten 3 Zeichen eingeben!"
-    }
+            {
+                sel: "#nname",
+                iafter: "#nname",
+                errtext: "Bitte mindesten 3 Zeichen eingeben!"
+            }
     );
     $("#email").data(
-    {
-        sel: "#email",
-        iafter: "#email",
-        errtext: "Bitte eine gültige Email eingeben!"
-    }
+            {
+                sel: "#email",
+                iafter: "#email",
+                errtext: "Bitte eine gültige Email eingeben!"
+            }
     );
     $(".auswahl").data(
-    {
-        sel: ".auswahl",
-        iafter: "#auswahl1",
-        errtext: "Bitte auswählen!"
-    }
+            {
+                sel: ".auswahl",
+                iafter: "#auswahl1",
+                errtext: "Bitte auswählen!"
+            }
     );
     $("#nachricht").data(
-    {
-        sel: "#nachricht",
-        iafter: "#nachricht",
-        errtext: "Bitte einen Kommentar eingeben!"
-    }
+            {
+                sel: "#nachricht",
+                iafter: "#nachricht",
+                errtext: "Bitte einen Kommentar eingeben!"
+            }
     );
     $("#vname").change(function() {
         setCheckRemove();
@@ -281,32 +285,32 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
     $("#contentRight article p:contains('Kontaktdaten')")
-	    .html("<br><br>Susann Rieder<br>"+
-		    "E-Mail: susann_rieder@yahoo.de<br>"+
-		    "Facebook: susann rieder<br>"+
-		    "Projekte: <a href=\"http://www.hafenkarriere.de\">Hafenkarriere</a><br><br><br>Mein Zuhause ;-)<br><br>"+
-		    "<img src='fotos/bild9.jpg' width='240px'>"
-	);
+            .html("<br><br>Susann Rieder<br>" +
+            "E-Mail: susann_rieder@yahoo.de<br>" +
+            "Facebook: susann rieder<br>" +
+            "Projekte: <a href=\"http://www.hafenkarriere.de\">Hafenkarriere</a><br><br><br>Mein Zuhause ;-)<br><br>" +
+            "<img src='fotos/bild9.jpg' width='240px'>"
+            );
 });
 (function($) {
     $.fn.simplified = function(video) {
-    	return this.each(function(i) {
-    		var params = { allowScriptAccess: "always" };
-    		var atts = { id: "ytplayer"+i };
-    		$div = $('<div />').attr('id', "containerplayer"+i);
-		
-    		swfobject.embedSWF(video+i, 
-    						   "containerplayer"+i, "280", "220", "8", null, null, params, atts);
-    		$(this).append($div);
-    	});
+        return this.each(function(i) {
+            var params = {allowScriptAccess: "always"};
+            var atts = {id: "ytplayer" + i};
+            $div = $('<div />').attr('id', "containerplayer" + i);
+
+            swfobject.embedSWF(video + i,
+                    "containerplayer" + i, "280", "220", "8", null, null, params, atts);
+            $(this).append($div);
+        });
     }
 })(jQuery);
 function onYouTubePlayerReady(playerId) {
-    var player = $('#'+playerId)[0];
+    var player = $('#' + playerId)[0];
     player.addEventListener('onStateChange', 'playerState');
 }
 function playerState(state) {
-    console.log("playerlog:"+state);
+    console.log("playerlog:" + state);
 }
 
 $(document).ready(function() {

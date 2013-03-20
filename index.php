@@ -396,18 +396,15 @@
                         <h1>Quelltexte</h1>
                         <div id="quelltexte">Hier findest Du die Kursquelltexte mit ein bischen Erleuterungen, nach Tagen geordnet oder nach Themen. 
                             Zug um zug werde ich diesen Bereich mit vollständigeren Erleuterungen Ergänzen.<br><br>
-                            <nav id="textlink">
-                                <a href="#tagen">Quelltexte nach Tagen</a><br><br>
-                                <a href="#themen">Quelltexte nach Themen</a>
-                            </nav>
-                            <div id="accordion3">
+                            <div id="accordion_quellcode">
                                 <h3>Accordeon</h3>
                                 <div>
                                     Das Arkkordeon ist Bestandteil der jquery-ui.js. Diese Bibliothek muß du erst im Header verlinken. 
                                     Du kannst das direkt zu einem Googleserver tuen oder dir die Datei runterladen und dann wie volgt einbinden:<br>
 <xmp>
 <link rel="stylesheet" href="css/jquery-ui.css" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.1.custom.css"/>
+<link rel="stylesheet" type="text/css" 
+      href="css/ui-lightness/jquery-ui-1.10.1.custom.css"/>
 <script src="js/jquery-ui.js"></script>
 </xmp>
                                     <br><br>ui-lightness ist ein ganz nettes css Layout, das auf die ui abgestimmt ist.
@@ -600,6 +597,14 @@
                     <h4>Weitere Beispiele</h4><br>
                     <button id="gridon">Tabelle mit jqgrid</button><br><br>
                     <button id="simpleon">Einfache ZebraTabelle mit Blättern</button>
+                    </p>
+                </article>
+                <article>
+                    <h2><a name="quelltexte">Quelltexte</a></h2>
+                    <p>
+                        <a href="#tage">Scripte nach Tagen</a><br>
+                    <div id="tageliste">1,21</div>
+                        <a href="#thema">Scripte nach Themen</a>
                     </p>
                 </article>
                 <article>

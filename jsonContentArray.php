@@ -20,5 +20,6 @@ $arr = array(
 );
 $string = json_encode($arr);
 echo $string;
+
 ?>
 
