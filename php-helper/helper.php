@@ -90,7 +90,7 @@ while ($datei = readdir($handle)) {
     if (stristr($datei, '_T')) {
         $arrdatei[]=$datei;
         
-    }//if(stristr($string, 'Erde') === FALSE)
+    }
 }
 closedir($handle);
 asort($arrdatei);
@@ -99,11 +99,34 @@ foreach ($arrdatei as $key => $val) {
         $n=$i;
         if($i<10)$n="0".$n;
      if (stristr($val, 'T'.$n)) {
+         $text .=$n;
         $arrdateisub[$n][]=$val;
     }
     
      }
 }
-print_r($arrdateisub);
-
+#print_r($arrdateisub);
+#echo json_encode($arrdateisub);
+#echo count($arrdateisub);
+foreach ($arrdateisub as $key3 => $val3) {
+$tag = '{"tag"'.':"'.$key3.'",'."\n";
+$dateien = $tag.'"thema":"",'."\n".'"dateien":[';
+$datei = "\n";
+$a = 0;
+    foreach ($val3 as $key2 => $val2) {
+        $komma="\n";
+        if(count($val3)>1)if($a<(count($val3)-1))$komma=",\n";
+        $titel = str_replace(".php", "", $val2);
+        $titel = str_replace("_T", "", $titel);
+        $datei .= "{\n".
+                    '"datei":"'.$val2.'",'."\n".
+                    '"titel":"'.$titel.'",'."\n".
+                    '"beschreibung":""'."\n".
+                    "\n}".$komma;
+        $a++;
+        
+    }
+$text = $dateien.$datei."]},\n";
+echo $text;
+}
 ?>
