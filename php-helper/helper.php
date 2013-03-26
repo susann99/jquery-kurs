@@ -80,7 +80,7 @@ $objJTage = '{"tage":[
     ]}';
 $d = json_decode($objJTage);
 #print_r($test);
-#echo $d->tage[2]->dateien[0]->datei;
+echo $d->tage[2]->dateien[0]->datei;
 // Mit den folgenden Zeilen lassen sich
 // alle Dateien in einem Verzeichnis auslesen
 
