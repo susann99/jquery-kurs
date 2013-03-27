@@ -1,3 +1,6 @@
+<?php
+include_once 'php-helper/dateien-kurs.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -603,7 +606,7 @@
                     <h2><a name="quelltexte">Quelltexte</a></h2>
                     <p>
                         <a href="#tage">Scripte nach Tagen</a><br>
-                    <div id="tageliste">1,21</div>
+                        <div id="tageliste"><?php getTageliste($d->tage);?></div>
                         <a href="#thema">Scripte nach Themen</a>
                     </p>
                 </article>
